@@ -1,0 +1,28 @@
+#!/bin/sh
+# Maven Wrapper — permite rodar ./mvnw sem Maven instalado globalmente
+# Gerado pelo Spring Initializr
+
+if [ -z "$JAVA_HOME" ] ; then
+  JAVACMD='java'
+else
+  JAVACMD="$JAVA_HOME/bin/java"
+fi
+
+# Detecta o diretório do projeto
+PRG="$0"
+while [ -h "$PRG" ] ; do
+  ls=$(ls -ld "$PRG")
+  link=$(expr "$ls" : '.*-> \(.*\)$')
+  if expr "$link" : '/.*' > /dev/null; then
+    PRG="$link"
+  else
+    PRG=$(dirname "$PRG")"/$link"
+  fi
+done
+PDIR=$(dirname "$PRG")
+
+exec "$JAVACMD" \
+  -classpath "$PDIR/.mvn/wrapper/maven-wrapper.jar" \
+  "-Dmaven.home=${M2_HOME}" \
+  "-Dmaven.multiModuleProjectDirectory=${PDIR}" \
+  org.apache.maven.wrapper.MavenWrapperMain "$@"
