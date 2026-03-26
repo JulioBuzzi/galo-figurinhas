@@ -6,9 +6,6 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Entidade que representa um usuário do sistema.
- */
 @Entity
 @Table(name = "users")
 @Data
@@ -30,6 +27,15 @@ public class User {
     @Column(nullable = false)
     private String password;
 
+    /** Telefone opcional (formato BR) */
+    @Column(name = "phone")
+    private String phone;
+
+    /** Se true, exibe o telefone para outros usuários nos matches */
+    @Column(name = "show_phone", nullable = false)
+    @Builder.Default
+    private Boolean showPhone = false;
+
     @Column(name = "created_at")
     private LocalDateTime createdAt;
 
@@ -44,5 +50,6 @@ public class User {
     @PrePersist
     protected void onCreate() {
         this.createdAt = LocalDateTime.now();
+        if (this.showPhone == null) this.showPhone = false;
     }
 }

@@ -13,13 +13,6 @@ import org.springframework.stereotype.Service;
 import java.util.*;
 import java.util.stream.Collectors;
 
-/**
- * Calcula trocas possíveis entre dois usuários específicos.
- *
- * Lógica:
- *  - theyGiveMe  → repetidas DO OUTRO que EU preciso (NAO_TENHO)
- *  - iGiveThem   → minhas REPETIDAS que O OUTRO precisa (NAO_TENHO)
- */
 @Service
 @RequiredArgsConstructor
 @Slf4j
@@ -31,44 +24,32 @@ public class MatchService {
 
     public MatchResponse findMatchBetween(Long myUserId, Long targetUserId) {
 
-        // Valida usuário alvo
         User target = userRepository.findById(targetUserId)
                 .orElseThrow(() -> new RuntimeException(
-                        "Usuário com ID " + targetUserId + " não encontrado."));
+                        "Usuário com código " + String.format("%06d", targetUserId) + " não encontrado."));
 
         if (myUserId.equals(targetUserId)) {
             throw new RuntimeException("Você não pode fazer match com você mesmo!");
         }
 
-        // Carrega os dados dos dois usuários
-        List<UserSticker> myStickers     = userStickerRepository.findByUserId(myUserId);
-        List<UserSticker> theirStickers  = userStickerRepository.findByUserId(targetUserId);
+        // Carrega álbuns dos dois
+        List<UserSticker> myStickers    = userStickerRepository.findByUserId(myUserId);
+        List<UserSticker> theirStickers = userStickerRepository.findByUserId(targetUserId);
 
-        // Meus IDs que preciso
+        // O que EU preciso (NAO_TENHO)
         Set<Long> myWantedIds = myStickers.stream()
                 .filter(us -> us.getStatus() == UserSticker.Status.NAO_TENHO)
                 .map(us -> us.getSticker().getId())
                 .collect(Collectors.toSet());
 
-        // IDs das minhas repetidas
-        Set<Long> myRepeatedIds = myStickers.stream()
-                .filter(us -> us.getRepeatedCount() > 0)
-                .map(us -> us.getSticker().getId())
-                .collect(Collectors.toSet());
-
-        // IDs que o outro precisa
+        // O que ELES precisam (NAO_TENHO)
         Set<Long> theirWantedIds = theirStickers.stream()
                 .filter(us -> us.getStatus() == UserSticker.Status.NAO_TENHO)
                 .map(us -> us.getSticker().getId())
                 .collect(Collectors.toSet());
 
-        // IDs das repetidas do outro
-        Set<Long> theirRepeatedIds = theirStickers.stream()
-                .filter(us -> us.getRepeatedCount() > 0)
-                .map(us -> us.getSticker().getId())
-                .collect(Collectors.toSet());
-
         // Repetidas DELES que EU preciso
+        // = stickers do outro onde repeatedCount > 0 E id está no meu NAO_TENHO
         List<StickerResponse> theyGiveMe = theirStickers.stream()
                 .filter(us -> us.getRepeatedCount() > 0
                            && myWantedIds.contains(us.getSticker().getId()))
@@ -76,19 +57,42 @@ public class MatchService {
                 .collect(Collectors.toList());
 
         // Minhas REPETIDAS que ELES precisam
+        // = meus stickers onde repeatedCount > 0 E id está no NAO_TENHO deles
         List<StickerResponse> iGiveThem = myStickers.stream()
                 .filter(us -> us.getRepeatedCount() > 0
                            && theirWantedIds.contains(us.getSticker().getId()))
                 .map(us -> stickerService.toStickerResponse(us.getSticker()))
                 .collect(Collectors.toList());
 
+        int score = theyGiveMe.size() + iGiveThem.size();
+
         MatchResponse response = new MatchResponse();
         response.setUserId(target.getId());
         response.setUserName(target.getName());
-        response.setUserEmail(target.getEmail());
+        response.setUserCode(String.format("%06d", target.getId()));
+        // Só mostra telefone se o usuário optou por mostrar
+        if (Boolean.TRUE.equals(target.getShowPhone()) && target.getPhone() != null) {
+            response.setUserPhone(formatPhone(target.getPhone()));
+        }
         response.setTheyHaveWhatINeed(theyGiveMe);
         response.setIHaveWhatTheyNeed(iGiveThem);
-        response.setMatchScore(theyGiveMe.size() + iGiveThem.size());
+        response.setMatchScore(score);
         return response;
+    }
+
+    /** Formata número brasileiro: (11) 99999-9999 */
+    private String formatPhone(String digits) {
+        if (digits == null) return null;
+        if (digits.length() == 11)
+            return String.format("(%s) %s-%s",
+                    digits.substring(0, 2),
+                    digits.substring(2, 7),
+                    digits.substring(7));
+        if (digits.length() == 10)
+            return String.format("(%s) %s-%s",
+                    digits.substring(0, 2),
+                    digits.substring(2, 6),
+                    digits.substring(6));
+        return digits;
     }
 }

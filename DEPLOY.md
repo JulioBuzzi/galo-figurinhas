@@ -75,7 +75,8 @@ git push -u origin main
 3. Role até **"Connection string"** → aba **"URI"**
 4. Copie a URL — vai ser assim:
    ```
-   postgresql://postgres:[SUA-SENHA]@db.XXXXXXXXXXX.supabase.co:5432/postgres
+   jdbc:postgresql://aws-0-us-east-1.pooler.supabase.com:6543/postgres?user=postgres.cxtynjmwiinaumjgpoiv&password=GaloFigurinhas2026!&sslmode=require
+   
    ```
 5. **Guarde essa URL**, vamos precisar depois
 
@@ -98,7 +99,7 @@ postgresql://postgres:SUASENHA@db.XXXXXXXXXXX.supabase.co:5432/postgres
 
 **URL para o Render (JDBC com pooler — porta 6543):**
 ```
-jdbc:postgresql://aws-0-us-east-1.pooler.supabase.com:6543/postgres?user=postgres.XXXXXXXXXXX&password=SUASENHA&sslmode=require
+jdbc:postgresql://aws-0-us-east-1.pooler.supabase.com:6543/postgres?user=postgres.cxtynjmwiinaumjgpoiv&password=GaloFigurinhas2026%21&sslmode=require
 ```
 
 > ⚠️ O `XXXXXXXXXXX` é o ID do seu projeto (aparece na URL do Supabase).
@@ -219,6 +220,8 @@ Value: https://galo-figurinhas-backend.onrender.com
    ```
    https://galo-figurinhas-frontend.vercel.app
    ```
+
+   galo-figurinhas-frontend.vercel.app
 
 ---
 
