@@ -7,11 +7,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
-/**
- * Controller do sistema de match entre colecionadores.
- */
 @RestController
 @RequestMapping("/api/matches")
 @RequiredArgsConstructor
@@ -20,17 +15,14 @@ public class MatchController {
     private final MatchService matchService;
 
     /**
-     * GET /api/matches
-     * Retorna lista de usuários compatíveis para troca,
-     * ordenados por relevância (matchScore).
-     *
-     * Cada item inclui:
-     * - Figurinhas que o outro usuário tem e eu preciso
-     * - Minhas figurinhas repetidas que ele precisa
+     * GET /api/matches/search?targetUserId=X
+     * Calcula trocas possíveis entre o usuário logado e o usuário alvo (por ID).
      */
-    @GetMapping
-    public ResponseEntity<List<MatchResponse>> findMatches(Authentication auth) {
+    @GetMapping("/search")
+    public ResponseEntity<MatchResponse> searchMatch(
+            @RequestParam Long targetUserId,
+            Authentication auth) {
         Long userId = (Long) auth.getCredentials();
-        return ResponseEntity.ok(matchService.findMatches(userId));
+        return ResponseEntity.ok(matchService.findMatchBetween(userId, targetUserId));
     }
 }
