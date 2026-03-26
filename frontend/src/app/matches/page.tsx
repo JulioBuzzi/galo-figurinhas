@@ -11,12 +11,12 @@ import { Users, Loader2, Mail, Shield, Search, Copy, Check, ChevronDown, Chevron
 export default function MatchesPage() {
   const user = useAuthStore((s) => s.user);
 
-  const [targetId, setTargetId]   = useState('');
-  const [match,    setMatch]      = useState<Match | null>(null);
-  const [loading,  setLoading]    = useState(false);
-  const [error,    setError]      = useState('');
-  const [copied,   setCopied]     = useState(false);
-  const [expanded, setExpanded]   = useState(false);
+  const [targetId, setTargetId] = useState('');
+  const [match,    setMatch]    = useState<Match | null>(null);
+  const [loading,  setLoading]  = useState(false);
+  const [error,    setError]    = useState('');
+  const [copied,   setCopied]   = useState(false);
+  const [expanded, setExpanded] = useState(false);
 
   const handleCopyId = () => {
     if (!user) return;
@@ -26,10 +26,13 @@ export default function MatchesPage() {
   };
 
   const handleSearch = async () => {
-    if (!targetId.trim()) return;
     const id = Number(targetId.trim());
-    if (isNaN(id) || id <= 0) {
-      setError('Digite um ID válido (número inteiro positivo)');
+    if (!targetId.trim() || isNaN(id) || id <= 0) {
+      setError('Digite um ID válido');
+      return;
+    }
+    if (id === user?.userId) {
+      setError('Você não pode buscar seu próprio ID!');
       return;
     }
     setLoading(true);
@@ -38,16 +41,23 @@ export default function MatchesPage() {
     setExpanded(false);
     try {
       const { data } = await api.get(`/api/matches/search?targetUserId=${id}`);
-      setMatch(data);
+      // Garante que os arrays nunca são undefined
+      const safeMatch: Match = {
+        ...data,
+        theyHaveWhatINeed: data.theyHaveWhatINeed ?? [],
+        iHaveWhatTheyNeed: data.iHaveWhatTheyNeed ?? [],
+      };
+      setMatch(safeMatch);
     } catch (err: any) {
-      setError(err.response?.data?.error || 'Usuário não encontrado. Verifique o ID.');
+      const msg = err.response?.data?.error;
+      setError(msg || 'Usuário não encontrado. Verifique o ID e tente novamente.');
     } finally {
       setLoading(false);
     }
   };
 
-  const theyGiveMe = match?.theyHaveWhatINeed.length ?? 0;
-  const iGiveThem  = match?.iHaveWhatTheyNeed.length ?? 0;
+  const theyGiveMe = match?.theyHaveWhatINeed?.length ?? 0;
+  const iGiveThem  = match?.iHaveWhatTheyNeed?.length ?? 0;
   const score      = match?.matchScore ?? 0;
 
   return (
@@ -70,7 +80,6 @@ export default function MatchesPage() {
               </div>
             </div>
 
-            {/* Card do ID */}
             <div className="bg-white/5 border border-white/10 rounded-xl p-4">
               <p className="text-white/50 text-xs mb-2 uppercase tracking-widest font-semibold">
                 Seu ID para compartilhar
@@ -90,11 +99,8 @@ export default function MatchesPage() {
                              transition-all border shrink-0"
                   style={copied
                     ? { backgroundColor: 'rgba(34,197,94,0.2)', borderColor: '#22c55e', color: '#22c55e' }
-                    : { backgroundColor: 'rgba(196,161,53,0.15)', borderColor: 'rgba(196,161,53,0.5)', color: '#C4A135' }
-                  }>
-                  {copied
-                    ? <><Check size={14} /> Copiado!</>
-                    : <><Copy size={14} /> Copiar ID</>}
+                    : { backgroundColor: 'rgba(196,161,53,0.15)', borderColor: 'rgba(196,161,53,0.5)', color: '#C4A135' }}>
+                  {copied ? <><Check size={14} /> Copiado!</> : <><Copy size={14} /> Copiar ID</>}
                 </button>
               </div>
             </div>
@@ -106,16 +112,14 @@ export default function MatchesPage() {
             <p className="text-gray-400 text-xs mb-4">
               Digite o ID de outro colecionador para ver quantas figurinhas vocês podem trocar.
             </p>
-
             <div className="flex gap-2">
               <div className="relative flex-1">
                 <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 font-bold text-sm">#</span>
                 <input
-                  type="number"
-                  value={targetId}
+                  type="number" value={targetId}
                   onChange={(e) => setTargetId(e.target.value)}
                   onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
-                  placeholder="Digite o ID do colecionador"
+                  placeholder="ID do colecionador"
                   min={1}
                   className="w-full pl-8 pr-4 py-3 border border-gray-200 rounded-xl text-sm
                              focus:outline-none focus:ring-2 focus:ring-yellow-400
@@ -129,16 +133,12 @@ export default function MatchesPage() {
                 className="flex items-center gap-2 px-5 py-3 rounded-xl font-black text-sm
                            transition-all disabled:opacity-40 disabled:cursor-not-allowed shrink-0"
                 style={{ backgroundColor: '#C4A135', color: '#0a0a0a' }}>
-                {loading
-                  ? <Loader2 size={16} className="animate-spin" />
-                  : <Search size={16} />}
+                {loading ? <Loader2 size={16} className="animate-spin" /> : <Search size={16} />}
                 {loading ? 'Buscando...' : 'Buscar'}
               </button>
             </div>
-
             {error && (
-              <div className="mt-3 bg-red-50 border border-red-200 text-red-700
-                              text-sm rounded-xl px-4 py-3">
+              <div className="mt-3 bg-red-50 border border-red-200 text-red-700 text-sm rounded-xl px-4 py-3">
                 {error}
               </div>
             )}
@@ -148,7 +148,7 @@ export default function MatchesPage() {
           {match && (
             <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden fade-in">
 
-              {/* Header do resultado */}
+              {/* Header */}
               <div className="p-5 border-b border-gray-100"
                    style={{ background: 'linear-gradient(135deg, #0a0a0a, #1a1a1a)' }}>
                 <div className="flex items-center gap-3">
@@ -164,49 +164,41 @@ export default function MatchesPage() {
                 </div>
               </div>
 
-              {/* Resumo de trocas */}
               <div className="p-5">
                 {score === 0 ? (
-                  <div className="text-center py-6">
+                  <div className="text-center py-8">
                     <Users size={40} className="mx-auto mb-3 text-gray-300" />
-                    <p className="font-bold text-gray-600">Nenhuma troca possível</p>
+                    <p className="font-bold text-gray-600">Nenhuma troca possível agora</p>
                     <p className="text-sm text-gray-400 mt-1">
-                      Vocês não têm repetidas que o outro precisa no momento.
+                      Nenhum de vocês tem repetidas que o outro precisa no momento.
+                      Marque mais figurinhas e adicione repetidas no álbum!
                     </p>
                   </div>
                 ) : (
                   <>
-                    {/* Cards de contagem */}
+                    {/* Contadores */}
                     <div className="grid grid-cols-2 gap-3 mb-4">
-
-                      {/* Eles dão para mim */}
                       <div className="bg-green-50 border border-green-200 rounded-xl p-4 text-center">
                         <p className="text-4xl font-black text-green-600">{theyGiveMe}</p>
                         <p className="text-xs font-bold text-green-700 mt-1">Eles podem te dar</p>
-                        <p className="text-[10px] text-gray-400 mt-0.5">
-                          repetidas deles que você precisa
-                        </p>
+                        <p className="text-[10px] text-gray-400 mt-0.5">repetidas deles que você precisa</p>
                       </div>
-
-                      {/* Eu dou para eles */}
                       <div className="border rounded-xl p-4 text-center"
                            style={{ backgroundColor: 'rgba(196,161,53,0.08)', borderColor: 'rgba(196,161,53,0.35)' }}>
                         <p className="text-4xl font-black" style={{ color: '#C4A135' }}>{iGiveThem}</p>
                         <p className="text-xs font-bold mt-1" style={{ color: '#8a6f1e' }}>Você pode dar</p>
-                        <p className="text-[10px] text-gray-400 mt-0.5">
-                          repetidas suas que eles precisam
-                        </p>
+                        <p className="text-[10px] text-gray-400 mt-0.5">repetidas suas que eles precisam</p>
                       </div>
                     </div>
 
-                    {/* Score total */}
+                    {/* Score */}
                     <div className="flex items-center justify-center gap-2 mb-4
                                     py-2.5 rounded-xl bg-gray-50 border border-gray-200">
                       <span className="text-gray-500 text-sm">Score total:</span>
                       <span className="text-xl font-black text-gray-900">★ {score} trocas possíveis</span>
                     </div>
 
-                    {/* Detalhe das figurinhas */}
+                    {/* Toggle detalhe */}
                     <button
                       onClick={() => setExpanded(v => !v)}
                       className="w-full flex items-center justify-center gap-2 py-2.5
@@ -217,9 +209,7 @@ export default function MatchesPage() {
                     </button>
 
                     {expanded && (
-                      <div className="space-y-4 fade-in">
-
-                        {/* Figurinhas que eles dão */}
+                      <div className="space-y-4 mb-4 fade-in">
                         {theyGiveMe > 0 && (
                           <div>
                             <p className="text-xs font-bold text-green-700 mb-2 flex items-center gap-1.5">
@@ -237,8 +227,6 @@ export default function MatchesPage() {
                             </div>
                           </div>
                         )}
-
-                        {/* Figurinhas que eu dou */}
                         {iGiveThem > 0 && (
                           <div>
                             <p className="text-xs font-bold mb-2 flex items-center gap-1.5"
@@ -260,7 +248,7 @@ export default function MatchesPage() {
                       </div>
                     )}
 
-                    {/* Botão de contato */}
+                    {/* Email */}
                     <a href={`mailto:${match.userEmail}?subject=Troca de figurinhas - Galo 2026&body=Olá ${match.userName}! Encontrei seu perfil no Galo Figurinhas (ID #${match.userId}). Podemos trocar: você tem ${theyGiveMe} figurinha(s) que preciso e eu tenho ${iGiveThem} que você precisa!`}
                        className="w-full flex items-center justify-center gap-2 py-3 rounded-xl
                                   font-black text-sm transition-all border"
@@ -274,13 +262,13 @@ export default function MatchesPage() {
             </div>
           )}
 
-          {/* Instrução inicial */}
+          {/* Estado vazio */}
           {!match && !loading && !error && (
             <div className="text-center py-12 text-gray-400">
               <Users size={48} className="mx-auto mb-3 opacity-20" />
               <p className="font-bold text-gray-500">Pesquise um colecionador</p>
               <p className="text-sm mt-1">
-                Digite o ID de outro usuário para ver quantas<br/>figurinhas vocês podem trocar entre si.
+                Digite o ID de outro usuário para ver<br/>quantas figurinhas vocês podem trocar.
               </p>
             </div>
           )}
