@@ -2,8 +2,10 @@ package com.copa2026.service;
 
 import com.copa2026.dto.MatchResponse;
 import com.copa2026.dto.StickerResponse;
+import com.copa2026.model.Sticker;
 import com.copa2026.model.User;
 import com.copa2026.model.UserSticker;
+import com.copa2026.repository.StickerRepository;
 import com.copa2026.repository.UserRepository;
 import com.copa2026.repository.UserStickerRepository;
 import lombok.RequiredArgsConstructor;
@@ -20,49 +22,49 @@ public class MatchService {
 
     private final UserStickerRepository userStickerRepository;
     private final UserRepository        userRepository;
+    private final StickerRepository     stickerRepository;
     private final StickerService        stickerService;
 
     public MatchResponse findMatchBetween(Long myUserId, Long targetUserId) {
 
         User target = userRepository.findById(targetUserId)
                 .orElseThrow(() -> new RuntimeException(
-                        "Usuário com código " + String.format("%06d", targetUserId) + " não encontrado."));
+                        "Nenhum colecionador encontrado com o código "
+                        + String.format("%06d", targetUserId)));
 
         if (myUserId.equals(targetUserId)) {
             throw new RuntimeException("Você não pode fazer match com você mesmo!");
         }
 
-        // Carrega álbuns dos dois
-        List<UserSticker> myStickers    = userStickerRepository.findByUserId(myUserId);
-        List<UserSticker> theirStickers = userStickerRepository.findByUserId(targetUserId);
+        // IDs que EU tenho (registros no banco)
+        Set<Long> myOwnedIds = userStickerRepository.findStickerIdsByUserId(myUserId);
 
-        // O que EU preciso (NAO_TENHO)
-        Set<Long> myWantedIds = myStickers.stream()
-                .filter(us -> us.getStatus() == UserSticker.Status.NAO_TENHO)
-                .map(us -> us.getSticker().getId())
-                .collect(Collectors.toSet());
+        // IDs que EU tenho REPETIDAS
+        Set<Long> myRepeatedIds = userStickerRepository.findRepeatedStickerIdsByUserId(myUserId);
 
-        // O que ELES precisam (NAO_TENHO)
-        Set<Long> theirWantedIds = theirStickers.stream()
-                .filter(us -> us.getStatus() == UserSticker.Status.NAO_TENHO)
-                .map(us -> us.getSticker().getId())
-                .collect(Collectors.toSet());
+        // IDs que O OUTRO tem (registros no banco)
+        Set<Long> theirOwnedIds = userStickerRepository.findStickerIdsByUserId(targetUserId);
 
-        // Repetidas DELES que EU preciso
-        // = stickers do outro onde repeatedCount > 0 E id está no meu NAO_TENHO
-        List<StickerResponse> theyGiveMe = theirStickers.stream()
-                .filter(us -> us.getRepeatedCount() > 0
-                           && myWantedIds.contains(us.getSticker().getId()))
-                .map(us -> stickerService.toStickerResponse(us.getSticker()))
-                .collect(Collectors.toList());
+        // IDs que O OUTRO tem REPETIDAS
+        Set<Long> theirRepeatedIds = userStickerRepository.findRepeatedStickerIdsByUserId(targetUserId);
 
-        // Minhas REPETIDAS que ELES precisam
-        // = meus stickers onde repeatedCount > 0 E id está no NAO_TENHO deles
-        List<StickerResponse> iGiveThem = myStickers.stream()
-                .filter(us -> us.getRepeatedCount() > 0
-                           && theirWantedIds.contains(us.getSticker().getId()))
-                .map(us -> stickerService.toStickerResponse(us.getSticker()))
-                .collect(Collectors.toList());
+        /*
+         * theyGiveMe = repetidas DELES que EU não tenho
+         * (eles têm repeatedCount > 0 E o stickerId NÃO está nos meus registros)
+         */
+        Set<Long> theyGiveMeIds = new HashSet<>(theirRepeatedIds);
+        theyGiveMeIds.removeAll(myOwnedIds); // remove os que eu já tenho
+
+        /*
+         * iGiveThem = minhas repetidas que O OUTRO não tem
+         * (eu tenho repeatedCount > 0 E o stickerId NÃO está nos registros deles)
+         */
+        Set<Long> iGiveThemIds = new HashSet<>(myRepeatedIds);
+        iGiveThemIds.removeAll(theirOwnedIds); // remove os que eles já têm
+
+        // Resolve IDs → objetos Sticker
+        List<StickerResponse> theyGiveMe = resolveStickers(theyGiveMeIds);
+        List<StickerResponse> iGiveThem  = resolveStickers(iGiveThemIds);
 
         int score = theyGiveMe.size() + iGiveThem.size();
 
@@ -70,29 +72,37 @@ public class MatchService {
         response.setUserId(target.getId());
         response.setUserName(target.getName());
         response.setUserCode(String.format("%06d", target.getId()));
-        // Só mostra telefone se o usuário optou por mostrar
         if (Boolean.TRUE.equals(target.getShowPhone()) && target.getPhone() != null) {
             response.setUserPhone(formatPhone(target.getPhone()));
         }
         response.setTheyHaveWhatINeed(theyGiveMe);
         response.setIHaveWhatTheyNeed(iGiveThem);
         response.setMatchScore(score);
+
+        log.info("Match {} ↔ {}: theyGiveMe={} iGiveThem={} score={}",
+                myUserId, targetUserId, theyGiveMe.size(), iGiveThem.size(), score);
+
         return response;
     }
 
-    /** Formata número brasileiro: (11) 99999-9999 */
+    /** Busca os Stickers por conjunto de IDs e converte para DTO */
+    private List<StickerResponse> resolveStickers(Set<Long> ids) {
+        if (ids.isEmpty()) return Collections.emptyList();
+        return stickerRepository.findAllById(ids).stream()
+                .map(stickerService::toStickerResponse)
+                .sorted(Comparator.comparing(StickerResponse::getAlbumNumber,
+                        Comparator.nullsLast(Comparator.naturalOrder())))
+                .collect(Collectors.toList());
+    }
+
     private String formatPhone(String digits) {
         if (digits == null) return null;
         if (digits.length() == 11)
             return String.format("(%s) %s-%s",
-                    digits.substring(0, 2),
-                    digits.substring(2, 7),
-                    digits.substring(7));
+                    digits.substring(0,2), digits.substring(2,7), digits.substring(7));
         if (digits.length() == 10)
             return String.format("(%s) %s-%s",
-                    digits.substring(0, 2),
-                    digits.substring(2, 6),
-                    digits.substring(6));
+                    digits.substring(0,2), digits.substring(2,6), digits.substring(6));
         return digits;
     }
 }

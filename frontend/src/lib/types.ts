@@ -5,8 +5,6 @@ export interface User {
   token: string;
 }
 
-export type StickerStatus = 'TENHO' | 'NAO_TENHO';
-
 export interface Sticker {
   id: number;
   code: string;
@@ -21,7 +19,7 @@ export interface UserSticker {
   name: string;
   team: string;
   albumNumber?: number;
-  status: StickerStatus;
+  owned: boolean;         // true = TENHO, false = NAO_TENHO
   repeatedCount: number;
   updatedAt?: string;
 }
@@ -54,7 +52,8 @@ export interface CreatePostPayload {
 export interface Match {
   userId: number;
   userName: string;
-  userEmail: string;
+  userCode?: string;
+  userPhone?: string;
   theyHaveWhatINeed: Sticker[];
   iHaveWhatTheyNeed: Sticker[];
   matchScore: number;

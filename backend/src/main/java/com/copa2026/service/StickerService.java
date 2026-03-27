@@ -8,31 +8,37 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
 public class StickerService {
 
-    private final StickerRepository stickerRepository;
+    private final StickerRepository     stickerRepository;
     private final UserStickerRepository userStickerRepository;
-    private final UserRepository userRepository;
+    private final UserRepository        userRepository;
 
     /** Lista todas as figurinhas */
     public List<StickerResponse> getAllStickers() {
-        return stickerRepository.findAll()
-                .stream()
+        return stickerRepository.findAll().stream()
                 .map(this::toStickerResponse)
                 .collect(Collectors.toList());
     }
 
     /**
      * Álbum completo do usuário.
-     * Figurinhas sem registro aparecem como NAO_TENHO, repeatedCount=0.
+     * owned=true  → tem registro no banco
+     * owned=false → ausência de registro
      */
     public List<UserStickerResponse> getUserAlbum(Long userId) {
         List<Sticker> all = stickerRepository.findAll();
-        List<UserSticker> userStickers = userStickerRepository.findByUserId(userId);
+
+        // Mapeia stickerId → UserSticker (só os que o usuário TEM)
+        Map<Long, UserSticker> myMap = userStickerRepository.findByUserId(userId)
+                .stream()
+                .collect(Collectors.toMap(us -> us.getSticker().getId(), us -> us));
 
         return all.stream().map(sticker -> {
             UserStickerResponse r = new UserStickerResponse();
@@ -42,31 +48,24 @@ public class StickerService {
             r.setTeam(sticker.getTeam());
             r.setAlbumNumber(sticker.getAlbumNumber());
 
-            userStickers.stream()
-                .filter(us -> us.getSticker().getId().equals(sticker.getId()))
-                .findFirst()
-                .ifPresentOrElse(
-                    us -> {
-                        r.setStatus(us.getStatus());
-                        r.setRepeatedCount(us.getRepeatedCount());
-                        r.setUpdatedAt(us.getUpdatedAt());
-                    },
-                    () -> {
-                        r.setStatus(UserSticker.Status.NAO_TENHO);
-                        r.setRepeatedCount(0);
-                    }
-                );
+            UserSticker us = myMap.get(sticker.getId());
+            if (us != null) {
+                r.setOwned(true);
+                r.setRepeatedCount(us.getRepeatedCount());
+                r.setUpdatedAt(us.getUpdatedAt());
+            } else {
+                r.setOwned(false);
+                r.setRepeatedCount(0);
+            }
             return r;
         }).collect(Collectors.toList());
     }
 
     /**
-     * Retorna apenas figurinhas que o usuário TEM (para a página de repetidas).
+     * Figurinhas que o usuário TEM (para página de repetidas).
      */
     public List<UserStickerResponse> getUserOwnedStickers(Long userId) {
-        return userStickerRepository
-                .findByUserIdAndStatus(userId, UserSticker.Status.TENHO)
-                .stream()
+        return userStickerRepository.findByUserId(userId).stream()
                 .map(us -> {
                     UserStickerResponse r = new UserStickerResponse();
                     r.setStickerId(us.getSticker().getId());
@@ -74,64 +73,87 @@ public class StickerService {
                     r.setName(us.getSticker().getName());
                     r.setTeam(us.getSticker().getTeam());
                     r.setAlbumNumber(us.getSticker().getAlbumNumber());
-                    r.setStatus(us.getStatus());
+                    r.setOwned(true);
                     r.setRepeatedCount(us.getRepeatedCount());
                     r.setUpdatedAt(us.getUpdatedAt());
                     return r;
-                })
-                .collect(Collectors.toList());
+                }).collect(Collectors.toList());
     }
 
-    /** Marca figurinha como TENHO ou NAO_TENHO */
+    /**
+     * Marcar como TENHO → cria registro.
+     * Desmarcar (toggle) → deleta registro.
+     */
     @Transactional
-    public UserStickerResponse updateStickerStatus(Long userId, Long stickerId,
-                                                    UserSticker.Status status) {
+    public UserStickerResponse toggleOwned(Long userId, Long stickerId) {
         User user = userRepository.findById(userId)
                 .orElseThrow(() -> new RuntimeException("Usuário não encontrado"));
         Sticker sticker = stickerRepository.findById(stickerId)
                 .orElseThrow(() -> new RuntimeException("Figurinha não encontrada"));
 
-        UserSticker us = userStickerRepository
-                .findByUserIdAndStickerId(userId, stickerId)
-                .orElse(UserSticker.builder().user(user).sticker(sticker).build());
+        var existing = userStickerRepository.findByUserIdAndStickerId(userId, stickerId);
 
-        us.setStatus(status);
-        // Se marcar como NAO_TENHO, zera repetidas também
-        if (status == UserSticker.Status.NAO_TENHO) {
-            us.setRepeatedCount(0);
+        UserStickerResponse r = new UserStickerResponse();
+        r.setStickerId(sticker.getId());
+        r.setCode(sticker.getCode());
+        r.setName(sticker.getName());
+        r.setTeam(sticker.getTeam());
+        r.setAlbumNumber(sticker.getAlbumNumber());
+
+        if (existing.isPresent()) {
+            // Já tem → desmarca (deleta)
+            userStickerRepository.delete(existing.get());
+            r.setOwned(false);
+            r.setRepeatedCount(0);
+        } else {
+            // Não tem → marca TENHO
+            UserSticker us = UserSticker.builder()
+                    .user(user)
+                    .sticker(sticker)
+                    .repeatedCount(0)
+                    .build();
+            us = userStickerRepository.save(us);
+            r.setOwned(true);
+            r.setRepeatedCount(0);
+            r.setUpdatedAt(us.getUpdatedAt());
         }
-        us = userStickerRepository.save(us);
-        return toUserStickerResponse(us);
+        return r;
     }
 
     /**
-     * Atualiza a quantidade de repetidas de uma figurinha.
-     * Só pode atualizar se status = TENHO.
+     * Atualiza quantidade de repetidas (+1 / -1).
+     * Só funciona se já tiver registro (owned=true).
      */
     @Transactional
     public UserStickerResponse updateRepeatedCount(Long userId, Long stickerId, int delta) {
-        UserSticker us = userStickerRepository
-                .findByUserIdAndStickerId(userId, stickerId)
-                .orElseThrow(() -> new RuntimeException("Figurinha não encontrada no álbum"));
-
-        if (us.getStatus() != UserSticker.Status.TENHO) {
-            throw new RuntimeException("Só é possível marcar repetidas de figurinhas que você possui");
-        }
+        UserSticker us = userStickerRepository.findByUserIdAndStickerId(userId, stickerId)
+                .orElseThrow(() -> new RuntimeException(
+                        "Marque a figurinha como TENHO antes de adicionar repetidas"));
 
         int newCount = Math.max(0, us.getRepeatedCount() + delta);
         us.setRepeatedCount(newCount);
         us = userStickerRepository.save(us);
-        return toUserStickerResponse(us);
+
+        UserStickerResponse r = new UserStickerResponse();
+        r.setStickerId(us.getSticker().getId());
+        r.setCode(us.getSticker().getCode());
+        r.setName(us.getSticker().getName());
+        r.setTeam(us.getSticker().getTeam());
+        r.setAlbumNumber(us.getSticker().getAlbumNumber());
+        r.setOwned(true);
+        r.setRepeatedCount(us.getRepeatedCount());
+        r.setUpdatedAt(us.getUpdatedAt());
+        return r;
     }
 
     /** Progresso do álbum */
     public AlbumProgressResponse getAlbumProgress(Long userId) {
-        long total         = stickerRepository.count();
-        long tenho         = userStickerRepository.countByUserIdAndStatus(userId, UserSticker.Status.TENHO);
-        long naoTenho      = total - tenho;
-        long comRepetidas  = userStickerRepository.countByUserIdWithRepeated(userId);
-        long totalRepetidas= userStickerRepository.sumRepeatedCountByUserId(userId);
-        double pct         = total > 0 ? Math.round((double) tenho / total * 1000.0) / 10.0 : 0;
+        long total          = stickerRepository.count();
+        long tenho          = userStickerRepository.countByUserId(userId);
+        long naoTenho       = total - tenho;
+        long comRepetidas   = userStickerRepository.countWithRepeatedByUserId(userId);
+        long totalRepetidas = userStickerRepository.sumRepeatedByUserId(userId);
+        double pct          = total > 0 ? Math.round((double) tenho / total * 1000.0) / 10.0 : 0;
 
         return new AlbumProgressResponse(total, tenho, naoTenho, comRepetidas, totalRepetidas, pct);
     }
@@ -143,19 +165,6 @@ public class StickerService {
         r.setName(s.getName());
         r.setTeam(s.getTeam());
         r.setAlbumNumber(s.getAlbumNumber());
-        return r;
-    }
-
-    private UserStickerResponse toUserStickerResponse(UserSticker us) {
-        UserStickerResponse r = new UserStickerResponse();
-        r.setStickerId(us.getSticker().getId());
-        r.setCode(us.getSticker().getCode());
-        r.setName(us.getSticker().getName());
-        r.setTeam(us.getSticker().getTeam());
-        r.setAlbumNumber(us.getSticker().getAlbumNumber());
-        r.setStatus(us.getStatus());
-        r.setRepeatedCount(us.getRepeatedCount());
-        r.setUpdatedAt(us.getUpdatedAt());
         return r;
     }
 }

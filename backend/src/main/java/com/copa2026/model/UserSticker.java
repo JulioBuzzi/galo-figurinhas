@@ -5,12 +5,9 @@ import lombok.*;
 import java.time.LocalDateTime;
 
 /**
- * Relacionamento entre usuário e figurinha.
- *
- * Lógica:
- *  - status = NAO_TENHO  → não possui (padrão)
- *  - status = TENHO      → possui pelo menos 1
- *  - repeatedCount       → quantas cópias EXTRAS tem (0 = nenhuma repetida)
+ * Só existe registro quando o usuário marcou TENHO.
+ * Ausência de registro = NAO_TENHO.
+ * repeatedCount = quantas cópias extras além da principal.
  */
 @Entity
 @Table(
@@ -35,11 +32,6 @@ public class UserSticker {
     @JoinColumn(name = "sticker_id", nullable = false)
     private Sticker sticker;
 
-    @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
-    @Builder.Default
-    private Status status = Status.NAO_TENHO;
-
     /** Quantidade de cópias repetidas (além da principal) */
     @Column(name = "repeated_count", nullable = false)
     @Builder.Default
@@ -52,9 +44,5 @@ public class UserSticker {
     @PreUpdate
     protected void onUpdate() {
         this.updatedAt = LocalDateTime.now();
-    }
-
-    public enum Status {
-        TENHO, NAO_TENHO
     }
 }
