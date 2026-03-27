@@ -17,22 +17,23 @@ public interface UserStickerRepository extends JpaRepository<UserSticker, Long> 
 
     Optional<UserSticker> findByUserIdAndStickerId(Long userId, Long stickerId);
 
-    /** Conta figurinhas que o usuário tem (registros no banco) */
     long countByUserId(Long userId);
 
-    /** Conta figurinhas com pelo menos 1 repetida */
-    @Query("SELECT COUNT(us) FROM UserSticker us WHERE us.user.id = :userId AND us.repeatedCount > 0")
-    long countWithRepeatedByUserId(@Param("userId") Long userId);
+    @Query("SELECT COUNT(us) FROM UserSticker us WHERE us.user.id = :uid AND us.repeatedCount > 0")
+    long countWithRepeatedByUserId(@Param("uid") Long uid);
 
-    /** Soma total de repetidas */
-    @Query("SELECT COALESCE(SUM(us.repeatedCount), 0) FROM UserSticker us WHERE us.user.id = :userId")
-    long sumRepeatedByUserId(@Param("userId") Long userId);
+    @Query("SELECT COALESCE(SUM(us.repeatedCount), 0) FROM UserSticker us WHERE us.user.id = :uid")
+    long sumRepeatedByUserId(@Param("uid") Long uid);
 
-    /** IDs de stickers que o usuário TEM */
-    @Query("SELECT us.sticker.id FROM UserSticker us WHERE us.user.id = :userId")
-    Set<Long> findStickerIdsByUserId(@Param("userId") Long userId);
+    /** Todos os IDs de stickers que o usuário possui (tem registro) */
+    @Query("SELECT us.sticker.id FROM UserSticker us WHERE us.user.id = :uid")
+    Set<Long> findStickerIdsByUserId(@Param("uid") Long uid);
 
-    /** IDs de stickers com repetidas */
-    @Query("SELECT us.sticker.id FROM UserSticker us WHERE us.user.id = :userId AND us.repeatedCount > 0")
-    Set<Long> findRepeatedStickerIdsByUserId(@Param("userId") Long userId);
+    /** IDs de stickers onde repeatedCount > 0 */
+    @Query("SELECT us.sticker.id FROM UserSticker us WHERE us.user.id = :uid AND us.repeatedCount > 0")
+    Set<Long> findRepeatedStickerIdsByUserId(@Param("uid") Long uid);
+
+    /** Busca UserStickers por lista de IDs de sticker */
+    @Query("SELECT us FROM UserSticker us WHERE us.user.id = :uid AND us.sticker.id IN :stickerIds")
+    List<UserSticker> findByUserIdAndStickerIdIn(@Param("uid") Long uid, @Param("stickerIds") List<Long> stickerIds);
 }
