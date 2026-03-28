@@ -299,7 +299,7 @@ export default function MatchesPage() {
                       </div>
                       {/* Pode oferecer */}
                       <div className="border-2 rounded-xl p-4 text-center"
-                           style={{ backgroundColor: 'rgba(196,161,53,0.08)', borderColor: '#C4A135' }}>
+                          style={{ backgroundColor: 'rgba(196,161,53,0.08)', borderColor: '#C4A135' }}>
                         <p className="text-5xl font-black leading-none" style={{ color: '#C4A135' }}>{canOffer}</p>
                         <p className="text-sm font-black mt-2" style={{ color: '#8a6f1e' }}>
                           {canOffer === 1 ? 'figurinha' : 'figurinhas'}
