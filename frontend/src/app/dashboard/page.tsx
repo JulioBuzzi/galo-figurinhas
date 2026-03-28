@@ -42,7 +42,7 @@ export default function DashboardPage() {
             </div>
             <div className="mt-5 pt-4 border-t border-white/10">
               <p className="text-galo-gold text-xs font-bold uppercase tracking-widest">
-                Atlético Mineiro — Copa 2026
+                Canal do Frossard — Copa 2026
               </p>
             </div>
           </div>
