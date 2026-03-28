@@ -15,22 +15,16 @@ public class MatchController {
 
     private final MatchService matchService;
 
-    /** GET /api/matches/search?targetCode=000001 */
+    /** GET /api/matches/search?targetCode=483920 */
     @GetMapping("/search")
     public ResponseEntity<MatchResponse> search(
             @RequestParam String targetCode,
             Authentication auth) {
         Long userId = (Long) auth.getCredentials();
-        Long targetId;
-        try {
-            targetId = Long.parseLong(targetCode.trim());
-        } catch (NumberFormatException e) {
-            throw new RuntimeException("Código inválido.");
-        }
-        return ResponseEntity.ok(matchService.findMatchBetween(userId, targetId));
+        return ResponseEntity.ok(matchService.findMatchByCode(userId, targetCode.trim()));
     }
 
-    /** POST /api/matches/confirm-trade — registra troca concluída */
+    /** POST /api/matches/confirm-trade */
     @PostMapping("/confirm-trade")
     public ResponseEntity<Void> confirmTrade(
             @RequestBody ConfirmTradeRequest req,

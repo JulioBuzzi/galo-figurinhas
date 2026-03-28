@@ -27,6 +27,10 @@ public class User {
     @Column(nullable = false)
     private String password;
 
+    /** Código único de 6 dígitos aleatórios — independente do ID */
+    @Column(name = "user_code", nullable = false, unique = true, length = 6)
+    private String userCode;
+
     @Column(name = "phone")
     private String phone;
 

@@ -27,93 +27,72 @@ public class MatchService {
     private final StickerService        stickerService;
 
     /**
-     * Calcula trocas possíveis entre dois usuários.
+     * Busca por userCode (6 dígitos aleatórios) em vez de ID.
      *
-     * theyGiveMe = stickers com repeatedCount > 0 do OUTRO que EU não possuo (sem registro)
-     * iGiveThem  = meus stickers com repeatedCount > 0 que o OUTRO não possui (sem registro)
+     * canReceive = repetidas do OUTRO ∩ faltantes do EU
+     *            = theirRepeated - myOwned
+     *
+     * canOffer   = minhas repetidas ∩ faltantes do OUTRO
+     *            = myRepeated - theirOwned
      */
-    public MatchResponse findMatchBetween(Long myUserId, Long targetUserId) {
+    public MatchResponse findMatchByCode(Long myUserId, String targetCode) {
 
-        User target = userRepository.findById(targetUserId)
+        User target = userRepository.findByUserCode(targetCode)
                 .orElseThrow(() -> new RuntimeException(
-                        "Nenhum colecionador encontrado com o código "
-                        + String.format("%06d", targetUserId)));
+                        "Nenhum colecionador encontrado com o código " + targetCode));
 
-        if (myUserId.equals(targetUserId)) {
-            throw new RuntimeException("Você não pode fazer match com você mesmo!");
+        if (myUserId.equals(target.getId())) {
+            throw new RuntimeException("Este é o seu próprio código!");
         }
 
-        // Busca direto no banco — conjuntos de IDs
-        Set<Long> myOwnedIds       = userStickerRepository.findStickerIdsByUserId(myUserId);
-        Set<Long> myRepeatedIds    = userStickerRepository.findRepeatedStickerIdsByUserId(myUserId);
-        Set<Long> theirOwnedIds    = userStickerRepository.findStickerIdsByUserId(targetUserId);
-        Set<Long> theirRepeatedIds = userStickerRepository.findRepeatedStickerIdsByUserId(targetUserId);
+        Set<Long> myOwned       = userStickerRepository.findStickerIdsByUserId(myUserId);
+        Set<Long> myRepeated    = userStickerRepository.findRepeatedStickerIdsByUserId(myUserId);
+        Set<Long> theirOwned    = userStickerRepository.findStickerIdsByUserId(target.getId());
+        Set<Long> theirRepeated = userStickerRepository.findRepeatedStickerIdsByUserId(target.getId());
 
-        log.info("Match {} x {}: myOwned={} myRepeated={} theirOwned={} theirRepeated={}",
-                myUserId, targetUserId,
-                myOwnedIds.size(), myRepeatedIds.size(),
-                theirOwnedIds.size(), theirRepeatedIds.size());
+        // Figurinhas que EU POSSO RECEBER:
+        // repetidas deles que EU ainda não tenho
+        Set<Long> canReceiveIds = new HashSet<>(theirRepeated);
+        canReceiveIds.removeAll(myOwned);
 
-        /*
-         * theyGiveMe: stickers que O OUTRO tem como repetida
-         *             E que EU não tenho (sem registro)
-         */
-        Set<Long> theyGiveMeIds = new HashSet<>(theirRepeatedIds);
-        theyGiveMeIds.removeAll(myOwnedIds);
+        // Figurinhas que EU POSSO OFERECER:
+        // minhas repetidas que ELES ainda não têm
+        Set<Long> canOfferIds = new HashSet<>(myRepeated);
+        canOfferIds.removeAll(theirOwned);
 
-        /*
-         * iGiveThem: meus stickers com repetida
-         *            E que O OUTRO não tem (sem registro)
-         */
-        Set<Long> iGiveThemIds = new HashSet<>(myRepeatedIds);
-        iGiveThemIds.removeAll(theirOwnedIds);
+        List<StickerResponse> canReceive = resolveStickers(canReceiveIds);
+        List<StickerResponse> canOffer   = resolveStickers(canOfferIds);
 
-        List<StickerResponse> theyGiveMe = resolveStickers(theyGiveMeIds);
-        List<StickerResponse> iGiveThem  = resolveStickers(iGiveThemIds);
-        int score = theyGiveMe.size() + iGiveThem.size();
-
-        log.info("Resultado: theyGiveMe={} iGiveThem={} score={}",
-                theyGiveMe.size(), iGiveThem.size(), score);
+        log.info("Match {} x {}: canReceive={} canOffer={}",
+                myUserId, target.getId(), canReceive.size(), canOffer.size());
 
         MatchResponse r = new MatchResponse();
         r.setUserId(target.getId());
         r.setUserName(target.getName());
-        r.setUserCode(String.format("%06d", target.getId()));
+        r.setUserCode(target.getUserCode());
         if (Boolean.TRUE.equals(target.getShowPhone()) && target.getPhone() != null) {
             r.setUserPhone(formatPhone(target.getPhone()));
         }
-        r.setTheyHaveWhatINeed(theyGiveMe);
-        r.setIHaveWhatTheyNeed(iGiveThem);
-        r.setMatchScore(score);
+        r.setTheyHaveWhatINeed(canReceive);
+        r.setIHaveWhatTheyNeed(canOffer);
+        // Score = menor dos dois (trocas realmente possíveis = pares)
+        r.setMatchScore(Math.min(canReceive.size(), canOffer.size()));
         return r;
     }
 
-    /**
-     * Confirma uma troca realizada:
-     *
-     * Para cada sticker RECEBIDO (receivedStickerIds):
-     *   - Se não tenho registro → cria (agora tenho)
-     *   - Se já tenho           → incrementa repeatedCount (ganhou mais uma cópia)
-     *
-     * Para cada sticker DADO (givenStickerIds):
-     *   - Diminui repeatedCount em 1
-     *   - Se repeatedCount chegar a 0, mantém o registro (ainda tenho a principal)
-     */
     @Transactional
     public void confirmTrade(Long myUserId, ConfirmTradeRequest req) {
         User me = userRepository.findById(myUserId)
                 .orElseThrow(() -> new RuntimeException("Usuário não encontrado"));
 
-        // Processa stickers recebidos
+        // Figurinhas recebidas → adiciona ao álbum (ou incrementa se já tinha)
         for (Long stickerId : req.getReceivedStickerIds()) {
             var existing = userStickerRepository.findByUserIdAndStickerId(myUserId, stickerId);
             if (existing.isPresent()) {
-                // Já tenho → incrementa repetida (recebi mais uma cópia)
                 UserSticker us = existing.get();
                 us.setRepeatedCount(us.getRepeatedCount() + 1);
                 userStickerRepository.save(us);
             } else {
-                // Não tenho → cria registro (agora tenho)
                 var sticker = stickerRepository.findById(stickerId)
                         .orElseThrow(() -> new RuntimeException("Figurinha não encontrada: " + stickerId));
                 UserSticker us = new UserSticker();
@@ -124,7 +103,7 @@ public class MatchService {
             }
         }
 
-        // Processa stickers dados
+        // Figurinhas dadas → decrementa repeatedCount
         for (Long stickerId : req.getGivenStickerIds()) {
             var existing = userStickerRepository.findByUserIdAndStickerId(myUserId, stickerId);
             if (existing.isPresent()) {
@@ -132,8 +111,6 @@ public class MatchService {
                 int newCount = Math.max(0, us.getRepeatedCount() - 1);
                 us.setRepeatedCount(newCount);
                 userStickerRepository.save(us);
-                // Nota: não deletamos o registro mesmo com repeatedCount=0
-                // pois o usuário ainda possui a figurinha principal
             }
         }
 

@@ -7,7 +7,7 @@ import { useAuthStore } from '@/contexts/authStore';
 import { AlbumProgress } from '@/lib/types';
 import api from '@/lib/api';
 import Link from 'next/link';
-import { BookOpen, Newspaper, Users, Shield, TrendingUp, RefreshCw } from 'lucide-react';
+import { BookOpen, Users, Shield, TrendingUp, RefreshCw } from 'lucide-react';
 
 export default function DashboardPage() {
   const user = useAuthStore((s) => s.user);
@@ -25,7 +25,7 @@ export default function DashboardPage() {
         <Navbar />
         <main className="max-w-4xl mx-auto px-4 py-8">
 
-          {/* Hero card */}
+          {/* Hero */}
           <div className="rounded-2xl p-6 mb-8 shadow-xl relative overflow-hidden"
                style={{ background: 'linear-gradient(135deg, #0a0a0a 0%, #2a2a2a 100%)' }}>
             <div className="absolute top-0 right-0 w-48 h-48 opacity-5"
@@ -36,15 +36,13 @@ export default function DashboardPage() {
                 <h1 className="text-2xl font-black text-white">{user?.name}</h1>
                 <p className="text-white/40 text-sm mt-1">{user?.email}</p>
               </div>
-              <div className="w-14 h-14 bg-galo-gold rounded-xl flex items-center justify-center shadow-lg shadow-galo-gold/30">
-                <Shield className="text-galo-black" size={28} fill="currentColor" />
+              <div className="w-14 h-14 bg-galo-gold rounded-xl flex items-center justify-center shadow-lg text-3xl">
+                🐓
               </div>
             </div>
-
-            {/* Faixa dourada */}
             <div className="mt-5 pt-4 border-t border-white/10">
-              <p className="text-galo-gold text-xs font-bold uppercase tracking-widest mb-1">
-                Atletico Mineiro — Copa 2026
+              <p className="text-galo-gold text-xs font-bold uppercase tracking-widest">
+                Atlético Mineiro — Copa 2026
               </p>
             </div>
           </div>
@@ -59,38 +57,25 @@ export default function DashboardPage() {
                 </h2>
                 <span className="text-3xl font-black text-galo-black">{pct}%</span>
               </div>
-
-              {/* Barra dourada */}
               <div className="w-full h-3 bg-gray-100 rounded-full overflow-hidden mb-5">
-                <div
-                  className="h-full rounded-full transition-all duration-700"
-                  style={{
-                    width: `${pct}%`,
-                    background: 'linear-gradient(90deg, #C4A135, #e8bf4a)',
-                    boxShadow: '0 0 8px rgba(196,161,53,0.5)'
-                  }}
-                />
+                <div className="h-full rounded-full transition-all duration-700"
+                     style={{ width: `${pct}%`, background: 'linear-gradient(90deg, #C4A135, #e8bf4a)', boxShadow: '0 0 8px rgba(196,161,53,0.5)' }} />
               </div>
-
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                <StatBox value={progress.tenho}         label="Tenho"        color="text-green-700"  bg="bg-green-50 border-green-200" />
-                <StatBox value={progress.naoTenho}      label="Faltam"       color="text-red-600"    bg="bg-red-50 border-red-200" />
-                <StatBox value={progress.comRepetidas}  label="C/ Repetidas" color="text-yellow-700" bg="bg-yellow-50 border-yellow-200" />
-                <StatBox value={progress.totalRepetidas}label="Tot. Repet."  color="text-orange-700" bg="bg-orange-50 border-orange-200" />
+                <StatBox value={progress.tenho}          label="Tenho"        color="text-green-700"  bg="bg-green-50 border-green-200" />
+                <StatBox value={progress.naoTenho}       label="Faltam"       color="text-red-600"    bg="bg-red-50 border-red-200" />
+                <StatBox value={progress.comRepetidas}   label="C/ Repetidas" color="text-yellow-700" bg="bg-yellow-50 border-yellow-200" />
+                <StatBox value={progress.totalRepetidas} label="Tot. Repet."  color="text-orange-700" bg="bg-orange-50 border-orange-200" />
               </div>
-
-              <p className="text-xs text-gray-400 mt-4 text-center">
-                {progress.total} figurinhas no álbum
-              </p>
+              <p className="text-xs text-gray-400 mt-4 text-center">{progress.total} figurinhas no álbum</p>
             </div>
           )}
 
-          {/* Cards de navegação */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-            <NavCard href="/album"     icon={<BookOpen size={24}/>}   title="Álbum"     desc="Marque suas figurinhas"    dark />
-            <NavCard href="/repetidas" icon={<RefreshCw size={24}/>}  title="Repetidas" desc="Gerencie suas trocas"      gold />
-            <NavCard href="/feed"      icon={<Newspaper size={24}/>}  title="Feed"      desc="Posts da comunidade"       />
-            <NavCard href="/matches"   icon={<Users size={24}/>}      title="Matches"   desc="Encontre parceiros"        />
+          {/* Cards — sem feed */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <NavCard href="/album"     icon={<BookOpen size={24}/>}  title="Álbum"     desc="Marque suas figurinhas"  dark />
+            <NavCard href="/repetidas" icon={<RefreshCw size={24}/>} title="Repetidas" desc="Gerencie suas trocas"    gold />
+            <NavCard href="/matches"   icon={<Users size={24}/>}     title="Matches"   desc="Encontre parceiros"      />
           </div>
         </main>
       </div>
@@ -116,10 +101,9 @@ function NavCard({ href, icon, title, desc, dark, gold }: {
   const bg = dark ? 'bg-galo-black hover:bg-galo-gray text-white'
            : gold ? 'bg-galo-gold hover:bg-galo-gold2 text-galo-black'
            :        'bg-white hover:bg-gray-50 text-gray-800 border border-gray-200';
-
   return (
     <Link href={href}
-      className={`${bg} rounded-2xl p-5 flex flex-col gap-3 transition-all cursor-pointer shadow-sm hover:shadow-md`}>
+      className={`${bg} rounded-2xl p-5 flex flex-col gap-3 transition-all shadow-sm hover:shadow-md cursor-pointer`}>
       <div className={`w-10 h-10 rounded-xl flex items-center justify-center
         ${dark ? 'bg-white/10' : gold ? 'bg-black/10' : 'bg-gray-100'}`}>
         {icon}

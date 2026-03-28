@@ -32,11 +32,9 @@ public class UserService {
             }
             user.setPhone(digits.isEmpty() ? null : digits);
         }
-
         if (req.getShowPhone() != null) {
             user.setShowPhone(req.getShowPhone());
         }
-
         user = userRepository.save(user);
         return toResponse(user);
     }
@@ -48,7 +46,7 @@ public class UserService {
         r.setEmail(user.getEmail());
         r.setPhone(user.getPhone());
         r.setShowPhone(user.getShowPhone() != null && user.getShowPhone());
-        r.setUserCode(String.format("%06d", user.getId()));
+        r.setUserCode(user.getUserCode());
         return r;
     }
 }
