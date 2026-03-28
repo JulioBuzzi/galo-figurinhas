@@ -17,8 +17,11 @@ export default function RepetidasPage() {
 
   useEffect(() => {
     api.get('/api/album/owned').then((r) => {
-      setStickers(r.data);
-      const teams = Array.from(new Set((r.data as UserSticker[]).map((s) => s.team)));
+      const sorted = (r.data as UserSticker[]).sort(
+        (a, b) => (a.albumNumber ?? 0) - (b.albumNumber ?? 0)
+      );
+      setStickers(sorted);
+      const teams = Array.from(new Set(sorted.map((s) => s.team)));
       const init: Record<string, boolean> = {};
       teams.forEach((t) => { init[t] = true; });
       setExpanded(init);
