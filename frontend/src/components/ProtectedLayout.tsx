@@ -1,0 +1,35 @@
+'use client';
+
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+import { useAuthStore } from '@/contexts/authStore';
+import { Shield } from 'lucide-react';
+
+export default function ProtectedLayout({ children }: { children: React.ReactNode }) {
+  const router = useRouter();
+  const user   = useAuthStore((s) => s.user);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (!user) router.replace('/login');
+    }, 100);
+    return () => clearTimeout(timer);
+  }, [user, router]);
+
+  if (!user) {
+    return (
+      <div className="min-h-screen flex items-center justify-center"
+           style={{ background: 'linear-gradient(135deg, #0a0a0a, #1a1a1a)' }}>
+        <div className="flex flex-col items-center gap-4">
+          <div className="w-16 h-16 bg-galo-gold rounded-2xl flex items-center justify-center
+                          animate-pulse shadow-lg shadow-galo-gold/30">
+            <Shield className="text-galo-black" size={32} fill="currentColor" />
+          </div>
+          <p className="text-white/40 text-sm">Carregando...</p>
+        </div>
+      </div>
+    );
+  }
+
+  return <>{children}</>;
+}

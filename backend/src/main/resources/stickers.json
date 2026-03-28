@@ -1,0 +1,5882 @@
+[
+  {
+    "albumNumber": 1,
+    "code": "FIG-001",
+    "name": "Figurinha 001",
+    "team": "Abertura"
+  },
+  {
+    "albumNumber": 2,
+    "code": "FIG-002",
+    "name": "Figurinha 002",
+    "team": "Abertura"
+  },
+  {
+    "albumNumber": 3,
+    "code": "FIG-003",
+    "name": "Figurinha 003",
+    "team": "Abertura"
+  },
+  {
+    "albumNumber": 4,
+    "code": "FIG-004",
+    "name": "Figurinha 004",
+    "team": "Abertura"
+  },
+  {
+    "albumNumber": 5,
+    "code": "FIG-005",
+    "name": "Figurinha 005",
+    "team": "Abertura"
+  },
+  {
+    "albumNumber": 6,
+    "code": "FIG-006",
+    "name": "Figurinha 006",
+    "team": "Abertura"
+  },
+  {
+    "albumNumber": 7,
+    "code": "FIG-007",
+    "name": "Figurinha 007",
+    "team": "Abertura"
+  },
+  {
+    "albumNumber": 8,
+    "code": "FIG-008",
+    "name": "Figurinha 008",
+    "team": "Abertura"
+  },
+  {
+    "albumNumber": 9,
+    "code": "FIG-009",
+    "name": "Figurinha 009",
+    "team": "Abertura"
+  },
+  {
+    "albumNumber": 10,
+    "code": "FIG-010",
+    "name": "Figurinha 010",
+    "team": "Abertura"
+  },
+  {
+    "albumNumber": 11,
+    "code": "FIG-011",
+    "name": "Figurinha 011",
+    "team": "Sede - USA"
+  },
+  {
+    "albumNumber": 12,
+    "code": "FIG-012",
+    "name": "Figurinha 012",
+    "team": "Sede - USA"
+  },
+  {
+    "albumNumber": 13,
+    "code": "FIG-013",
+    "name": "Figurinha 013",
+    "team": "Sede - USA"
+  },
+  {
+    "albumNumber": 14,
+    "code": "FIG-014",
+    "name": "Figurinha 014",
+    "team": "Sede - USA"
+  },
+  {
+    "albumNumber": 15,
+    "code": "FIG-015",
+    "name": "Figurinha 015",
+    "team": "Sede - USA"
+  },
+  {
+    "albumNumber": 16,
+    "code": "FIG-016",
+    "name": "Figurinha 016",
+    "team": "Sede - USA"
+  },
+  {
+    "albumNumber": 17,
+    "code": "FIG-017",
+    "name": "Figurinha 017",
+    "team": "Sede - USA"
+  },
+  {
+    "albumNumber": 18,
+    "code": "FIG-018",
+    "name": "Figurinha 018",
+    "team": "Sede - USA"
+  },
+  {
+    "albumNumber": 19,
+    "code": "FIG-019",
+    "name": "Figurinha 019",
+    "team": "Sede - USA"
+  },
+  {
+    "albumNumber": 20,
+    "code": "FIG-020",
+    "name": "Figurinha 020",
+    "team": "Sede - USA"
+  },
+  {
+    "albumNumber": 21,
+    "code": "FIG-021",
+    "name": "Figurinha 021",
+    "team": "Sede - USA"
+  },
+  {
+    "albumNumber": 22,
+    "code": "FIG-022",
+    "name": "Figurinha 022",
+    "team": "Sede - USA"
+  },
+  {
+    "albumNumber": 23,
+    "code": "FIG-023",
+    "name": "Figurinha 023",
+    "team": "Sede - USA"
+  },
+  {
+    "albumNumber": 24,
+    "code": "FIG-024",
+    "name": "Figurinha 024",
+    "team": "Sede - USA"
+  },
+  {
+    "albumNumber": 25,
+    "code": "FIG-025",
+    "name": "Figurinha 025",
+    "team": "Sede - USA"
+  },
+  {
+    "albumNumber": 26,
+    "code": "FIG-026",
+    "name": "Figurinha 026",
+    "team": "Sede - USA"
+  },
+  {
+    "albumNumber": 27,
+    "code": "FIG-027",
+    "name": "Figurinha 027",
+    "team": "Sede - USA"
+  },
+  {
+    "albumNumber": 28,
+    "code": "FIG-028",
+    "name": "Figurinha 028",
+    "team": "Sede - USA"
+  },
+  {
+    "albumNumber": 29,
+    "code": "FIG-029",
+    "name": "Figurinha 029",
+    "team": "Sede - México"
+  },
+  {
+    "albumNumber": 30,
+    "code": "FIG-030",
+    "name": "Figurinha 030",
+    "team": "Sede - México"
+  },
+  {
+    "albumNumber": 31,
+    "code": "FIG-031",
+    "name": "Figurinha 031",
+    "team": "Sede - México"
+  },
+  {
+    "albumNumber": 32,
+    "code": "FIG-032",
+    "name": "Figurinha 032",
+    "team": "Sede - México"
+  },
+  {
+    "albumNumber": 33,
+    "code": "FIG-033",
+    "name": "Figurinha 033",
+    "team": "Sede - México"
+  },
+  {
+    "albumNumber": 34,
+    "code": "FIG-034",
+    "name": "Figurinha 034",
+    "team": "Sede - México"
+  },
+  {
+    "albumNumber": 35,
+    "code": "FIG-035",
+    "name": "Figurinha 035",
+    "team": "Sede - México"
+  },
+  {
+    "albumNumber": 36,
+    "code": "FIG-036",
+    "name": "Figurinha 036",
+    "team": "Sede - México"
+  },
+  {
+    "albumNumber": 37,
+    "code": "FIG-037",
+    "name": "Figurinha 037",
+    "team": "Sede - México"
+  },
+  {
+    "albumNumber": 38,
+    "code": "FIG-038",
+    "name": "Figurinha 038",
+    "team": "Sede - México"
+  },
+  {
+    "albumNumber": 39,
+    "code": "FIG-039",
+    "name": "Figurinha 039",
+    "team": "Sede - México"
+  },
+  {
+    "albumNumber": 40,
+    "code": "FIG-040",
+    "name": "Figurinha 040",
+    "team": "Sede - México"
+  },
+  {
+    "albumNumber": 41,
+    "code": "FIG-041",
+    "name": "Figurinha 041",
+    "team": "Sede - Canadá"
+  },
+  {
+    "albumNumber": 42,
+    "code": "FIG-042",
+    "name": "Figurinha 042",
+    "team": "Sede - Canadá"
+  },
+  {
+    "albumNumber": 43,
+    "code": "FIG-043",
+    "name": "Figurinha 043",
+    "team": "Sede - Canadá"
+  },
+  {
+    "albumNumber": 44,
+    "code": "FIG-044",
+    "name": "Figurinha 044",
+    "team": "Sede - Canadá"
+  },
+  {
+    "albumNumber": 45,
+    "code": "FIG-045",
+    "name": "Figurinha 045",
+    "team": "Sede - Canadá"
+  },
+  {
+    "albumNumber": 46,
+    "code": "FIG-046",
+    "name": "Figurinha 046",
+    "team": "Sede - Canadá"
+  },
+  {
+    "albumNumber": 47,
+    "code": "FIG-047",
+    "name": "Figurinha 047",
+    "team": "Sede - Canadá"
+  },
+  {
+    "albumNumber": 48,
+    "code": "FIG-048",
+    "name": "Figurinha 048",
+    "team": "Sede - Canadá"
+  },
+  {
+    "albumNumber": 49,
+    "code": "FIG-049",
+    "name": "Figurinha 049",
+    "team": "Sede - Canadá"
+  },
+  {
+    "albumNumber": 50,
+    "code": "FIG-050",
+    "name": "Figurinha 050",
+    "team": "Sede - Canadá"
+  },
+  {
+    "albumNumber": 51,
+    "code": "FIG-051",
+    "name": "Figurinha 051",
+    "team": "Sede - Canadá"
+  },
+  {
+    "albumNumber": 52,
+    "code": "FIG-052",
+    "name": "Figurinha 052",
+    "team": "Sede - Canadá"
+  },
+  {
+    "albumNumber": 53,
+    "code": "FIG-053",
+    "name": "Figurinha 053",
+    "team": "Brasil"
+  },
+  {
+    "albumNumber": 54,
+    "code": "FIG-054",
+    "name": "Figurinha 054",
+    "team": "Brasil"
+  },
+  {
+    "albumNumber": 55,
+    "code": "FIG-055",
+    "name": "Figurinha 055",
+    "team": "Brasil"
+  },
+  {
+    "albumNumber": 56,
+    "code": "FIG-056",
+    "name": "Figurinha 056",
+    "team": "Brasil"
+  },
+  {
+    "albumNumber": 57,
+    "code": "FIG-057",
+    "name": "Figurinha 057",
+    "team": "Brasil"
+  },
+  {
+    "albumNumber": 58,
+    "code": "FIG-058",
+    "name": "Figurinha 058",
+    "team": "Brasil"
+  },
+  {
+    "albumNumber": 59,
+    "code": "FIG-059",
+    "name": "Figurinha 059",
+    "team": "Brasil"
+  },
+  {
+    "albumNumber": 60,
+    "code": "FIG-060",
+    "name": "Figurinha 060",
+    "team": "Brasil"
+  },
+  {
+    "albumNumber": 61,
+    "code": "FIG-061",
+    "name": "Figurinha 061",
+    "team": "Brasil"
+  },
+  {
+    "albumNumber": 62,
+    "code": "FIG-062",
+    "name": "Figurinha 062",
+    "team": "Brasil"
+  },
+  {
+    "albumNumber": 63,
+    "code": "FIG-063",
+    "name": "Figurinha 063",
+    "team": "Brasil"
+  },
+  {
+    "albumNumber": 64,
+    "code": "FIG-064",
+    "name": "Figurinha 064",
+    "team": "Brasil"
+  },
+  {
+    "albumNumber": 65,
+    "code": "FIG-065",
+    "name": "Figurinha 065",
+    "team": "Brasil"
+  },
+  {
+    "albumNumber": 66,
+    "code": "FIG-066",
+    "name": "Figurinha 066",
+    "team": "Brasil"
+  },
+  {
+    "albumNumber": 67,
+    "code": "FIG-067",
+    "name": "Figurinha 067",
+    "team": "Brasil"
+  },
+  {
+    "albumNumber": 68,
+    "code": "FIG-068",
+    "name": "Figurinha 068",
+    "team": "Brasil"
+  },
+  {
+    "albumNumber": 69,
+    "code": "FIG-069",
+    "name": "Figurinha 069",
+    "team": "Brasil"
+  },
+  {
+    "albumNumber": 70,
+    "code": "FIG-070",
+    "name": "Figurinha 070",
+    "team": "Brasil"
+  },
+  {
+    "albumNumber": 71,
+    "code": "FIG-071",
+    "name": "Figurinha 071",
+    "team": "Argentina"
+  },
+  {
+    "albumNumber": 72,
+    "code": "FIG-072",
+    "name": "Figurinha 072",
+    "team": "Argentina"
+  },
+  {
+    "albumNumber": 73,
+    "code": "FIG-073",
+    "name": "Figurinha 073",
+    "team": "Argentina"
+  },
+  {
+    "albumNumber": 74,
+    "code": "FIG-074",
+    "name": "Figurinha 074",
+    "team": "Argentina"
+  },
+  {
+    "albumNumber": 75,
+    "code": "FIG-075",
+    "name": "Figurinha 075",
+    "team": "Argentina"
+  },
+  {
+    "albumNumber": 76,
+    "code": "FIG-076",
+    "name": "Figurinha 076",
+    "team": "Argentina"
+  },
+  {
+    "albumNumber": 77,
+    "code": "FIG-077",
+    "name": "Figurinha 077",
+    "team": "Argentina"
+  },
+  {
+    "albumNumber": 78,
+    "code": "FIG-078",
+    "name": "Figurinha 078",
+    "team": "Argentina"
+  },
+  {
+    "albumNumber": 79,
+    "code": "FIG-079",
+    "name": "Figurinha 079",
+    "team": "Argentina"
+  },
+  {
+    "albumNumber": 80,
+    "code": "FIG-080",
+    "name": "Figurinha 080",
+    "team": "Argentina"
+  },
+  {
+    "albumNumber": 81,
+    "code": "FIG-081",
+    "name": "Figurinha 081",
+    "team": "Argentina"
+  },
+  {
+    "albumNumber": 82,
+    "code": "FIG-082",
+    "name": "Figurinha 082",
+    "team": "Argentina"
+  },
+  {
+    "albumNumber": 83,
+    "code": "FIG-083",
+    "name": "Figurinha 083",
+    "team": "Argentina"
+  },
+  {
+    "albumNumber": 84,
+    "code": "FIG-084",
+    "name": "Figurinha 084",
+    "team": "Argentina"
+  },
+  {
+    "albumNumber": 85,
+    "code": "FIG-085",
+    "name": "Figurinha 085",
+    "team": "Argentina"
+  },
+  {
+    "albumNumber": 86,
+    "code": "FIG-086",
+    "name": "Figurinha 086",
+    "team": "Argentina"
+  },
+  {
+    "albumNumber": 87,
+    "code": "FIG-087",
+    "name": "Figurinha 087",
+    "team": "Argentina"
+  },
+  {
+    "albumNumber": 88,
+    "code": "FIG-088",
+    "name": "Figurinha 088",
+    "team": "Argentina"
+  },
+  {
+    "albumNumber": 89,
+    "code": "FIG-089",
+    "name": "Figurinha 089",
+    "team": "França"
+  },
+  {
+    "albumNumber": 90,
+    "code": "FIG-090",
+    "name": "Figurinha 090",
+    "team": "França"
+  },
+  {
+    "albumNumber": 91,
+    "code": "FIG-091",
+    "name": "Figurinha 091",
+    "team": "França"
+  },
+  {
+    "albumNumber": 92,
+    "code": "FIG-092",
+    "name": "Figurinha 092",
+    "team": "França"
+  },
+  {
+    "albumNumber": 93,
+    "code": "FIG-093",
+    "name": "Figurinha 093",
+    "team": "França"
+  },
+  {
+    "albumNumber": 94,
+    "code": "FIG-094",
+    "name": "Figurinha 094",
+    "team": "França"
+  },
+  {
+    "albumNumber": 95,
+    "code": "FIG-095",
+    "name": "Figurinha 095",
+    "team": "França"
+  },
+  {
+    "albumNumber": 96,
+    "code": "FIG-096",
+    "name": "Figurinha 096",
+    "team": "França"
+  },
+  {
+    "albumNumber": 97,
+    "code": "FIG-097",
+    "name": "Figurinha 097",
+    "team": "França"
+  },
+  {
+    "albumNumber": 98,
+    "code": "FIG-098",
+    "name": "Figurinha 098",
+    "team": "França"
+  },
+  {
+    "albumNumber": 99,
+    "code": "FIG-099",
+    "name": "Figurinha 099",
+    "team": "França"
+  },
+  {
+    "albumNumber": 100,
+    "code": "FIG-100",
+    "name": "Figurinha 100",
+    "team": "França"
+  },
+  {
+    "albumNumber": 101,
+    "code": "FIG-101",
+    "name": "Figurinha 101",
+    "team": "França"
+  },
+  {
+    "albumNumber": 102,
+    "code": "FIG-102",
+    "name": "Figurinha 102",
+    "team": "França"
+  },
+  {
+    "albumNumber": 103,
+    "code": "FIG-103",
+    "name": "Figurinha 103",
+    "team": "França"
+  },
+  {
+    "albumNumber": 104,
+    "code": "FIG-104",
+    "name": "Figurinha 104",
+    "team": "França"
+  },
+  {
+    "albumNumber": 105,
+    "code": "FIG-105",
+    "name": "Figurinha 105",
+    "team": "França"
+  },
+  {
+    "albumNumber": 106,
+    "code": "FIG-106",
+    "name": "Figurinha 106",
+    "team": "França"
+  },
+  {
+    "albumNumber": 107,
+    "code": "FIG-107",
+    "name": "Figurinha 107",
+    "team": "Inglaterra"
+  },
+  {
+    "albumNumber": 108,
+    "code": "FIG-108",
+    "name": "Figurinha 108",
+    "team": "Inglaterra"
+  },
+  {
+    "albumNumber": 109,
+    "code": "FIG-109",
+    "name": "Figurinha 109",
+    "team": "Inglaterra"
+  },
+  {
+    "albumNumber": 110,
+    "code": "FIG-110",
+    "name": "Figurinha 110",
+    "team": "Inglaterra"
+  },
+  {
+    "albumNumber": 111,
+    "code": "FIG-111",
+    "name": "Figurinha 111",
+    "team": "Inglaterra"
+  },
+  {
+    "albumNumber": 112,
+    "code": "FIG-112",
+    "name": "Figurinha 112",
+    "team": "Inglaterra"
+  },
+  {
+    "albumNumber": 113,
+    "code": "FIG-113",
+    "name": "Figurinha 113",
+    "team": "Inglaterra"
+  },
+  {
+    "albumNumber": 114,
+    "code": "FIG-114",
+    "name": "Figurinha 114",
+    "team": "Inglaterra"
+  },
+  {
+    "albumNumber": 115,
+    "code": "FIG-115",
+    "name": "Figurinha 115",
+    "team": "Inglaterra"
+  },
+  {
+    "albumNumber": 116,
+    "code": "FIG-116",
+    "name": "Figurinha 116",
+    "team": "Inglaterra"
+  },
+  {
+    "albumNumber": 117,
+    "code": "FIG-117",
+    "name": "Figurinha 117",
+    "team": "Inglaterra"
+  },
+  {
+    "albumNumber": 118,
+    "code": "FIG-118",
+    "name": "Figurinha 118",
+    "team": "Inglaterra"
+  },
+  {
+    "albumNumber": 119,
+    "code": "FIG-119",
+    "name": "Figurinha 119",
+    "team": "Inglaterra"
+  },
+  {
+    "albumNumber": 120,
+    "code": "FIG-120",
+    "name": "Figurinha 120",
+    "team": "Inglaterra"
+  },
+  {
+    "albumNumber": 121,
+    "code": "FIG-121",
+    "name": "Figurinha 121",
+    "team": "Inglaterra"
+  },
+  {
+    "albumNumber": 122,
+    "code": "FIG-122",
+    "name": "Figurinha 122",
+    "team": "Inglaterra"
+  },
+  {
+    "albumNumber": 123,
+    "code": "FIG-123",
+    "name": "Figurinha 123",
+    "team": "Inglaterra"
+  },
+  {
+    "albumNumber": 124,
+    "code": "FIG-124",
+    "name": "Figurinha 124",
+    "team": "Inglaterra"
+  },
+  {
+    "albumNumber": 125,
+    "code": "FIG-125",
+    "name": "Figurinha 125",
+    "team": "Alemanha"
+  },
+  {
+    "albumNumber": 126,
+    "code": "FIG-126",
+    "name": "Figurinha 126",
+    "team": "Alemanha"
+  },
+  {
+    "albumNumber": 127,
+    "code": "FIG-127",
+    "name": "Figurinha 127",
+    "team": "Alemanha"
+  },
+  {
+    "albumNumber": 128,
+    "code": "FIG-128",
+    "name": "Figurinha 128",
+    "team": "Alemanha"
+  },
+  {
+    "albumNumber": 129,
+    "code": "FIG-129",
+    "name": "Figurinha 129",
+    "team": "Alemanha"
+  },
+  {
+    "albumNumber": 130,
+    "code": "FIG-130",
+    "name": "Figurinha 130",
+    "team": "Alemanha"
+  },
+  {
+    "albumNumber": 131,
+    "code": "FIG-131",
+    "name": "Figurinha 131",
+    "team": "Alemanha"
+  },
+  {
+    "albumNumber": 132,
+    "code": "FIG-132",
+    "name": "Figurinha 132",
+    "team": "Alemanha"
+  },
+  {
+    "albumNumber": 133,
+    "code": "FIG-133",
+    "name": "Figurinha 133",
+    "team": "Alemanha"
+  },
+  {
+    "albumNumber": 134,
+    "code": "FIG-134",
+    "name": "Figurinha 134",
+    "team": "Alemanha"
+  },
+  {
+    "albumNumber": 135,
+    "code": "FIG-135",
+    "name": "Figurinha 135",
+    "team": "Alemanha"
+  },
+  {
+    "albumNumber": 136,
+    "code": "FIG-136",
+    "name": "Figurinha 136",
+    "team": "Alemanha"
+  },
+  {
+    "albumNumber": 137,
+    "code": "FIG-137",
+    "name": "Figurinha 137",
+    "team": "Alemanha"
+  },
+  {
+    "albumNumber": 138,
+    "code": "FIG-138",
+    "name": "Figurinha 138",
+    "team": "Alemanha"
+  },
+  {
+    "albumNumber": 139,
+    "code": "FIG-139",
+    "name": "Figurinha 139",
+    "team": "Alemanha"
+  },
+  {
+    "albumNumber": 140,
+    "code": "FIG-140",
+    "name": "Figurinha 140",
+    "team": "Alemanha"
+  },
+  {
+    "albumNumber": 141,
+    "code": "FIG-141",
+    "name": "Figurinha 141",
+    "team": "Alemanha"
+  },
+  {
+    "albumNumber": 142,
+    "code": "FIG-142",
+    "name": "Figurinha 142",
+    "team": "Alemanha"
+  },
+  {
+    "albumNumber": 143,
+    "code": "FIG-143",
+    "name": "Figurinha 143",
+    "team": "Espanha"
+  },
+  {
+    "albumNumber": 144,
+    "code": "FIG-144",
+    "name": "Figurinha 144",
+    "team": "Espanha"
+  },
+  {
+    "albumNumber": 145,
+    "code": "FIG-145",
+    "name": "Figurinha 145",
+    "team": "Espanha"
+  },
+  {
+    "albumNumber": 146,
+    "code": "FIG-146",
+    "name": "Figurinha 146",
+    "team": "Espanha"
+  },
+  {
+    "albumNumber": 147,
+    "code": "FIG-147",
+    "name": "Figurinha 147",
+    "team": "Espanha"
+  },
+  {
+    "albumNumber": 148,
+    "code": "FIG-148",
+    "name": "Figurinha 148",
+    "team": "Espanha"
+  },
+  {
+    "albumNumber": 149,
+    "code": "FIG-149",
+    "name": "Figurinha 149",
+    "team": "Espanha"
+  },
+  {
+    "albumNumber": 150,
+    "code": "FIG-150",
+    "name": "Figurinha 150",
+    "team": "Espanha"
+  },
+  {
+    "albumNumber": 151,
+    "code": "FIG-151",
+    "name": "Figurinha 151",
+    "team": "Espanha"
+  },
+  {
+    "albumNumber": 152,
+    "code": "FIG-152",
+    "name": "Figurinha 152",
+    "team": "Espanha"
+  },
+  {
+    "albumNumber": 153,
+    "code": "FIG-153",
+    "name": "Figurinha 153",
+    "team": "Espanha"
+  },
+  {
+    "albumNumber": 154,
+    "code": "FIG-154",
+    "name": "Figurinha 154",
+    "team": "Espanha"
+  },
+  {
+    "albumNumber": 155,
+    "code": "FIG-155",
+    "name": "Figurinha 155",
+    "team": "Espanha"
+  },
+  {
+    "albumNumber": 156,
+    "code": "FIG-156",
+    "name": "Figurinha 156",
+    "team": "Espanha"
+  },
+  {
+    "albumNumber": 157,
+    "code": "FIG-157",
+    "name": "Figurinha 157",
+    "team": "Espanha"
+  },
+  {
+    "albumNumber": 158,
+    "code": "FIG-158",
+    "name": "Figurinha 158",
+    "team": "Espanha"
+  },
+  {
+    "albumNumber": 159,
+    "code": "FIG-159",
+    "name": "Figurinha 159",
+    "team": "Espanha"
+  },
+  {
+    "albumNumber": 160,
+    "code": "FIG-160",
+    "name": "Figurinha 160",
+    "team": "Espanha"
+  },
+  {
+    "albumNumber": 161,
+    "code": "FIG-161",
+    "name": "Figurinha 161",
+    "team": "Portugal"
+  },
+  {
+    "albumNumber": 162,
+    "code": "FIG-162",
+    "name": "Figurinha 162",
+    "team": "Portugal"
+  },
+  {
+    "albumNumber": 163,
+    "code": "FIG-163",
+    "name": "Figurinha 163",
+    "team": "Portugal"
+  },
+  {
+    "albumNumber": 164,
+    "code": "FIG-164",
+    "name": "Figurinha 164",
+    "team": "Portugal"
+  },
+  {
+    "albumNumber": 165,
+    "code": "FIG-165",
+    "name": "Figurinha 165",
+    "team": "Portugal"
+  },
+  {
+    "albumNumber": 166,
+    "code": "FIG-166",
+    "name": "Figurinha 166",
+    "team": "Portugal"
+  },
+  {
+    "albumNumber": 167,
+    "code": "FIG-167",
+    "name": "Figurinha 167",
+    "team": "Portugal"
+  },
+  {
+    "albumNumber": 168,
+    "code": "FIG-168",
+    "name": "Figurinha 168",
+    "team": "Portugal"
+  },
+  {
+    "albumNumber": 169,
+    "code": "FIG-169",
+    "name": "Figurinha 169",
+    "team": "Portugal"
+  },
+  {
+    "albumNumber": 170,
+    "code": "FIG-170",
+    "name": "Figurinha 170",
+    "team": "Portugal"
+  },
+  {
+    "albumNumber": 171,
+    "code": "FIG-171",
+    "name": "Figurinha 171",
+    "team": "Portugal"
+  },
+  {
+    "albumNumber": 172,
+    "code": "FIG-172",
+    "name": "Figurinha 172",
+    "team": "Portugal"
+  },
+  {
+    "albumNumber": 173,
+    "code": "FIG-173",
+    "name": "Figurinha 173",
+    "team": "Portugal"
+  },
+  {
+    "albumNumber": 174,
+    "code": "FIG-174",
+    "name": "Figurinha 174",
+    "team": "Portugal"
+  },
+  {
+    "albumNumber": 175,
+    "code": "FIG-175",
+    "name": "Figurinha 175",
+    "team": "Portugal"
+  },
+  {
+    "albumNumber": 176,
+    "code": "FIG-176",
+    "name": "Figurinha 176",
+    "team": "Portugal"
+  },
+  {
+    "albumNumber": 177,
+    "code": "FIG-177",
+    "name": "Figurinha 177",
+    "team": "Portugal"
+  },
+  {
+    "albumNumber": 178,
+    "code": "FIG-178",
+    "name": "Figurinha 178",
+    "team": "Portugal"
+  },
+  {
+    "albumNumber": 179,
+    "code": "FIG-179",
+    "name": "Figurinha 179",
+    "team": "Holanda"
+  },
+  {
+    "albumNumber": 180,
+    "code": "FIG-180",
+    "name": "Figurinha 180",
+    "team": "Holanda"
+  },
+  {
+    "albumNumber": 181,
+    "code": "FIG-181",
+    "name": "Figurinha 181",
+    "team": "Holanda"
+  },
+  {
+    "albumNumber": 182,
+    "code": "FIG-182",
+    "name": "Figurinha 182",
+    "team": "Holanda"
+  },
+  {
+    "albumNumber": 183,
+    "code": "FIG-183",
+    "name": "Figurinha 183",
+    "team": "Holanda"
+  },
+  {
+    "albumNumber": 184,
+    "code": "FIG-184",
+    "name": "Figurinha 184",
+    "team": "Holanda"
+  },
+  {
+    "albumNumber": 185,
+    "code": "FIG-185",
+    "name": "Figurinha 185",
+    "team": "Holanda"
+  },
+  {
+    "albumNumber": 186,
+    "code": "FIG-186",
+    "name": "Figurinha 186",
+    "team": "Holanda"
+  },
+  {
+    "albumNumber": 187,
+    "code": "FIG-187",
+    "name": "Figurinha 187",
+    "team": "Holanda"
+  },
+  {
+    "albumNumber": 188,
+    "code": "FIG-188",
+    "name": "Figurinha 188",
+    "team": "Holanda"
+  },
+  {
+    "albumNumber": 189,
+    "code": "FIG-189",
+    "name": "Figurinha 189",
+    "team": "Holanda"
+  },
+  {
+    "albumNumber": 190,
+    "code": "FIG-190",
+    "name": "Figurinha 190",
+    "team": "Holanda"
+  },
+  {
+    "albumNumber": 191,
+    "code": "FIG-191",
+    "name": "Figurinha 191",
+    "team": "Holanda"
+  },
+  {
+    "albumNumber": 192,
+    "code": "FIG-192",
+    "name": "Figurinha 192",
+    "team": "Holanda"
+  },
+  {
+    "albumNumber": 193,
+    "code": "FIG-193",
+    "name": "Figurinha 193",
+    "team": "Holanda"
+  },
+  {
+    "albumNumber": 194,
+    "code": "FIG-194",
+    "name": "Figurinha 194",
+    "team": "Holanda"
+  },
+  {
+    "albumNumber": 195,
+    "code": "FIG-195",
+    "name": "Figurinha 195",
+    "team": "Holanda"
+  },
+  {
+    "albumNumber": 196,
+    "code": "FIG-196",
+    "name": "Figurinha 196",
+    "team": "Holanda"
+  },
+  {
+    "albumNumber": 197,
+    "code": "FIG-197",
+    "name": "Figurinha 197",
+    "team": "Bélgica"
+  },
+  {
+    "albumNumber": 198,
+    "code": "FIG-198",
+    "name": "Figurinha 198",
+    "team": "Bélgica"
+  },
+  {
+    "albumNumber": 199,
+    "code": "FIG-199",
+    "name": "Figurinha 199",
+    "team": "Bélgica"
+  },
+  {
+    "albumNumber": 200,
+    "code": "FIG-200",
+    "name": "Figurinha 200",
+    "team": "Bélgica"
+  },
+  {
+    "albumNumber": 201,
+    "code": "FIG-201",
+    "name": "Figurinha 201",
+    "team": "Bélgica"
+  },
+  {
+    "albumNumber": 202,
+    "code": "FIG-202",
+    "name": "Figurinha 202",
+    "team": "Bélgica"
+  },
+  {
+    "albumNumber": 203,
+    "code": "FIG-203",
+    "name": "Figurinha 203",
+    "team": "Bélgica"
+  },
+  {
+    "albumNumber": 204,
+    "code": "FIG-204",
+    "name": "Figurinha 204",
+    "team": "Bélgica"
+  },
+  {
+    "albumNumber": 205,
+    "code": "FIG-205",
+    "name": "Figurinha 205",
+    "team": "Bélgica"
+  },
+  {
+    "albumNumber": 206,
+    "code": "FIG-206",
+    "name": "Figurinha 206",
+    "team": "Bélgica"
+  },
+  {
+    "albumNumber": 207,
+    "code": "FIG-207",
+    "name": "Figurinha 207",
+    "team": "Bélgica"
+  },
+  {
+    "albumNumber": 208,
+    "code": "FIG-208",
+    "name": "Figurinha 208",
+    "team": "Bélgica"
+  },
+  {
+    "albumNumber": 209,
+    "code": "FIG-209",
+    "name": "Figurinha 209",
+    "team": "Bélgica"
+  },
+  {
+    "albumNumber": 210,
+    "code": "FIG-210",
+    "name": "Figurinha 210",
+    "team": "Bélgica"
+  },
+  {
+    "albumNumber": 211,
+    "code": "FIG-211",
+    "name": "Figurinha 211",
+    "team": "Bélgica"
+  },
+  {
+    "albumNumber": 212,
+    "code": "FIG-212",
+    "name": "Figurinha 212",
+    "team": "Bélgica"
+  },
+  {
+    "albumNumber": 213,
+    "code": "FIG-213",
+    "name": "Figurinha 213",
+    "team": "Bélgica"
+  },
+  {
+    "albumNumber": 214,
+    "code": "FIG-214",
+    "name": "Figurinha 214",
+    "team": "Bélgica"
+  },
+  {
+    "albumNumber": 215,
+    "code": "FIG-215",
+    "name": "Figurinha 215",
+    "team": "Croácia"
+  },
+  {
+    "albumNumber": 216,
+    "code": "FIG-216",
+    "name": "Figurinha 216",
+    "team": "Croácia"
+  },
+  {
+    "albumNumber": 217,
+    "code": "FIG-217",
+    "name": "Figurinha 217",
+    "team": "Croácia"
+  },
+  {
+    "albumNumber": 218,
+    "code": "FIG-218",
+    "name": "Figurinha 218",
+    "team": "Croácia"
+  },
+  {
+    "albumNumber": 219,
+    "code": "FIG-219",
+    "name": "Figurinha 219",
+    "team": "Croácia"
+  },
+  {
+    "albumNumber": 220,
+    "code": "FIG-220",
+    "name": "Figurinha 220",
+    "team": "Croácia"
+  },
+  {
+    "albumNumber": 221,
+    "code": "FIG-221",
+    "name": "Figurinha 221",
+    "team": "Croácia"
+  },
+  {
+    "albumNumber": 222,
+    "code": "FIG-222",
+    "name": "Figurinha 222",
+    "team": "Croácia"
+  },
+  {
+    "albumNumber": 223,
+    "code": "FIG-223",
+    "name": "Figurinha 223",
+    "team": "Croácia"
+  },
+  {
+    "albumNumber": 224,
+    "code": "FIG-224",
+    "name": "Figurinha 224",
+    "team": "Croácia"
+  },
+  {
+    "albumNumber": 225,
+    "code": "FIG-225",
+    "name": "Figurinha 225",
+    "team": "Croácia"
+  },
+  {
+    "albumNumber": 226,
+    "code": "FIG-226",
+    "name": "Figurinha 226",
+    "team": "Croácia"
+  },
+  {
+    "albumNumber": 227,
+    "code": "FIG-227",
+    "name": "Figurinha 227",
+    "team": "Croácia"
+  },
+  {
+    "albumNumber": 228,
+    "code": "FIG-228",
+    "name": "Figurinha 228",
+    "team": "Croácia"
+  },
+  {
+    "albumNumber": 229,
+    "code": "FIG-229",
+    "name": "Figurinha 229",
+    "team": "Croácia"
+  },
+  {
+    "albumNumber": 230,
+    "code": "FIG-230",
+    "name": "Figurinha 230",
+    "team": "Croácia"
+  },
+  {
+    "albumNumber": 231,
+    "code": "FIG-231",
+    "name": "Figurinha 231",
+    "team": "Croácia"
+  },
+  {
+    "albumNumber": 232,
+    "code": "FIG-232",
+    "name": "Figurinha 232",
+    "team": "Croácia"
+  },
+  {
+    "albumNumber": 233,
+    "code": "FIG-233",
+    "name": "Figurinha 233",
+    "team": "Uruguai"
+  },
+  {
+    "albumNumber": 234,
+    "code": "FIG-234",
+    "name": "Figurinha 234",
+    "team": "Uruguai"
+  },
+  {
+    "albumNumber": 235,
+    "code": "FIG-235",
+    "name": "Figurinha 235",
+    "team": "Uruguai"
+  },
+  {
+    "albumNumber": 236,
+    "code": "FIG-236",
+    "name": "Figurinha 236",
+    "team": "Uruguai"
+  },
+  {
+    "albumNumber": 237,
+    "code": "FIG-237",
+    "name": "Figurinha 237",
+    "team": "Uruguai"
+  },
+  {
+    "albumNumber": 238,
+    "code": "FIG-238",
+    "name": "Figurinha 238",
+    "team": "Uruguai"
+  },
+  {
+    "albumNumber": 239,
+    "code": "FIG-239",
+    "name": "Figurinha 239",
+    "team": "Uruguai"
+  },
+  {
+    "albumNumber": 240,
+    "code": "FIG-240",
+    "name": "Figurinha 240",
+    "team": "Uruguai"
+  },
+  {
+    "albumNumber": 241,
+    "code": "FIG-241",
+    "name": "Figurinha 241",
+    "team": "Uruguai"
+  },
+  {
+    "albumNumber": 242,
+    "code": "FIG-242",
+    "name": "Figurinha 242",
+    "team": "Uruguai"
+  },
+  {
+    "albumNumber": 243,
+    "code": "FIG-243",
+    "name": "Figurinha 243",
+    "team": "Uruguai"
+  },
+  {
+    "albumNumber": 244,
+    "code": "FIG-244",
+    "name": "Figurinha 244",
+    "team": "Uruguai"
+  },
+  {
+    "albumNumber": 245,
+    "code": "FIG-245",
+    "name": "Figurinha 245",
+    "team": "Uruguai"
+  },
+  {
+    "albumNumber": 246,
+    "code": "FIG-246",
+    "name": "Figurinha 246",
+    "team": "Uruguai"
+  },
+  {
+    "albumNumber": 247,
+    "code": "FIG-247",
+    "name": "Figurinha 247",
+    "team": "Uruguai"
+  },
+  {
+    "albumNumber": 248,
+    "code": "FIG-248",
+    "name": "Figurinha 248",
+    "team": "Uruguai"
+  },
+  {
+    "albumNumber": 249,
+    "code": "FIG-249",
+    "name": "Figurinha 249",
+    "team": "Uruguai"
+  },
+  {
+    "albumNumber": 250,
+    "code": "FIG-250",
+    "name": "Figurinha 250",
+    "team": "Uruguai"
+  },
+  {
+    "albumNumber": 251,
+    "code": "FIG-251",
+    "name": "Figurinha 251",
+    "team": "Colômbia"
+  },
+  {
+    "albumNumber": 252,
+    "code": "FIG-252",
+    "name": "Figurinha 252",
+    "team": "Colômbia"
+  },
+  {
+    "albumNumber": 253,
+    "code": "FIG-253",
+    "name": "Figurinha 253",
+    "team": "Colômbia"
+  },
+  {
+    "albumNumber": 254,
+    "code": "FIG-254",
+    "name": "Figurinha 254",
+    "team": "Colômbia"
+  },
+  {
+    "albumNumber": 255,
+    "code": "FIG-255",
+    "name": "Figurinha 255",
+    "team": "Colômbia"
+  },
+  {
+    "albumNumber": 256,
+    "code": "FIG-256",
+    "name": "Figurinha 256",
+    "team": "Colômbia"
+  },
+  {
+    "albumNumber": 257,
+    "code": "FIG-257",
+    "name": "Figurinha 257",
+    "team": "Colômbia"
+  },
+  {
+    "albumNumber": 258,
+    "code": "FIG-258",
+    "name": "Figurinha 258",
+    "team": "Colômbia"
+  },
+  {
+    "albumNumber": 259,
+    "code": "FIG-259",
+    "name": "Figurinha 259",
+    "team": "Colômbia"
+  },
+  {
+    "albumNumber": 260,
+    "code": "FIG-260",
+    "name": "Figurinha 260",
+    "team": "Colômbia"
+  },
+  {
+    "albumNumber": 261,
+    "code": "FIG-261",
+    "name": "Figurinha 261",
+    "team": "Colômbia"
+  },
+  {
+    "albumNumber": 262,
+    "code": "FIG-262",
+    "name": "Figurinha 262",
+    "team": "Colômbia"
+  },
+  {
+    "albumNumber": 263,
+    "code": "FIG-263",
+    "name": "Figurinha 263",
+    "team": "Colômbia"
+  },
+  {
+    "albumNumber": 264,
+    "code": "FIG-264",
+    "name": "Figurinha 264",
+    "team": "Colômbia"
+  },
+  {
+    "albumNumber": 265,
+    "code": "FIG-265",
+    "name": "Figurinha 265",
+    "team": "Colômbia"
+  },
+  {
+    "albumNumber": 266,
+    "code": "FIG-266",
+    "name": "Figurinha 266",
+    "team": "Colômbia"
+  },
+  {
+    "albumNumber": 267,
+    "code": "FIG-267",
+    "name": "Figurinha 267",
+    "team": "Colômbia"
+  },
+  {
+    "albumNumber": 268,
+    "code": "FIG-268",
+    "name": "Figurinha 268",
+    "team": "Colômbia"
+  },
+  {
+    "albumNumber": 269,
+    "code": "FIG-269",
+    "name": "Figurinha 269",
+    "team": "México"
+  },
+  {
+    "albumNumber": 270,
+    "code": "FIG-270",
+    "name": "Figurinha 270",
+    "team": "México"
+  },
+  {
+    "albumNumber": 271,
+    "code": "FIG-271",
+    "name": "Figurinha 271",
+    "team": "México"
+  },
+  {
+    "albumNumber": 272,
+    "code": "FIG-272",
+    "name": "Figurinha 272",
+    "team": "México"
+  },
+  {
+    "albumNumber": 273,
+    "code": "FIG-273",
+    "name": "Figurinha 273",
+    "team": "México"
+  },
+  {
+    "albumNumber": 274,
+    "code": "FIG-274",
+    "name": "Figurinha 274",
+    "team": "México"
+  },
+  {
+    "albumNumber": 275,
+    "code": "FIG-275",
+    "name": "Figurinha 275",
+    "team": "México"
+  },
+  {
+    "albumNumber": 276,
+    "code": "FIG-276",
+    "name": "Figurinha 276",
+    "team": "México"
+  },
+  {
+    "albumNumber": 277,
+    "code": "FIG-277",
+    "name": "Figurinha 277",
+    "team": "México"
+  },
+  {
+    "albumNumber": 278,
+    "code": "FIG-278",
+    "name": "Figurinha 278",
+    "team": "México"
+  },
+  {
+    "albumNumber": 279,
+    "code": "FIG-279",
+    "name": "Figurinha 279",
+    "team": "México"
+  },
+  {
+    "albumNumber": 280,
+    "code": "FIG-280",
+    "name": "Figurinha 280",
+    "team": "México"
+  },
+  {
+    "albumNumber": 281,
+    "code": "FIG-281",
+    "name": "Figurinha 281",
+    "team": "México"
+  },
+  {
+    "albumNumber": 282,
+    "code": "FIG-282",
+    "name": "Figurinha 282",
+    "team": "México"
+  },
+  {
+    "albumNumber": 283,
+    "code": "FIG-283",
+    "name": "Figurinha 283",
+    "team": "México"
+  },
+  {
+    "albumNumber": 284,
+    "code": "FIG-284",
+    "name": "Figurinha 284",
+    "team": "México"
+  },
+  {
+    "albumNumber": 285,
+    "code": "FIG-285",
+    "name": "Figurinha 285",
+    "team": "México"
+  },
+  {
+    "albumNumber": 286,
+    "code": "FIG-286",
+    "name": "Figurinha 286",
+    "team": "México"
+  },
+  {
+    "albumNumber": 287,
+    "code": "FIG-287",
+    "name": "Figurinha 287",
+    "team": "Estados Unidos"
+  },
+  {
+    "albumNumber": 288,
+    "code": "FIG-288",
+    "name": "Figurinha 288",
+    "team": "Estados Unidos"
+  },
+  {
+    "albumNumber": 289,
+    "code": "FIG-289",
+    "name": "Figurinha 289",
+    "team": "Estados Unidos"
+  },
+  {
+    "albumNumber": 290,
+    "code": "FIG-290",
+    "name": "Figurinha 290",
+    "team": "Estados Unidos"
+  },
+  {
+    "albumNumber": 291,
+    "code": "FIG-291",
+    "name": "Figurinha 291",
+    "team": "Estados Unidos"
+  },
+  {
+    "albumNumber": 292,
+    "code": "FIG-292",
+    "name": "Figurinha 292",
+    "team": "Estados Unidos"
+  },
+  {
+    "albumNumber": 293,
+    "code": "FIG-293",
+    "name": "Figurinha 293",
+    "team": "Estados Unidos"
+  },
+  {
+    "albumNumber": 294,
+    "code": "FIG-294",
+    "name": "Figurinha 294",
+    "team": "Estados Unidos"
+  },
+  {
+    "albumNumber": 295,
+    "code": "FIG-295",
+    "name": "Figurinha 295",
+    "team": "Estados Unidos"
+  },
+  {
+    "albumNumber": 296,
+    "code": "FIG-296",
+    "name": "Figurinha 296",
+    "team": "Estados Unidos"
+  },
+  {
+    "albumNumber": 297,
+    "code": "FIG-297",
+    "name": "Figurinha 297",
+    "team": "Estados Unidos"
+  },
+  {
+    "albumNumber": 298,
+    "code": "FIG-298",
+    "name": "Figurinha 298",
+    "team": "Estados Unidos"
+  },
+  {
+    "albumNumber": 299,
+    "code": "FIG-299",
+    "name": "Figurinha 299",
+    "team": "Estados Unidos"
+  },
+  {
+    "albumNumber": 300,
+    "code": "FIG-300",
+    "name": "Figurinha 300",
+    "team": "Estados Unidos"
+  },
+  {
+    "albumNumber": 301,
+    "code": "FIG-301",
+    "name": "Figurinha 301",
+    "team": "Estados Unidos"
+  },
+  {
+    "albumNumber": 302,
+    "code": "FIG-302",
+    "name": "Figurinha 302",
+    "team": "Estados Unidos"
+  },
+  {
+    "albumNumber": 303,
+    "code": "FIG-303",
+    "name": "Figurinha 303",
+    "team": "Estados Unidos"
+  },
+  {
+    "albumNumber": 304,
+    "code": "FIG-304",
+    "name": "Figurinha 304",
+    "team": "Estados Unidos"
+  },
+  {
+    "albumNumber": 305,
+    "code": "FIG-305",
+    "name": "Figurinha 305",
+    "team": "Canadá"
+  },
+  {
+    "albumNumber": 306,
+    "code": "FIG-306",
+    "name": "Figurinha 306",
+    "team": "Canadá"
+  },
+  {
+    "albumNumber": 307,
+    "code": "FIG-307",
+    "name": "Figurinha 307",
+    "team": "Canadá"
+  },
+  {
+    "albumNumber": 308,
+    "code": "FIG-308",
+    "name": "Figurinha 308",
+    "team": "Canadá"
+  },
+  {
+    "albumNumber": 309,
+    "code": "FIG-309",
+    "name": "Figurinha 309",
+    "team": "Canadá"
+  },
+  {
+    "albumNumber": 310,
+    "code": "FIG-310",
+    "name": "Figurinha 310",
+    "team": "Canadá"
+  },
+  {
+    "albumNumber": 311,
+    "code": "FIG-311",
+    "name": "Figurinha 311",
+    "team": "Canadá"
+  },
+  {
+    "albumNumber": 312,
+    "code": "FIG-312",
+    "name": "Figurinha 312",
+    "team": "Canadá"
+  },
+  {
+    "albumNumber": 313,
+    "code": "FIG-313",
+    "name": "Figurinha 313",
+    "team": "Canadá"
+  },
+  {
+    "albumNumber": 314,
+    "code": "FIG-314",
+    "name": "Figurinha 314",
+    "team": "Canadá"
+  },
+  {
+    "albumNumber": 315,
+    "code": "FIG-315",
+    "name": "Figurinha 315",
+    "team": "Canadá"
+  },
+  {
+    "albumNumber": 316,
+    "code": "FIG-316",
+    "name": "Figurinha 316",
+    "team": "Canadá"
+  },
+  {
+    "albumNumber": 317,
+    "code": "FIG-317",
+    "name": "Figurinha 317",
+    "team": "Canadá"
+  },
+  {
+    "albumNumber": 318,
+    "code": "FIG-318",
+    "name": "Figurinha 318",
+    "team": "Canadá"
+  },
+  {
+    "albumNumber": 319,
+    "code": "FIG-319",
+    "name": "Figurinha 319",
+    "team": "Canadá"
+  },
+  {
+    "albumNumber": 320,
+    "code": "FIG-320",
+    "name": "Figurinha 320",
+    "team": "Canadá"
+  },
+  {
+    "albumNumber": 321,
+    "code": "FIG-321",
+    "name": "Figurinha 321",
+    "team": "Canadá"
+  },
+  {
+    "albumNumber": 322,
+    "code": "FIG-322",
+    "name": "Figurinha 322",
+    "team": "Canadá"
+  },
+  {
+    "albumNumber": 323,
+    "code": "FIG-323",
+    "name": "Figurinha 323",
+    "team": "Japão"
+  },
+  {
+    "albumNumber": 324,
+    "code": "FIG-324",
+    "name": "Figurinha 324",
+    "team": "Japão"
+  },
+  {
+    "albumNumber": 325,
+    "code": "FIG-325",
+    "name": "Figurinha 325",
+    "team": "Japão"
+  },
+  {
+    "albumNumber": 326,
+    "code": "FIG-326",
+    "name": "Figurinha 326",
+    "team": "Japão"
+  },
+  {
+    "albumNumber": 327,
+    "code": "FIG-327",
+    "name": "Figurinha 327",
+    "team": "Japão"
+  },
+  {
+    "albumNumber": 328,
+    "code": "FIG-328",
+    "name": "Figurinha 328",
+    "team": "Japão"
+  },
+  {
+    "albumNumber": 329,
+    "code": "FIG-329",
+    "name": "Figurinha 329",
+    "team": "Japão"
+  },
+  {
+    "albumNumber": 330,
+    "code": "FIG-330",
+    "name": "Figurinha 330",
+    "team": "Japão"
+  },
+  {
+    "albumNumber": 331,
+    "code": "FIG-331",
+    "name": "Figurinha 331",
+    "team": "Japão"
+  },
+  {
+    "albumNumber": 332,
+    "code": "FIG-332",
+    "name": "Figurinha 332",
+    "team": "Japão"
+  },
+  {
+    "albumNumber": 333,
+    "code": "FIG-333",
+    "name": "Figurinha 333",
+    "team": "Japão"
+  },
+  {
+    "albumNumber": 334,
+    "code": "FIG-334",
+    "name": "Figurinha 334",
+    "team": "Japão"
+  },
+  {
+    "albumNumber": 335,
+    "code": "FIG-335",
+    "name": "Figurinha 335",
+    "team": "Japão"
+  },
+  {
+    "albumNumber": 336,
+    "code": "FIG-336",
+    "name": "Figurinha 336",
+    "team": "Japão"
+  },
+  {
+    "albumNumber": 337,
+    "code": "FIG-337",
+    "name": "Figurinha 337",
+    "team": "Japão"
+  },
+  {
+    "albumNumber": 338,
+    "code": "FIG-338",
+    "name": "Figurinha 338",
+    "team": "Japão"
+  },
+  {
+    "albumNumber": 339,
+    "code": "FIG-339",
+    "name": "Figurinha 339",
+    "team": "Japão"
+  },
+  {
+    "albumNumber": 340,
+    "code": "FIG-340",
+    "name": "Figurinha 340",
+    "team": "Japão"
+  },
+  {
+    "albumNumber": 341,
+    "code": "FIG-341",
+    "name": "Figurinha 341",
+    "team": "Coreia do Sul"
+  },
+  {
+    "albumNumber": 342,
+    "code": "FIG-342",
+    "name": "Figurinha 342",
+    "team": "Coreia do Sul"
+  },
+  {
+    "albumNumber": 343,
+    "code": "FIG-343",
+    "name": "Figurinha 343",
+    "team": "Coreia do Sul"
+  },
+  {
+    "albumNumber": 344,
+    "code": "FIG-344",
+    "name": "Figurinha 344",
+    "team": "Coreia do Sul"
+  },
+  {
+    "albumNumber": 345,
+    "code": "FIG-345",
+    "name": "Figurinha 345",
+    "team": "Coreia do Sul"
+  },
+  {
+    "albumNumber": 346,
+    "code": "FIG-346",
+    "name": "Figurinha 346",
+    "team": "Coreia do Sul"
+  },
+  {
+    "albumNumber": 347,
+    "code": "FIG-347",
+    "name": "Figurinha 347",
+    "team": "Coreia do Sul"
+  },
+  {
+    "albumNumber": 348,
+    "code": "FIG-348",
+    "name": "Figurinha 348",
+    "team": "Coreia do Sul"
+  },
+  {
+    "albumNumber": 349,
+    "code": "FIG-349",
+    "name": "Figurinha 349",
+    "team": "Coreia do Sul"
+  },
+  {
+    "albumNumber": 350,
+    "code": "FIG-350",
+    "name": "Figurinha 350",
+    "team": "Coreia do Sul"
+  },
+  {
+    "albumNumber": 351,
+    "code": "FIG-351",
+    "name": "Figurinha 351",
+    "team": "Coreia do Sul"
+  },
+  {
+    "albumNumber": 352,
+    "code": "FIG-352",
+    "name": "Figurinha 352",
+    "team": "Coreia do Sul"
+  },
+  {
+    "albumNumber": 353,
+    "code": "FIG-353",
+    "name": "Figurinha 353",
+    "team": "Coreia do Sul"
+  },
+  {
+    "albumNumber": 354,
+    "code": "FIG-354",
+    "name": "Figurinha 354",
+    "team": "Coreia do Sul"
+  },
+  {
+    "albumNumber": 355,
+    "code": "FIG-355",
+    "name": "Figurinha 355",
+    "team": "Coreia do Sul"
+  },
+  {
+    "albumNumber": 356,
+    "code": "FIG-356",
+    "name": "Figurinha 356",
+    "team": "Coreia do Sul"
+  },
+  {
+    "albumNumber": 357,
+    "code": "FIG-357",
+    "name": "Figurinha 357",
+    "team": "Coreia do Sul"
+  },
+  {
+    "albumNumber": 358,
+    "code": "FIG-358",
+    "name": "Figurinha 358",
+    "team": "Coreia do Sul"
+  },
+  {
+    "albumNumber": 359,
+    "code": "FIG-359",
+    "name": "Figurinha 359",
+    "team": "Austrália"
+  },
+  {
+    "albumNumber": 360,
+    "code": "FIG-360",
+    "name": "Figurinha 360",
+    "team": "Austrália"
+  },
+  {
+    "albumNumber": 361,
+    "code": "FIG-361",
+    "name": "Figurinha 361",
+    "team": "Austrália"
+  },
+  {
+    "albumNumber": 362,
+    "code": "FIG-362",
+    "name": "Figurinha 362",
+    "team": "Austrália"
+  },
+  {
+    "albumNumber": 363,
+    "code": "FIG-363",
+    "name": "Figurinha 363",
+    "team": "Austrália"
+  },
+  {
+    "albumNumber": 364,
+    "code": "FIG-364",
+    "name": "Figurinha 364",
+    "team": "Austrália"
+  },
+  {
+    "albumNumber": 365,
+    "code": "FIG-365",
+    "name": "Figurinha 365",
+    "team": "Austrália"
+  },
+  {
+    "albumNumber": 366,
+    "code": "FIG-366",
+    "name": "Figurinha 366",
+    "team": "Austrália"
+  },
+  {
+    "albumNumber": 367,
+    "code": "FIG-367",
+    "name": "Figurinha 367",
+    "team": "Austrália"
+  },
+  {
+    "albumNumber": 368,
+    "code": "FIG-368",
+    "name": "Figurinha 368",
+    "team": "Austrália"
+  },
+  {
+    "albumNumber": 369,
+    "code": "FIG-369",
+    "name": "Figurinha 369",
+    "team": "Austrália"
+  },
+  {
+    "albumNumber": 370,
+    "code": "FIG-370",
+    "name": "Figurinha 370",
+    "team": "Austrália"
+  },
+  {
+    "albumNumber": 371,
+    "code": "FIG-371",
+    "name": "Figurinha 371",
+    "team": "Austrália"
+  },
+  {
+    "albumNumber": 372,
+    "code": "FIG-372",
+    "name": "Figurinha 372",
+    "team": "Austrália"
+  },
+  {
+    "albumNumber": 373,
+    "code": "FIG-373",
+    "name": "Figurinha 373",
+    "team": "Austrália"
+  },
+  {
+    "albumNumber": 374,
+    "code": "FIG-374",
+    "name": "Figurinha 374",
+    "team": "Austrália"
+  },
+  {
+    "albumNumber": 375,
+    "code": "FIG-375",
+    "name": "Figurinha 375",
+    "team": "Austrália"
+  },
+  {
+    "albumNumber": 376,
+    "code": "FIG-376",
+    "name": "Figurinha 376",
+    "team": "Austrália"
+  },
+  {
+    "albumNumber": 377,
+    "code": "FIG-377",
+    "name": "Figurinha 377",
+    "team": "Marrocos"
+  },
+  {
+    "albumNumber": 378,
+    "code": "FIG-378",
+    "name": "Figurinha 378",
+    "team": "Marrocos"
+  },
+  {
+    "albumNumber": 379,
+    "code": "FIG-379",
+    "name": "Figurinha 379",
+    "team": "Marrocos"
+  },
+  {
+    "albumNumber": 380,
+    "code": "FIG-380",
+    "name": "Figurinha 380",
+    "team": "Marrocos"
+  },
+  {
+    "albumNumber": 381,
+    "code": "FIG-381",
+    "name": "Figurinha 381",
+    "team": "Marrocos"
+  },
+  {
+    "albumNumber": 382,
+    "code": "FIG-382",
+    "name": "Figurinha 382",
+    "team": "Marrocos"
+  },
+  {
+    "albumNumber": 383,
+    "code": "FIG-383",
+    "name": "Figurinha 383",
+    "team": "Marrocos"
+  },
+  {
+    "albumNumber": 384,
+    "code": "FIG-384",
+    "name": "Figurinha 384",
+    "team": "Marrocos"
+  },
+  {
+    "albumNumber": 385,
+    "code": "FIG-385",
+    "name": "Figurinha 385",
+    "team": "Marrocos"
+  },
+  {
+    "albumNumber": 386,
+    "code": "FIG-386",
+    "name": "Figurinha 386",
+    "team": "Marrocos"
+  },
+  {
+    "albumNumber": 387,
+    "code": "FIG-387",
+    "name": "Figurinha 387",
+    "team": "Marrocos"
+  },
+  {
+    "albumNumber": 388,
+    "code": "FIG-388",
+    "name": "Figurinha 388",
+    "team": "Marrocos"
+  },
+  {
+    "albumNumber": 389,
+    "code": "FIG-389",
+    "name": "Figurinha 389",
+    "team": "Marrocos"
+  },
+  {
+    "albumNumber": 390,
+    "code": "FIG-390",
+    "name": "Figurinha 390",
+    "team": "Marrocos"
+  },
+  {
+    "albumNumber": 391,
+    "code": "FIG-391",
+    "name": "Figurinha 391",
+    "team": "Marrocos"
+  },
+  {
+    "albumNumber": 392,
+    "code": "FIG-392",
+    "name": "Figurinha 392",
+    "team": "Marrocos"
+  },
+  {
+    "albumNumber": 393,
+    "code": "FIG-393",
+    "name": "Figurinha 393",
+    "team": "Marrocos"
+  },
+  {
+    "albumNumber": 394,
+    "code": "FIG-394",
+    "name": "Figurinha 394",
+    "team": "Marrocos"
+  },
+  {
+    "albumNumber": 395,
+    "code": "FIG-395",
+    "name": "Figurinha 395",
+    "team": "Senegal"
+  },
+  {
+    "albumNumber": 396,
+    "code": "FIG-396",
+    "name": "Figurinha 396",
+    "team": "Senegal"
+  },
+  {
+    "albumNumber": 397,
+    "code": "FIG-397",
+    "name": "Figurinha 397",
+    "team": "Senegal"
+  },
+  {
+    "albumNumber": 398,
+    "code": "FIG-398",
+    "name": "Figurinha 398",
+    "team": "Senegal"
+  },
+  {
+    "albumNumber": 399,
+    "code": "FIG-399",
+    "name": "Figurinha 399",
+    "team": "Senegal"
+  },
+  {
+    "albumNumber": 400,
+    "code": "FIG-400",
+    "name": "Figurinha 400",
+    "team": "Senegal"
+  },
+  {
+    "albumNumber": 401,
+    "code": "FIG-401",
+    "name": "Figurinha 401",
+    "team": "Senegal"
+  },
+  {
+    "albumNumber": 402,
+    "code": "FIG-402",
+    "name": "Figurinha 402",
+    "team": "Senegal"
+  },
+  {
+    "albumNumber": 403,
+    "code": "FIG-403",
+    "name": "Figurinha 403",
+    "team": "Senegal"
+  },
+  {
+    "albumNumber": 404,
+    "code": "FIG-404",
+    "name": "Figurinha 404",
+    "team": "Senegal"
+  },
+  {
+    "albumNumber": 405,
+    "code": "FIG-405",
+    "name": "Figurinha 405",
+    "team": "Senegal"
+  },
+  {
+    "albumNumber": 406,
+    "code": "FIG-406",
+    "name": "Figurinha 406",
+    "team": "Senegal"
+  },
+  {
+    "albumNumber": 407,
+    "code": "FIG-407",
+    "name": "Figurinha 407",
+    "team": "Senegal"
+  },
+  {
+    "albumNumber": 408,
+    "code": "FIG-408",
+    "name": "Figurinha 408",
+    "team": "Senegal"
+  },
+  {
+    "albumNumber": 409,
+    "code": "FIG-409",
+    "name": "Figurinha 409",
+    "team": "Senegal"
+  },
+  {
+    "albumNumber": 410,
+    "code": "FIG-410",
+    "name": "Figurinha 410",
+    "team": "Senegal"
+  },
+  {
+    "albumNumber": 411,
+    "code": "FIG-411",
+    "name": "Figurinha 411",
+    "team": "Senegal"
+  },
+  {
+    "albumNumber": 412,
+    "code": "FIG-412",
+    "name": "Figurinha 412",
+    "team": "Senegal"
+  },
+  {
+    "albumNumber": 413,
+    "code": "FIG-413",
+    "name": "Figurinha 413",
+    "team": "Nigéria"
+  },
+  {
+    "albumNumber": 414,
+    "code": "FIG-414",
+    "name": "Figurinha 414",
+    "team": "Nigéria"
+  },
+  {
+    "albumNumber": 415,
+    "code": "FIG-415",
+    "name": "Figurinha 415",
+    "team": "Nigéria"
+  },
+  {
+    "albumNumber": 416,
+    "code": "FIG-416",
+    "name": "Figurinha 416",
+    "team": "Nigéria"
+  },
+  {
+    "albumNumber": 417,
+    "code": "FIG-417",
+    "name": "Figurinha 417",
+    "team": "Nigéria"
+  },
+  {
+    "albumNumber": 418,
+    "code": "FIG-418",
+    "name": "Figurinha 418",
+    "team": "Nigéria"
+  },
+  {
+    "albumNumber": 419,
+    "code": "FIG-419",
+    "name": "Figurinha 419",
+    "team": "Nigéria"
+  },
+  {
+    "albumNumber": 420,
+    "code": "FIG-420",
+    "name": "Figurinha 420",
+    "team": "Nigéria"
+  },
+  {
+    "albumNumber": 421,
+    "code": "FIG-421",
+    "name": "Figurinha 421",
+    "team": "Nigéria"
+  },
+  {
+    "albumNumber": 422,
+    "code": "FIG-422",
+    "name": "Figurinha 422",
+    "team": "Nigéria"
+  },
+  {
+    "albumNumber": 423,
+    "code": "FIG-423",
+    "name": "Figurinha 423",
+    "team": "Nigéria"
+  },
+  {
+    "albumNumber": 424,
+    "code": "FIG-424",
+    "name": "Figurinha 424",
+    "team": "Nigéria"
+  },
+  {
+    "albumNumber": 425,
+    "code": "FIG-425",
+    "name": "Figurinha 425",
+    "team": "Nigéria"
+  },
+  {
+    "albumNumber": 426,
+    "code": "FIG-426",
+    "name": "Figurinha 426",
+    "team": "Nigéria"
+  },
+  {
+    "albumNumber": 427,
+    "code": "FIG-427",
+    "name": "Figurinha 427",
+    "team": "Nigéria"
+  },
+  {
+    "albumNumber": 428,
+    "code": "FIG-428",
+    "name": "Figurinha 428",
+    "team": "Nigéria"
+  },
+  {
+    "albumNumber": 429,
+    "code": "FIG-429",
+    "name": "Figurinha 429",
+    "team": "Nigéria"
+  },
+  {
+    "albumNumber": 430,
+    "code": "FIG-430",
+    "name": "Figurinha 430",
+    "team": "Nigéria"
+  },
+  {
+    "albumNumber": 431,
+    "code": "FIG-431",
+    "name": "Figurinha 431",
+    "team": "Costa do Marfim"
+  },
+  {
+    "albumNumber": 432,
+    "code": "FIG-432",
+    "name": "Figurinha 432",
+    "team": "Costa do Marfim"
+  },
+  {
+    "albumNumber": 433,
+    "code": "FIG-433",
+    "name": "Figurinha 433",
+    "team": "Costa do Marfim"
+  },
+  {
+    "albumNumber": 434,
+    "code": "FIG-434",
+    "name": "Figurinha 434",
+    "team": "Costa do Marfim"
+  },
+  {
+    "albumNumber": 435,
+    "code": "FIG-435",
+    "name": "Figurinha 435",
+    "team": "Costa do Marfim"
+  },
+  {
+    "albumNumber": 436,
+    "code": "FIG-436",
+    "name": "Figurinha 436",
+    "team": "Costa do Marfim"
+  },
+  {
+    "albumNumber": 437,
+    "code": "FIG-437",
+    "name": "Figurinha 437",
+    "team": "Costa do Marfim"
+  },
+  {
+    "albumNumber": 438,
+    "code": "FIG-438",
+    "name": "Figurinha 438",
+    "team": "Costa do Marfim"
+  },
+  {
+    "albumNumber": 439,
+    "code": "FIG-439",
+    "name": "Figurinha 439",
+    "team": "Costa do Marfim"
+  },
+  {
+    "albumNumber": 440,
+    "code": "FIG-440",
+    "name": "Figurinha 440",
+    "team": "Costa do Marfim"
+  },
+  {
+    "albumNumber": 441,
+    "code": "FIG-441",
+    "name": "Figurinha 441",
+    "team": "Costa do Marfim"
+  },
+  {
+    "albumNumber": 442,
+    "code": "FIG-442",
+    "name": "Figurinha 442",
+    "team": "Costa do Marfim"
+  },
+  {
+    "albumNumber": 443,
+    "code": "FIG-443",
+    "name": "Figurinha 443",
+    "team": "Costa do Marfim"
+  },
+  {
+    "albumNumber": 444,
+    "code": "FIG-444",
+    "name": "Figurinha 444",
+    "team": "Costa do Marfim"
+  },
+  {
+    "albumNumber": 445,
+    "code": "FIG-445",
+    "name": "Figurinha 445",
+    "team": "Costa do Marfim"
+  },
+  {
+    "albumNumber": 446,
+    "code": "FIG-446",
+    "name": "Figurinha 446",
+    "team": "Costa do Marfim"
+  },
+  {
+    "albumNumber": 447,
+    "code": "FIG-447",
+    "name": "Figurinha 447",
+    "team": "Costa do Marfim"
+  },
+  {
+    "albumNumber": 448,
+    "code": "FIG-448",
+    "name": "Figurinha 448",
+    "team": "Costa do Marfim"
+  },
+  {
+    "albumNumber": 449,
+    "code": "FIG-449",
+    "name": "Figurinha 449",
+    "team": "Egito"
+  },
+  {
+    "albumNumber": 450,
+    "code": "FIG-450",
+    "name": "Figurinha 450",
+    "team": "Egito"
+  },
+  {
+    "albumNumber": 451,
+    "code": "FIG-451",
+    "name": "Figurinha 451",
+    "team": "Egito"
+  },
+  {
+    "albumNumber": 452,
+    "code": "FIG-452",
+    "name": "Figurinha 452",
+    "team": "Egito"
+  },
+  {
+    "albumNumber": 453,
+    "code": "FIG-453",
+    "name": "Figurinha 453",
+    "team": "Egito"
+  },
+  {
+    "albumNumber": 454,
+    "code": "FIG-454",
+    "name": "Figurinha 454",
+    "team": "Egito"
+  },
+  {
+    "albumNumber": 455,
+    "code": "FIG-455",
+    "name": "Figurinha 455",
+    "team": "Egito"
+  },
+  {
+    "albumNumber": 456,
+    "code": "FIG-456",
+    "name": "Figurinha 456",
+    "team": "Egito"
+  },
+  {
+    "albumNumber": 457,
+    "code": "FIG-457",
+    "name": "Figurinha 457",
+    "team": "Egito"
+  },
+  {
+    "albumNumber": 458,
+    "code": "FIG-458",
+    "name": "Figurinha 458",
+    "team": "Egito"
+  },
+  {
+    "albumNumber": 459,
+    "code": "FIG-459",
+    "name": "Figurinha 459",
+    "team": "Egito"
+  },
+  {
+    "albumNumber": 460,
+    "code": "FIG-460",
+    "name": "Figurinha 460",
+    "team": "Egito"
+  },
+  {
+    "albumNumber": 461,
+    "code": "FIG-461",
+    "name": "Figurinha 461",
+    "team": "Egito"
+  },
+  {
+    "albumNumber": 462,
+    "code": "FIG-462",
+    "name": "Figurinha 462",
+    "team": "Egito"
+  },
+  {
+    "albumNumber": 463,
+    "code": "FIG-463",
+    "name": "Figurinha 463",
+    "team": "Egito"
+  },
+  {
+    "albumNumber": 464,
+    "code": "FIG-464",
+    "name": "Figurinha 464",
+    "team": "Egito"
+  },
+  {
+    "albumNumber": 465,
+    "code": "FIG-465",
+    "name": "Figurinha 465",
+    "team": "Egito"
+  },
+  {
+    "albumNumber": 466,
+    "code": "FIG-466",
+    "name": "Figurinha 466",
+    "team": "Egito"
+  },
+  {
+    "albumNumber": 467,
+    "code": "FIG-467",
+    "name": "Figurinha 467",
+    "team": "Camarões"
+  },
+  {
+    "albumNumber": 468,
+    "code": "FIG-468",
+    "name": "Figurinha 468",
+    "team": "Camarões"
+  },
+  {
+    "albumNumber": 469,
+    "code": "FIG-469",
+    "name": "Figurinha 469",
+    "team": "Camarões"
+  },
+  {
+    "albumNumber": 470,
+    "code": "FIG-470",
+    "name": "Figurinha 470",
+    "team": "Camarões"
+  },
+  {
+    "albumNumber": 471,
+    "code": "FIG-471",
+    "name": "Figurinha 471",
+    "team": "Camarões"
+  },
+  {
+    "albumNumber": 472,
+    "code": "FIG-472",
+    "name": "Figurinha 472",
+    "team": "Camarões"
+  },
+  {
+    "albumNumber": 473,
+    "code": "FIG-473",
+    "name": "Figurinha 473",
+    "team": "Camarões"
+  },
+  {
+    "albumNumber": 474,
+    "code": "FIG-474",
+    "name": "Figurinha 474",
+    "team": "Camarões"
+  },
+  {
+    "albumNumber": 475,
+    "code": "FIG-475",
+    "name": "Figurinha 475",
+    "team": "Camarões"
+  },
+  {
+    "albumNumber": 476,
+    "code": "FIG-476",
+    "name": "Figurinha 476",
+    "team": "Camarões"
+  },
+  {
+    "albumNumber": 477,
+    "code": "FIG-477",
+    "name": "Figurinha 477",
+    "team": "Camarões"
+  },
+  {
+    "albumNumber": 478,
+    "code": "FIG-478",
+    "name": "Figurinha 478",
+    "team": "Camarões"
+  },
+  {
+    "albumNumber": 479,
+    "code": "FIG-479",
+    "name": "Figurinha 479",
+    "team": "Camarões"
+  },
+  {
+    "albumNumber": 480,
+    "code": "FIG-480",
+    "name": "Figurinha 480",
+    "team": "Camarões"
+  },
+  {
+    "albumNumber": 481,
+    "code": "FIG-481",
+    "name": "Figurinha 481",
+    "team": "Camarões"
+  },
+  {
+    "albumNumber": 482,
+    "code": "FIG-482",
+    "name": "Figurinha 482",
+    "team": "Camarões"
+  },
+  {
+    "albumNumber": 483,
+    "code": "FIG-483",
+    "name": "Figurinha 483",
+    "team": "Camarões"
+  },
+  {
+    "albumNumber": 484,
+    "code": "FIG-484",
+    "name": "Figurinha 484",
+    "team": "Camarões"
+  },
+  {
+    "albumNumber": 485,
+    "code": "FIG-485",
+    "name": "Figurinha 485",
+    "team": "Gana"
+  },
+  {
+    "albumNumber": 486,
+    "code": "FIG-486",
+    "name": "Figurinha 486",
+    "team": "Gana"
+  },
+  {
+    "albumNumber": 487,
+    "code": "FIG-487",
+    "name": "Figurinha 487",
+    "team": "Gana"
+  },
+  {
+    "albumNumber": 488,
+    "code": "FIG-488",
+    "name": "Figurinha 488",
+    "team": "Gana"
+  },
+  {
+    "albumNumber": 489,
+    "code": "FIG-489",
+    "name": "Figurinha 489",
+    "team": "Gana"
+  },
+  {
+    "albumNumber": 490,
+    "code": "FIG-490",
+    "name": "Figurinha 490",
+    "team": "Gana"
+  },
+  {
+    "albumNumber": 491,
+    "code": "FIG-491",
+    "name": "Figurinha 491",
+    "team": "Gana"
+  },
+  {
+    "albumNumber": 492,
+    "code": "FIG-492",
+    "name": "Figurinha 492",
+    "team": "Gana"
+  },
+  {
+    "albumNumber": 493,
+    "code": "FIG-493",
+    "name": "Figurinha 493",
+    "team": "Gana"
+  },
+  {
+    "albumNumber": 494,
+    "code": "FIG-494",
+    "name": "Figurinha 494",
+    "team": "Gana"
+  },
+  {
+    "albumNumber": 495,
+    "code": "FIG-495",
+    "name": "Figurinha 495",
+    "team": "Gana"
+  },
+  {
+    "albumNumber": 496,
+    "code": "FIG-496",
+    "name": "Figurinha 496",
+    "team": "Gana"
+  },
+  {
+    "albumNumber": 497,
+    "code": "FIG-497",
+    "name": "Figurinha 497",
+    "team": "Gana"
+  },
+  {
+    "albumNumber": 498,
+    "code": "FIG-498",
+    "name": "Figurinha 498",
+    "team": "Gana"
+  },
+  {
+    "albumNumber": 499,
+    "code": "FIG-499",
+    "name": "Figurinha 499",
+    "team": "Gana"
+  },
+  {
+    "albumNumber": 500,
+    "code": "FIG-500",
+    "name": "Figurinha 500",
+    "team": "Gana"
+  },
+  {
+    "albumNumber": 501,
+    "code": "FIG-501",
+    "name": "Figurinha 501",
+    "team": "Gana"
+  },
+  {
+    "albumNumber": 502,
+    "code": "FIG-502",
+    "name": "Figurinha 502",
+    "team": "Gana"
+  },
+  {
+    "albumNumber": 503,
+    "code": "FIG-503",
+    "name": "Figurinha 503",
+    "team": "África do Sul"
+  },
+  {
+    "albumNumber": 504,
+    "code": "FIG-504",
+    "name": "Figurinha 504",
+    "team": "África do Sul"
+  },
+  {
+    "albumNumber": 505,
+    "code": "FIG-505",
+    "name": "Figurinha 505",
+    "team": "África do Sul"
+  },
+  {
+    "albumNumber": 506,
+    "code": "FIG-506",
+    "name": "Figurinha 506",
+    "team": "África do Sul"
+  },
+  {
+    "albumNumber": 507,
+    "code": "FIG-507",
+    "name": "Figurinha 507",
+    "team": "África do Sul"
+  },
+  {
+    "albumNumber": 508,
+    "code": "FIG-508",
+    "name": "Figurinha 508",
+    "team": "África do Sul"
+  },
+  {
+    "albumNumber": 509,
+    "code": "FIG-509",
+    "name": "Figurinha 509",
+    "team": "África do Sul"
+  },
+  {
+    "albumNumber": 510,
+    "code": "FIG-510",
+    "name": "Figurinha 510",
+    "team": "África do Sul"
+  },
+  {
+    "albumNumber": 511,
+    "code": "FIG-511",
+    "name": "Figurinha 511",
+    "team": "África do Sul"
+  },
+  {
+    "albumNumber": 512,
+    "code": "FIG-512",
+    "name": "Figurinha 512",
+    "team": "África do Sul"
+  },
+  {
+    "albumNumber": 513,
+    "code": "FIG-513",
+    "name": "Figurinha 513",
+    "team": "África do Sul"
+  },
+  {
+    "albumNumber": 514,
+    "code": "FIG-514",
+    "name": "Figurinha 514",
+    "team": "África do Sul"
+  },
+  {
+    "albumNumber": 515,
+    "code": "FIG-515",
+    "name": "Figurinha 515",
+    "team": "África do Sul"
+  },
+  {
+    "albumNumber": 516,
+    "code": "FIG-516",
+    "name": "Figurinha 516",
+    "team": "África do Sul"
+  },
+  {
+    "albumNumber": 517,
+    "code": "FIG-517",
+    "name": "Figurinha 517",
+    "team": "África do Sul"
+  },
+  {
+    "albumNumber": 518,
+    "code": "FIG-518",
+    "name": "Figurinha 518",
+    "team": "África do Sul"
+  },
+  {
+    "albumNumber": 519,
+    "code": "FIG-519",
+    "name": "Figurinha 519",
+    "team": "África do Sul"
+  },
+  {
+    "albumNumber": 520,
+    "code": "FIG-520",
+    "name": "Figurinha 520",
+    "team": "África do Sul"
+  },
+  {
+    "albumNumber": 521,
+    "code": "FIG-521",
+    "name": "Figurinha 521",
+    "team": "Arábia Saudita"
+  },
+  {
+    "albumNumber": 522,
+    "code": "FIG-522",
+    "name": "Figurinha 522",
+    "team": "Arábia Saudita"
+  },
+  {
+    "albumNumber": 523,
+    "code": "FIG-523",
+    "name": "Figurinha 523",
+    "team": "Arábia Saudita"
+  },
+  {
+    "albumNumber": 524,
+    "code": "FIG-524",
+    "name": "Figurinha 524",
+    "team": "Arábia Saudita"
+  },
+  {
+    "albumNumber": 525,
+    "code": "FIG-525",
+    "name": "Figurinha 525",
+    "team": "Arábia Saudita"
+  },
+  {
+    "albumNumber": 526,
+    "code": "FIG-526",
+    "name": "Figurinha 526",
+    "team": "Arábia Saudita"
+  },
+  {
+    "albumNumber": 527,
+    "code": "FIG-527",
+    "name": "Figurinha 527",
+    "team": "Arábia Saudita"
+  },
+  {
+    "albumNumber": 528,
+    "code": "FIG-528",
+    "name": "Figurinha 528",
+    "team": "Arábia Saudita"
+  },
+  {
+    "albumNumber": 529,
+    "code": "FIG-529",
+    "name": "Figurinha 529",
+    "team": "Arábia Saudita"
+  },
+  {
+    "albumNumber": 530,
+    "code": "FIG-530",
+    "name": "Figurinha 530",
+    "team": "Arábia Saudita"
+  },
+  {
+    "albumNumber": 531,
+    "code": "FIG-531",
+    "name": "Figurinha 531",
+    "team": "Arábia Saudita"
+  },
+  {
+    "albumNumber": 532,
+    "code": "FIG-532",
+    "name": "Figurinha 532",
+    "team": "Arábia Saudita"
+  },
+  {
+    "albumNumber": 533,
+    "code": "FIG-533",
+    "name": "Figurinha 533",
+    "team": "Arábia Saudita"
+  },
+  {
+    "albumNumber": 534,
+    "code": "FIG-534",
+    "name": "Figurinha 534",
+    "team": "Arábia Saudita"
+  },
+  {
+    "albumNumber": 535,
+    "code": "FIG-535",
+    "name": "Figurinha 535",
+    "team": "Arábia Saudita"
+  },
+  {
+    "albumNumber": 536,
+    "code": "FIG-536",
+    "name": "Figurinha 536",
+    "team": "Arábia Saudita"
+  },
+  {
+    "albumNumber": 537,
+    "code": "FIG-537",
+    "name": "Figurinha 537",
+    "team": "Arábia Saudita"
+  },
+  {
+    "albumNumber": 538,
+    "code": "FIG-538",
+    "name": "Figurinha 538",
+    "team": "Arábia Saudita"
+  },
+  {
+    "albumNumber": 539,
+    "code": "FIG-539",
+    "name": "Figurinha 539",
+    "team": "Irã"
+  },
+  {
+    "albumNumber": 540,
+    "code": "FIG-540",
+    "name": "Figurinha 540",
+    "team": "Irã"
+  },
+  {
+    "albumNumber": 541,
+    "code": "FIG-541",
+    "name": "Figurinha 541",
+    "team": "Irã"
+  },
+  {
+    "albumNumber": 542,
+    "code": "FIG-542",
+    "name": "Figurinha 542",
+    "team": "Irã"
+  },
+  {
+    "albumNumber": 543,
+    "code": "FIG-543",
+    "name": "Figurinha 543",
+    "team": "Irã"
+  },
+  {
+    "albumNumber": 544,
+    "code": "FIG-544",
+    "name": "Figurinha 544",
+    "team": "Irã"
+  },
+  {
+    "albumNumber": 545,
+    "code": "FIG-545",
+    "name": "Figurinha 545",
+    "team": "Irã"
+  },
+  {
+    "albumNumber": 546,
+    "code": "FIG-546",
+    "name": "Figurinha 546",
+    "team": "Irã"
+  },
+  {
+    "albumNumber": 547,
+    "code": "FIG-547",
+    "name": "Figurinha 547",
+    "team": "Irã"
+  },
+  {
+    "albumNumber": 548,
+    "code": "FIG-548",
+    "name": "Figurinha 548",
+    "team": "Irã"
+  },
+  {
+    "albumNumber": 549,
+    "code": "FIG-549",
+    "name": "Figurinha 549",
+    "team": "Irã"
+  },
+  {
+    "albumNumber": 550,
+    "code": "FIG-550",
+    "name": "Figurinha 550",
+    "team": "Irã"
+  },
+  {
+    "albumNumber": 551,
+    "code": "FIG-551",
+    "name": "Figurinha 551",
+    "team": "Irã"
+  },
+  {
+    "albumNumber": 552,
+    "code": "FIG-552",
+    "name": "Figurinha 552",
+    "team": "Irã"
+  },
+  {
+    "albumNumber": 553,
+    "code": "FIG-553",
+    "name": "Figurinha 553",
+    "team": "Irã"
+  },
+  {
+    "albumNumber": 554,
+    "code": "FIG-554",
+    "name": "Figurinha 554",
+    "team": "Irã"
+  },
+  {
+    "albumNumber": 555,
+    "code": "FIG-555",
+    "name": "Figurinha 555",
+    "team": "Irã"
+  },
+  {
+    "albumNumber": 556,
+    "code": "FIG-556",
+    "name": "Figurinha 556",
+    "team": "Irã"
+  },
+  {
+    "albumNumber": 557,
+    "code": "FIG-557",
+    "name": "Figurinha 557",
+    "team": "Qatar"
+  },
+  {
+    "albumNumber": 558,
+    "code": "FIG-558",
+    "name": "Figurinha 558",
+    "team": "Qatar"
+  },
+  {
+    "albumNumber": 559,
+    "code": "FIG-559",
+    "name": "Figurinha 559",
+    "team": "Qatar"
+  },
+  {
+    "albumNumber": 560,
+    "code": "FIG-560",
+    "name": "Figurinha 560",
+    "team": "Qatar"
+  },
+  {
+    "albumNumber": 561,
+    "code": "FIG-561",
+    "name": "Figurinha 561",
+    "team": "Qatar"
+  },
+  {
+    "albumNumber": 562,
+    "code": "FIG-562",
+    "name": "Figurinha 562",
+    "team": "Qatar"
+  },
+  {
+    "albumNumber": 563,
+    "code": "FIG-563",
+    "name": "Figurinha 563",
+    "team": "Qatar"
+  },
+  {
+    "albumNumber": 564,
+    "code": "FIG-564",
+    "name": "Figurinha 564",
+    "team": "Qatar"
+  },
+  {
+    "albumNumber": 565,
+    "code": "FIG-565",
+    "name": "Figurinha 565",
+    "team": "Qatar"
+  },
+  {
+    "albumNumber": 566,
+    "code": "FIG-566",
+    "name": "Figurinha 566",
+    "team": "Qatar"
+  },
+  {
+    "albumNumber": 567,
+    "code": "FIG-567",
+    "name": "Figurinha 567",
+    "team": "Qatar"
+  },
+  {
+    "albumNumber": 568,
+    "code": "FIG-568",
+    "name": "Figurinha 568",
+    "team": "Qatar"
+  },
+  {
+    "albumNumber": 569,
+    "code": "FIG-569",
+    "name": "Figurinha 569",
+    "team": "Qatar"
+  },
+  {
+    "albumNumber": 570,
+    "code": "FIG-570",
+    "name": "Figurinha 570",
+    "team": "Qatar"
+  },
+  {
+    "albumNumber": 571,
+    "code": "FIG-571",
+    "name": "Figurinha 571",
+    "team": "Qatar"
+  },
+  {
+    "albumNumber": 572,
+    "code": "FIG-572",
+    "name": "Figurinha 572",
+    "team": "Qatar"
+  },
+  {
+    "albumNumber": 573,
+    "code": "FIG-573",
+    "name": "Figurinha 573",
+    "team": "Qatar"
+  },
+  {
+    "albumNumber": 574,
+    "code": "FIG-574",
+    "name": "Figurinha 574",
+    "team": "Qatar"
+  },
+  {
+    "albumNumber": 575,
+    "code": "FIG-575",
+    "name": "Figurinha 575",
+    "team": "Austrália"
+  },
+  {
+    "albumNumber": 576,
+    "code": "FIG-576",
+    "name": "Figurinha 576",
+    "team": "Austrália"
+  },
+  {
+    "albumNumber": 577,
+    "code": "FIG-577",
+    "name": "Figurinha 577",
+    "team": "Austrália"
+  },
+  {
+    "albumNumber": 578,
+    "code": "FIG-578",
+    "name": "Figurinha 578",
+    "team": "Austrália"
+  },
+  {
+    "albumNumber": 579,
+    "code": "FIG-579",
+    "name": "Figurinha 579",
+    "team": "Austrália"
+  },
+  {
+    "albumNumber": 580,
+    "code": "FIG-580",
+    "name": "Figurinha 580",
+    "team": "Austrália"
+  },
+  {
+    "albumNumber": 581,
+    "code": "FIG-581",
+    "name": "Figurinha 581",
+    "team": "Peru"
+  },
+  {
+    "albumNumber": 582,
+    "code": "FIG-582",
+    "name": "Figurinha 582",
+    "team": "Peru"
+  },
+  {
+    "albumNumber": 583,
+    "code": "FIG-583",
+    "name": "Figurinha 583",
+    "team": "Peru"
+  },
+  {
+    "albumNumber": 584,
+    "code": "FIG-584",
+    "name": "Figurinha 584",
+    "team": "Peru"
+  },
+  {
+    "albumNumber": 585,
+    "code": "FIG-585",
+    "name": "Figurinha 585",
+    "team": "Peru"
+  },
+  {
+    "albumNumber": 586,
+    "code": "FIG-586",
+    "name": "Figurinha 586",
+    "team": "Peru"
+  },
+  {
+    "albumNumber": 587,
+    "code": "FIG-587",
+    "name": "Figurinha 587",
+    "team": "Peru"
+  },
+  {
+    "albumNumber": 588,
+    "code": "FIG-588",
+    "name": "Figurinha 588",
+    "team": "Peru"
+  },
+  {
+    "albumNumber": 589,
+    "code": "FIG-589",
+    "name": "Figurinha 589",
+    "team": "Peru"
+  },
+  {
+    "albumNumber": 590,
+    "code": "FIG-590",
+    "name": "Figurinha 590",
+    "team": "Peru"
+  },
+  {
+    "albumNumber": 591,
+    "code": "FIG-591",
+    "name": "Figurinha 591",
+    "team": "Peru"
+  },
+  {
+    "albumNumber": 592,
+    "code": "FIG-592",
+    "name": "Figurinha 592",
+    "team": "Peru"
+  },
+  {
+    "albumNumber": 593,
+    "code": "FIG-593",
+    "name": "Figurinha 593",
+    "team": "Peru"
+  },
+  {
+    "albumNumber": 594,
+    "code": "FIG-594",
+    "name": "Figurinha 594",
+    "team": "Peru"
+  },
+  {
+    "albumNumber": 595,
+    "code": "FIG-595",
+    "name": "Figurinha 595",
+    "team": "Peru"
+  },
+  {
+    "albumNumber": 596,
+    "code": "FIG-596",
+    "name": "Figurinha 596",
+    "team": "Peru"
+  },
+  {
+    "albumNumber": 597,
+    "code": "FIG-597",
+    "name": "Figurinha 597",
+    "team": "Peru"
+  },
+  {
+    "albumNumber": 598,
+    "code": "FIG-598",
+    "name": "Figurinha 598",
+    "team": "Peru"
+  },
+  {
+    "albumNumber": 599,
+    "code": "FIG-599",
+    "name": "Figurinha 599",
+    "team": "Chile"
+  },
+  {
+    "albumNumber": 600,
+    "code": "FIG-600",
+    "name": "Figurinha 600",
+    "team": "Chile"
+  },
+  {
+    "albumNumber": 601,
+    "code": "FIG-601",
+    "name": "Figurinha 601",
+    "team": "Chile"
+  },
+  {
+    "albumNumber": 602,
+    "code": "FIG-602",
+    "name": "Figurinha 602",
+    "team": "Chile"
+  },
+  {
+    "albumNumber": 603,
+    "code": "FIG-603",
+    "name": "Figurinha 603",
+    "team": "Chile"
+  },
+  {
+    "albumNumber": 604,
+    "code": "FIG-604",
+    "name": "Figurinha 604",
+    "team": "Chile"
+  },
+  {
+    "albumNumber": 605,
+    "code": "FIG-605",
+    "name": "Figurinha 605",
+    "team": "Chile"
+  },
+  {
+    "albumNumber": 606,
+    "code": "FIG-606",
+    "name": "Figurinha 606",
+    "team": "Chile"
+  },
+  {
+    "albumNumber": 607,
+    "code": "FIG-607",
+    "name": "Figurinha 607",
+    "team": "Chile"
+  },
+  {
+    "albumNumber": 608,
+    "code": "FIG-608",
+    "name": "Figurinha 608",
+    "team": "Chile"
+  },
+  {
+    "albumNumber": 609,
+    "code": "FIG-609",
+    "name": "Figurinha 609",
+    "team": "Chile"
+  },
+  {
+    "albumNumber": 610,
+    "code": "FIG-610",
+    "name": "Figurinha 610",
+    "team": "Chile"
+  },
+  {
+    "albumNumber": 611,
+    "code": "FIG-611",
+    "name": "Figurinha 611",
+    "team": "Chile"
+  },
+  {
+    "albumNumber": 612,
+    "code": "FIG-612",
+    "name": "Figurinha 612",
+    "team": "Chile"
+  },
+  {
+    "albumNumber": 613,
+    "code": "FIG-613",
+    "name": "Figurinha 613",
+    "team": "Chile"
+  },
+  {
+    "albumNumber": 614,
+    "code": "FIG-614",
+    "name": "Figurinha 614",
+    "team": "Chile"
+  },
+  {
+    "albumNumber": 615,
+    "code": "FIG-615",
+    "name": "Figurinha 615",
+    "team": "Chile"
+  },
+  {
+    "albumNumber": 616,
+    "code": "FIG-616",
+    "name": "Figurinha 616",
+    "team": "Chile"
+  },
+  {
+    "albumNumber": 617,
+    "code": "FIG-617",
+    "name": "Figurinha 617",
+    "team": "Equador"
+  },
+  {
+    "albumNumber": 618,
+    "code": "FIG-618",
+    "name": "Figurinha 618",
+    "team": "Equador"
+  },
+  {
+    "albumNumber": 619,
+    "code": "FIG-619",
+    "name": "Figurinha 619",
+    "team": "Equador"
+  },
+  {
+    "albumNumber": 620,
+    "code": "FIG-620",
+    "name": "Figurinha 620",
+    "team": "Equador"
+  },
+  {
+    "albumNumber": 621,
+    "code": "FIG-621",
+    "name": "Figurinha 621",
+    "team": "Equador"
+  },
+  {
+    "albumNumber": 622,
+    "code": "FIG-622",
+    "name": "Figurinha 622",
+    "team": "Equador"
+  },
+  {
+    "albumNumber": 623,
+    "code": "FIG-623",
+    "name": "Figurinha 623",
+    "team": "Equador"
+  },
+  {
+    "albumNumber": 624,
+    "code": "FIG-624",
+    "name": "Figurinha 624",
+    "team": "Equador"
+  },
+  {
+    "albumNumber": 625,
+    "code": "FIG-625",
+    "name": "Figurinha 625",
+    "team": "Equador"
+  },
+  {
+    "albumNumber": 626,
+    "code": "FIG-626",
+    "name": "Figurinha 626",
+    "team": "Equador"
+  },
+  {
+    "albumNumber": 627,
+    "code": "FIG-627",
+    "name": "Figurinha 627",
+    "team": "Equador"
+  },
+  {
+    "albumNumber": 628,
+    "code": "FIG-628",
+    "name": "Figurinha 628",
+    "team": "Equador"
+  },
+  {
+    "albumNumber": 629,
+    "code": "FIG-629",
+    "name": "Figurinha 629",
+    "team": "Equador"
+  },
+  {
+    "albumNumber": 630,
+    "code": "FIG-630",
+    "name": "Figurinha 630",
+    "team": "Equador"
+  },
+  {
+    "albumNumber": 631,
+    "code": "FIG-631",
+    "name": "Figurinha 631",
+    "team": "Equador"
+  },
+  {
+    "albumNumber": 632,
+    "code": "FIG-632",
+    "name": "Figurinha 632",
+    "team": "Equador"
+  },
+  {
+    "albumNumber": 633,
+    "code": "FIG-633",
+    "name": "Figurinha 633",
+    "team": "Equador"
+  },
+  {
+    "albumNumber": 634,
+    "code": "FIG-634",
+    "name": "Figurinha 634",
+    "team": "Equador"
+  },
+  {
+    "albumNumber": 635,
+    "code": "FIG-635",
+    "name": "Figurinha 635",
+    "team": "Bolívia"
+  },
+  {
+    "albumNumber": 636,
+    "code": "FIG-636",
+    "name": "Figurinha 636",
+    "team": "Bolívia"
+  },
+  {
+    "albumNumber": 637,
+    "code": "FIG-637",
+    "name": "Figurinha 637",
+    "team": "Bolívia"
+  },
+  {
+    "albumNumber": 638,
+    "code": "FIG-638",
+    "name": "Figurinha 638",
+    "team": "Bolívia"
+  },
+  {
+    "albumNumber": 639,
+    "code": "FIG-639",
+    "name": "Figurinha 639",
+    "team": "Bolívia"
+  },
+  {
+    "albumNumber": 640,
+    "code": "FIG-640",
+    "name": "Figurinha 640",
+    "team": "Bolívia"
+  },
+  {
+    "albumNumber": 641,
+    "code": "FIG-641",
+    "name": "Figurinha 641",
+    "team": "Bolívia"
+  },
+  {
+    "albumNumber": 642,
+    "code": "FIG-642",
+    "name": "Figurinha 642",
+    "team": "Bolívia"
+  },
+  {
+    "albumNumber": 643,
+    "code": "FIG-643",
+    "name": "Figurinha 643",
+    "team": "Bolívia"
+  },
+  {
+    "albumNumber": 644,
+    "code": "FIG-644",
+    "name": "Figurinha 644",
+    "team": "Bolívia"
+  },
+  {
+    "albumNumber": 645,
+    "code": "FIG-645",
+    "name": "Figurinha 645",
+    "team": "Bolívia"
+  },
+  {
+    "albumNumber": 646,
+    "code": "FIG-646",
+    "name": "Figurinha 646",
+    "team": "Bolívia"
+  },
+  {
+    "albumNumber": 647,
+    "code": "FIG-647",
+    "name": "Figurinha 647",
+    "team": "Bolívia"
+  },
+  {
+    "albumNumber": 648,
+    "code": "FIG-648",
+    "name": "Figurinha 648",
+    "team": "Bolívia"
+  },
+  {
+    "albumNumber": 649,
+    "code": "FIG-649",
+    "name": "Figurinha 649",
+    "team": "Bolívia"
+  },
+  {
+    "albumNumber": 650,
+    "code": "FIG-650",
+    "name": "Figurinha 650",
+    "team": "Bolívia"
+  },
+  {
+    "albumNumber": 651,
+    "code": "FIG-651",
+    "name": "Figurinha 651",
+    "team": "Bolívia"
+  },
+  {
+    "albumNumber": 652,
+    "code": "FIG-652",
+    "name": "Figurinha 652",
+    "team": "Bolívia"
+  },
+  {
+    "albumNumber": 653,
+    "code": "FIG-653",
+    "name": "Figurinha 653",
+    "team": "Venezuela"
+  },
+  {
+    "albumNumber": 654,
+    "code": "FIG-654",
+    "name": "Figurinha 654",
+    "team": "Venezuela"
+  },
+  {
+    "albumNumber": 655,
+    "code": "FIG-655",
+    "name": "Figurinha 655",
+    "team": "Venezuela"
+  },
+  {
+    "albumNumber": 656,
+    "code": "FIG-656",
+    "name": "Figurinha 656",
+    "team": "Venezuela"
+  },
+  {
+    "albumNumber": 657,
+    "code": "FIG-657",
+    "name": "Figurinha 657",
+    "team": "Venezuela"
+  },
+  {
+    "albumNumber": 658,
+    "code": "FIG-658",
+    "name": "Figurinha 658",
+    "team": "Venezuela"
+  },
+  {
+    "albumNumber": 659,
+    "code": "FIG-659",
+    "name": "Figurinha 659",
+    "team": "Venezuela"
+  },
+  {
+    "albumNumber": 660,
+    "code": "FIG-660",
+    "name": "Figurinha 660",
+    "team": "Venezuela"
+  },
+  {
+    "albumNumber": 661,
+    "code": "FIG-661",
+    "name": "Figurinha 661",
+    "team": "Venezuela"
+  },
+  {
+    "albumNumber": 662,
+    "code": "FIG-662",
+    "name": "Figurinha 662",
+    "team": "Venezuela"
+  },
+  {
+    "albumNumber": 663,
+    "code": "FIG-663",
+    "name": "Figurinha 663",
+    "team": "Venezuela"
+  },
+  {
+    "albumNumber": 664,
+    "code": "FIG-664",
+    "name": "Figurinha 664",
+    "team": "Venezuela"
+  },
+  {
+    "albumNumber": 665,
+    "code": "FIG-665",
+    "name": "Figurinha 665",
+    "team": "Venezuela"
+  },
+  {
+    "albumNumber": 666,
+    "code": "FIG-666",
+    "name": "Figurinha 666",
+    "team": "Venezuela"
+  },
+  {
+    "albumNumber": 667,
+    "code": "FIG-667",
+    "name": "Figurinha 667",
+    "team": "Venezuela"
+  },
+  {
+    "albumNumber": 668,
+    "code": "FIG-668",
+    "name": "Figurinha 668",
+    "team": "Venezuela"
+  },
+  {
+    "albumNumber": 669,
+    "code": "FIG-669",
+    "name": "Figurinha 669",
+    "team": "Venezuela"
+  },
+  {
+    "albumNumber": 670,
+    "code": "FIG-670",
+    "name": "Figurinha 670",
+    "team": "Venezuela"
+  },
+  {
+    "albumNumber": 671,
+    "code": "FIG-671",
+    "name": "Figurinha 671",
+    "team": "Paraguai"
+  },
+  {
+    "albumNumber": 672,
+    "code": "FIG-672",
+    "name": "Figurinha 672",
+    "team": "Paraguai"
+  },
+  {
+    "albumNumber": 673,
+    "code": "FIG-673",
+    "name": "Figurinha 673",
+    "team": "Paraguai"
+  },
+  {
+    "albumNumber": 674,
+    "code": "FIG-674",
+    "name": "Figurinha 674",
+    "team": "Paraguai"
+  },
+  {
+    "albumNumber": 675,
+    "code": "FIG-675",
+    "name": "Figurinha 675",
+    "team": "Paraguai"
+  },
+  {
+    "albumNumber": 676,
+    "code": "FIG-676",
+    "name": "Figurinha 676",
+    "team": "Paraguai"
+  },
+  {
+    "albumNumber": 677,
+    "code": "FIG-677",
+    "name": "Figurinha 677",
+    "team": "Paraguai"
+  },
+  {
+    "albumNumber": 678,
+    "code": "FIG-678",
+    "name": "Figurinha 678",
+    "team": "Paraguai"
+  },
+  {
+    "albumNumber": 679,
+    "code": "FIG-679",
+    "name": "Figurinha 679",
+    "team": "Paraguai"
+  },
+  {
+    "albumNumber": 680,
+    "code": "FIG-680",
+    "name": "Figurinha 680",
+    "team": "Paraguai"
+  },
+  {
+    "albumNumber": 681,
+    "code": "FIG-681",
+    "name": "Figurinha 681",
+    "team": "Paraguai"
+  },
+  {
+    "albumNumber": 682,
+    "code": "FIG-682",
+    "name": "Figurinha 682",
+    "team": "Paraguai"
+  },
+  {
+    "albumNumber": 683,
+    "code": "FIG-683",
+    "name": "Figurinha 683",
+    "team": "Paraguai"
+  },
+  {
+    "albumNumber": 684,
+    "code": "FIG-684",
+    "name": "Figurinha 684",
+    "team": "Paraguai"
+  },
+  {
+    "albumNumber": 685,
+    "code": "FIG-685",
+    "name": "Figurinha 685",
+    "team": "Paraguai"
+  },
+  {
+    "albumNumber": 686,
+    "code": "FIG-686",
+    "name": "Figurinha 686",
+    "team": "Paraguai"
+  },
+  {
+    "albumNumber": 687,
+    "code": "FIG-687",
+    "name": "Figurinha 687",
+    "team": "Paraguai"
+  },
+  {
+    "albumNumber": 688,
+    "code": "FIG-688",
+    "name": "Figurinha 688",
+    "team": "Paraguai"
+  },
+  {
+    "albumNumber": 689,
+    "code": "FIG-689",
+    "name": "Figurinha 689",
+    "team": "Costa Rica"
+  },
+  {
+    "albumNumber": 690,
+    "code": "FIG-690",
+    "name": "Figurinha 690",
+    "team": "Costa Rica"
+  },
+  {
+    "albumNumber": 691,
+    "code": "FIG-691",
+    "name": "Figurinha 691",
+    "team": "Costa Rica"
+  },
+  {
+    "albumNumber": 692,
+    "code": "FIG-692",
+    "name": "Figurinha 692",
+    "team": "Costa Rica"
+  },
+  {
+    "albumNumber": 693,
+    "code": "FIG-693",
+    "name": "Figurinha 693",
+    "team": "Costa Rica"
+  },
+  {
+    "albumNumber": 694,
+    "code": "FIG-694",
+    "name": "Figurinha 694",
+    "team": "Costa Rica"
+  },
+  {
+    "albumNumber": 695,
+    "code": "FIG-695",
+    "name": "Figurinha 695",
+    "team": "Costa Rica"
+  },
+  {
+    "albumNumber": 696,
+    "code": "FIG-696",
+    "name": "Figurinha 696",
+    "team": "Costa Rica"
+  },
+  {
+    "albumNumber": 697,
+    "code": "FIG-697",
+    "name": "Figurinha 697",
+    "team": "Costa Rica"
+  },
+  {
+    "albumNumber": 698,
+    "code": "FIG-698",
+    "name": "Figurinha 698",
+    "team": "Costa Rica"
+  },
+  {
+    "albumNumber": 699,
+    "code": "FIG-699",
+    "name": "Figurinha 699",
+    "team": "Costa Rica"
+  },
+  {
+    "albumNumber": 700,
+    "code": "FIG-700",
+    "name": "Figurinha 700",
+    "team": "Costa Rica"
+  },
+  {
+    "albumNumber": 701,
+    "code": "FIG-701",
+    "name": "Figurinha 701",
+    "team": "Costa Rica"
+  },
+  {
+    "albumNumber": 702,
+    "code": "FIG-702",
+    "name": "Figurinha 702",
+    "team": "Costa Rica"
+  },
+  {
+    "albumNumber": 703,
+    "code": "FIG-703",
+    "name": "Figurinha 703",
+    "team": "Costa Rica"
+  },
+  {
+    "albumNumber": 704,
+    "code": "FIG-704",
+    "name": "Figurinha 704",
+    "team": "Costa Rica"
+  },
+  {
+    "albumNumber": 705,
+    "code": "FIG-705",
+    "name": "Figurinha 705",
+    "team": "Costa Rica"
+  },
+  {
+    "albumNumber": 706,
+    "code": "FIG-706",
+    "name": "Figurinha 706",
+    "team": "Costa Rica"
+  },
+  {
+    "albumNumber": 707,
+    "code": "FIG-707",
+    "name": "Figurinha 707",
+    "team": "Panamá"
+  },
+  {
+    "albumNumber": 708,
+    "code": "FIG-708",
+    "name": "Figurinha 708",
+    "team": "Panamá"
+  },
+  {
+    "albumNumber": 709,
+    "code": "FIG-709",
+    "name": "Figurinha 709",
+    "team": "Panamá"
+  },
+  {
+    "albumNumber": 710,
+    "code": "FIG-710",
+    "name": "Figurinha 710",
+    "team": "Panamá"
+  },
+  {
+    "albumNumber": 711,
+    "code": "FIG-711",
+    "name": "Figurinha 711",
+    "team": "Panamá"
+  },
+  {
+    "albumNumber": 712,
+    "code": "FIG-712",
+    "name": "Figurinha 712",
+    "team": "Panamá"
+  },
+  {
+    "albumNumber": 713,
+    "code": "FIG-713",
+    "name": "Figurinha 713",
+    "team": "Panamá"
+  },
+  {
+    "albumNumber": 714,
+    "code": "FIG-714",
+    "name": "Figurinha 714",
+    "team": "Panamá"
+  },
+  {
+    "albumNumber": 715,
+    "code": "FIG-715",
+    "name": "Figurinha 715",
+    "team": "Panamá"
+  },
+  {
+    "albumNumber": 716,
+    "code": "FIG-716",
+    "name": "Figurinha 716",
+    "team": "Panamá"
+  },
+  {
+    "albumNumber": 717,
+    "code": "FIG-717",
+    "name": "Figurinha 717",
+    "team": "Panamá"
+  },
+  {
+    "albumNumber": 718,
+    "code": "FIG-718",
+    "name": "Figurinha 718",
+    "team": "Panamá"
+  },
+  {
+    "albumNumber": 719,
+    "code": "FIG-719",
+    "name": "Figurinha 719",
+    "team": "Panamá"
+  },
+  {
+    "albumNumber": 720,
+    "code": "FIG-720",
+    "name": "Figurinha 720",
+    "team": "Panamá"
+  },
+  {
+    "albumNumber": 721,
+    "code": "FIG-721",
+    "name": "Figurinha 721",
+    "team": "Panamá"
+  },
+  {
+    "albumNumber": 722,
+    "code": "FIG-722",
+    "name": "Figurinha 722",
+    "team": "Panamá"
+  },
+  {
+    "albumNumber": 723,
+    "code": "FIG-723",
+    "name": "Figurinha 723",
+    "team": "Panamá"
+  },
+  {
+    "albumNumber": 724,
+    "code": "FIG-724",
+    "name": "Figurinha 724",
+    "team": "Panamá"
+  },
+  {
+    "albumNumber": 725,
+    "code": "FIG-725",
+    "name": "Figurinha 725",
+    "team": "Jamaica"
+  },
+  {
+    "albumNumber": 726,
+    "code": "FIG-726",
+    "name": "Figurinha 726",
+    "team": "Jamaica"
+  },
+  {
+    "albumNumber": 727,
+    "code": "FIG-727",
+    "name": "Figurinha 727",
+    "team": "Jamaica"
+  },
+  {
+    "albumNumber": 728,
+    "code": "FIG-728",
+    "name": "Figurinha 728",
+    "team": "Jamaica"
+  },
+  {
+    "albumNumber": 729,
+    "code": "FIG-729",
+    "name": "Figurinha 729",
+    "team": "Jamaica"
+  },
+  {
+    "albumNumber": 730,
+    "code": "FIG-730",
+    "name": "Figurinha 730",
+    "team": "Jamaica"
+  },
+  {
+    "albumNumber": 731,
+    "code": "FIG-731",
+    "name": "Figurinha 731",
+    "team": "Jamaica"
+  },
+  {
+    "albumNumber": 732,
+    "code": "FIG-732",
+    "name": "Figurinha 732",
+    "team": "Jamaica"
+  },
+  {
+    "albumNumber": 733,
+    "code": "FIG-733",
+    "name": "Figurinha 733",
+    "team": "Jamaica"
+  },
+  {
+    "albumNumber": 734,
+    "code": "FIG-734",
+    "name": "Figurinha 734",
+    "team": "Jamaica"
+  },
+  {
+    "albumNumber": 735,
+    "code": "FIG-735",
+    "name": "Figurinha 735",
+    "team": "Jamaica"
+  },
+  {
+    "albumNumber": 736,
+    "code": "FIG-736",
+    "name": "Figurinha 736",
+    "team": "Jamaica"
+  },
+  {
+    "albumNumber": 737,
+    "code": "FIG-737",
+    "name": "Figurinha 737",
+    "team": "Jamaica"
+  },
+  {
+    "albumNumber": 738,
+    "code": "FIG-738",
+    "name": "Figurinha 738",
+    "team": "Jamaica"
+  },
+  {
+    "albumNumber": 739,
+    "code": "FIG-739",
+    "name": "Figurinha 739",
+    "team": "Jamaica"
+  },
+  {
+    "albumNumber": 740,
+    "code": "FIG-740",
+    "name": "Figurinha 740",
+    "team": "Jamaica"
+  },
+  {
+    "albumNumber": 741,
+    "code": "FIG-741",
+    "name": "Figurinha 741",
+    "team": "Jamaica"
+  },
+  {
+    "albumNumber": 742,
+    "code": "FIG-742",
+    "name": "Figurinha 742",
+    "team": "Jamaica"
+  },
+  {
+    "albumNumber": 743,
+    "code": "FIG-743",
+    "name": "Figurinha 743",
+    "team": "Honduras"
+  },
+  {
+    "albumNumber": 744,
+    "code": "FIG-744",
+    "name": "Figurinha 744",
+    "team": "Honduras"
+  },
+  {
+    "albumNumber": 745,
+    "code": "FIG-745",
+    "name": "Figurinha 745",
+    "team": "Honduras"
+  },
+  {
+    "albumNumber": 746,
+    "code": "FIG-746",
+    "name": "Figurinha 746",
+    "team": "Honduras"
+  },
+  {
+    "albumNumber": 747,
+    "code": "FIG-747",
+    "name": "Figurinha 747",
+    "team": "Honduras"
+  },
+  {
+    "albumNumber": 748,
+    "code": "FIG-748",
+    "name": "Figurinha 748",
+    "team": "Honduras"
+  },
+  {
+    "albumNumber": 749,
+    "code": "FIG-749",
+    "name": "Figurinha 749",
+    "team": "Honduras"
+  },
+  {
+    "albumNumber": 750,
+    "code": "FIG-750",
+    "name": "Figurinha 750",
+    "team": "Honduras"
+  },
+  {
+    "albumNumber": 751,
+    "code": "FIG-751",
+    "name": "Figurinha 751",
+    "team": "Honduras"
+  },
+  {
+    "albumNumber": 752,
+    "code": "FIG-752",
+    "name": "Figurinha 752",
+    "team": "Honduras"
+  },
+  {
+    "albumNumber": 753,
+    "code": "FIG-753",
+    "name": "Figurinha 753",
+    "team": "Honduras"
+  },
+  {
+    "albumNumber": 754,
+    "code": "FIG-754",
+    "name": "Figurinha 754",
+    "team": "Honduras"
+  },
+  {
+    "albumNumber": 755,
+    "code": "FIG-755",
+    "name": "Figurinha 755",
+    "team": "Honduras"
+  },
+  {
+    "albumNumber": 756,
+    "code": "FIG-756",
+    "name": "Figurinha 756",
+    "team": "Honduras"
+  },
+  {
+    "albumNumber": 757,
+    "code": "FIG-757",
+    "name": "Figurinha 757",
+    "team": "Honduras"
+  },
+  {
+    "albumNumber": 758,
+    "code": "FIG-758",
+    "name": "Figurinha 758",
+    "team": "Honduras"
+  },
+  {
+    "albumNumber": 759,
+    "code": "FIG-759",
+    "name": "Figurinha 759",
+    "team": "Honduras"
+  },
+  {
+    "albumNumber": 760,
+    "code": "FIG-760",
+    "name": "Figurinha 760",
+    "team": "Honduras"
+  },
+  {
+    "albumNumber": 761,
+    "code": "FIG-761",
+    "name": "Figurinha 761",
+    "team": "El Salvador"
+  },
+  {
+    "albumNumber": 762,
+    "code": "FIG-762",
+    "name": "Figurinha 762",
+    "team": "El Salvador"
+  },
+  {
+    "albumNumber": 763,
+    "code": "FIG-763",
+    "name": "Figurinha 763",
+    "team": "El Salvador"
+  },
+  {
+    "albumNumber": 764,
+    "code": "FIG-764",
+    "name": "Figurinha 764",
+    "team": "El Salvador"
+  },
+  {
+    "albumNumber": 765,
+    "code": "FIG-765",
+    "name": "Figurinha 765",
+    "team": "El Salvador"
+  },
+  {
+    "albumNumber": 766,
+    "code": "FIG-766",
+    "name": "Figurinha 766",
+    "team": "El Salvador"
+  },
+  {
+    "albumNumber": 767,
+    "code": "FIG-767",
+    "name": "Figurinha 767",
+    "team": "El Salvador"
+  },
+  {
+    "albumNumber": 768,
+    "code": "FIG-768",
+    "name": "Figurinha 768",
+    "team": "El Salvador"
+  },
+  {
+    "albumNumber": 769,
+    "code": "FIG-769",
+    "name": "Figurinha 769",
+    "team": "El Salvador"
+  },
+  {
+    "albumNumber": 770,
+    "code": "FIG-770",
+    "name": "Figurinha 770",
+    "team": "El Salvador"
+  },
+  {
+    "albumNumber": 771,
+    "code": "FIG-771",
+    "name": "Figurinha 771",
+    "team": "El Salvador"
+  },
+  {
+    "albumNumber": 772,
+    "code": "FIG-772",
+    "name": "Figurinha 772",
+    "team": "El Salvador"
+  },
+  {
+    "albumNumber": 773,
+    "code": "FIG-773",
+    "name": "Figurinha 773",
+    "team": "El Salvador"
+  },
+  {
+    "albumNumber": 774,
+    "code": "FIG-774",
+    "name": "Figurinha 774",
+    "team": "El Salvador"
+  },
+  {
+    "albumNumber": 775,
+    "code": "FIG-775",
+    "name": "Figurinha 775",
+    "team": "El Salvador"
+  },
+  {
+    "albumNumber": 776,
+    "code": "FIG-776",
+    "name": "Figurinha 776",
+    "team": "El Salvador"
+  },
+  {
+    "albumNumber": 777,
+    "code": "FIG-777",
+    "name": "Figurinha 777",
+    "team": "El Salvador"
+  },
+  {
+    "albumNumber": 778,
+    "code": "FIG-778",
+    "name": "Figurinha 778",
+    "team": "El Salvador"
+  },
+  {
+    "albumNumber": 779,
+    "code": "FIG-779",
+    "name": "Figurinha 779",
+    "team": "Turquia"
+  },
+  {
+    "albumNumber": 780,
+    "code": "FIG-780",
+    "name": "Figurinha 780",
+    "team": "Turquia"
+  },
+  {
+    "albumNumber": 781,
+    "code": "FIG-781",
+    "name": "Figurinha 781",
+    "team": "Turquia"
+  },
+  {
+    "albumNumber": 782,
+    "code": "FIG-782",
+    "name": "Figurinha 782",
+    "team": "Turquia"
+  },
+  {
+    "albumNumber": 783,
+    "code": "FIG-783",
+    "name": "Figurinha 783",
+    "team": "Turquia"
+  },
+  {
+    "albumNumber": 784,
+    "code": "FIG-784",
+    "name": "Figurinha 784",
+    "team": "Turquia"
+  },
+  {
+    "albumNumber": 785,
+    "code": "FIG-785",
+    "name": "Figurinha 785",
+    "team": "Turquia"
+  },
+  {
+    "albumNumber": 786,
+    "code": "FIG-786",
+    "name": "Figurinha 786",
+    "team": "Turquia"
+  },
+  {
+    "albumNumber": 787,
+    "code": "FIG-787",
+    "name": "Figurinha 787",
+    "team": "Turquia"
+  },
+  {
+    "albumNumber": 788,
+    "code": "FIG-788",
+    "name": "Figurinha 788",
+    "team": "Turquia"
+  },
+  {
+    "albumNumber": 789,
+    "code": "FIG-789",
+    "name": "Figurinha 789",
+    "team": "Turquia"
+  },
+  {
+    "albumNumber": 790,
+    "code": "FIG-790",
+    "name": "Figurinha 790",
+    "team": "Turquia"
+  },
+  {
+    "albumNumber": 791,
+    "code": "FIG-791",
+    "name": "Figurinha 791",
+    "team": "Turquia"
+  },
+  {
+    "albumNumber": 792,
+    "code": "FIG-792",
+    "name": "Figurinha 792",
+    "team": "Turquia"
+  },
+  {
+    "albumNumber": 793,
+    "code": "FIG-793",
+    "name": "Figurinha 793",
+    "team": "Turquia"
+  },
+  {
+    "albumNumber": 794,
+    "code": "FIG-794",
+    "name": "Figurinha 794",
+    "team": "Turquia"
+  },
+  {
+    "albumNumber": 795,
+    "code": "FIG-795",
+    "name": "Figurinha 795",
+    "team": "Turquia"
+  },
+  {
+    "albumNumber": 796,
+    "code": "FIG-796",
+    "name": "Figurinha 796",
+    "team": "Turquia"
+  },
+  {
+    "albumNumber": 797,
+    "code": "FIG-797",
+    "name": "Figurinha 797",
+    "team": "Polônia"
+  },
+  {
+    "albumNumber": 798,
+    "code": "FIG-798",
+    "name": "Figurinha 798",
+    "team": "Polônia"
+  },
+  {
+    "albumNumber": 799,
+    "code": "FIG-799",
+    "name": "Figurinha 799",
+    "team": "Polônia"
+  },
+  {
+    "albumNumber": 800,
+    "code": "FIG-800",
+    "name": "Figurinha 800",
+    "team": "Polônia"
+  },
+  {
+    "albumNumber": 801,
+    "code": "FIG-801",
+    "name": "Figurinha 801",
+    "team": "Polônia"
+  },
+  {
+    "albumNumber": 802,
+    "code": "FIG-802",
+    "name": "Figurinha 802",
+    "team": "Polônia"
+  },
+  {
+    "albumNumber": 803,
+    "code": "FIG-803",
+    "name": "Figurinha 803",
+    "team": "Polônia"
+  },
+  {
+    "albumNumber": 804,
+    "code": "FIG-804",
+    "name": "Figurinha 804",
+    "team": "Polônia"
+  },
+  {
+    "albumNumber": 805,
+    "code": "FIG-805",
+    "name": "Figurinha 805",
+    "team": "Polônia"
+  },
+  {
+    "albumNumber": 806,
+    "code": "FIG-806",
+    "name": "Figurinha 806",
+    "team": "Polônia"
+  },
+  {
+    "albumNumber": 807,
+    "code": "FIG-807",
+    "name": "Figurinha 807",
+    "team": "Polônia"
+  },
+  {
+    "albumNumber": 808,
+    "code": "FIG-808",
+    "name": "Figurinha 808",
+    "team": "Polônia"
+  },
+  {
+    "albumNumber": 809,
+    "code": "FIG-809",
+    "name": "Figurinha 809",
+    "team": "Polônia"
+  },
+  {
+    "albumNumber": 810,
+    "code": "FIG-810",
+    "name": "Figurinha 810",
+    "team": "Polônia"
+  },
+  {
+    "albumNumber": 811,
+    "code": "FIG-811",
+    "name": "Figurinha 811",
+    "team": "Polônia"
+  },
+  {
+    "albumNumber": 812,
+    "code": "FIG-812",
+    "name": "Figurinha 812",
+    "team": "Polônia"
+  },
+  {
+    "albumNumber": 813,
+    "code": "FIG-813",
+    "name": "Figurinha 813",
+    "team": "Polônia"
+  },
+  {
+    "albumNumber": 814,
+    "code": "FIG-814",
+    "name": "Figurinha 814",
+    "team": "Polônia"
+  },
+  {
+    "albumNumber": 815,
+    "code": "FIG-815",
+    "name": "Figurinha 815",
+    "team": "Suíça"
+  },
+  {
+    "albumNumber": 816,
+    "code": "FIG-816",
+    "name": "Figurinha 816",
+    "team": "Suíça"
+  },
+  {
+    "albumNumber": 817,
+    "code": "FIG-817",
+    "name": "Figurinha 817",
+    "team": "Suíça"
+  },
+  {
+    "albumNumber": 818,
+    "code": "FIG-818",
+    "name": "Figurinha 818",
+    "team": "Suíça"
+  },
+  {
+    "albumNumber": 819,
+    "code": "FIG-819",
+    "name": "Figurinha 819",
+    "team": "Suíça"
+  },
+  {
+    "albumNumber": 820,
+    "code": "FIG-820",
+    "name": "Figurinha 820",
+    "team": "Suíça"
+  },
+  {
+    "albumNumber": 821,
+    "code": "FIG-821",
+    "name": "Figurinha 821",
+    "team": "Suíça"
+  },
+  {
+    "albumNumber": 822,
+    "code": "FIG-822",
+    "name": "Figurinha 822",
+    "team": "Suíça"
+  },
+  {
+    "albumNumber": 823,
+    "code": "FIG-823",
+    "name": "Figurinha 823",
+    "team": "Suíça"
+  },
+  {
+    "albumNumber": 824,
+    "code": "FIG-824",
+    "name": "Figurinha 824",
+    "team": "Suíça"
+  },
+  {
+    "albumNumber": 825,
+    "code": "FIG-825",
+    "name": "Figurinha 825",
+    "team": "Suíça"
+  },
+  {
+    "albumNumber": 826,
+    "code": "FIG-826",
+    "name": "Figurinha 826",
+    "team": "Suíça"
+  },
+  {
+    "albumNumber": 827,
+    "code": "FIG-827",
+    "name": "Figurinha 827",
+    "team": "Suíça"
+  },
+  {
+    "albumNumber": 828,
+    "code": "FIG-828",
+    "name": "Figurinha 828",
+    "team": "Suíça"
+  },
+  {
+    "albumNumber": 829,
+    "code": "FIG-829",
+    "name": "Figurinha 829",
+    "team": "Suíça"
+  },
+  {
+    "albumNumber": 830,
+    "code": "FIG-830",
+    "name": "Figurinha 830",
+    "team": "Suíça"
+  },
+  {
+    "albumNumber": 831,
+    "code": "FIG-831",
+    "name": "Figurinha 831",
+    "team": "Suíça"
+  },
+  {
+    "albumNumber": 832,
+    "code": "FIG-832",
+    "name": "Figurinha 832",
+    "team": "Suíça"
+  },
+  {
+    "albumNumber": 833,
+    "code": "FIG-833",
+    "name": "Figurinha 833",
+    "team": "Dinamarca"
+  },
+  {
+    "albumNumber": 834,
+    "code": "FIG-834",
+    "name": "Figurinha 834",
+    "team": "Dinamarca"
+  },
+  {
+    "albumNumber": 835,
+    "code": "FIG-835",
+    "name": "Figurinha 835",
+    "team": "Dinamarca"
+  },
+  {
+    "albumNumber": 836,
+    "code": "FIG-836",
+    "name": "Figurinha 836",
+    "team": "Dinamarca"
+  },
+  {
+    "albumNumber": 837,
+    "code": "FIG-837",
+    "name": "Figurinha 837",
+    "team": "Dinamarca"
+  },
+  {
+    "albumNumber": 838,
+    "code": "FIG-838",
+    "name": "Figurinha 838",
+    "team": "Dinamarca"
+  },
+  {
+    "albumNumber": 839,
+    "code": "FIG-839",
+    "name": "Figurinha 839",
+    "team": "Dinamarca"
+  },
+  {
+    "albumNumber": 840,
+    "code": "FIG-840",
+    "name": "Figurinha 840",
+    "team": "Dinamarca"
+  },
+  {
+    "albumNumber": 841,
+    "code": "FIG-841",
+    "name": "Figurinha 841",
+    "team": "Dinamarca"
+  },
+  {
+    "albumNumber": 842,
+    "code": "FIG-842",
+    "name": "Figurinha 842",
+    "team": "Dinamarca"
+  },
+  {
+    "albumNumber": 843,
+    "code": "FIG-843",
+    "name": "Figurinha 843",
+    "team": "Dinamarca"
+  },
+  {
+    "albumNumber": 844,
+    "code": "FIG-844",
+    "name": "Figurinha 844",
+    "team": "Dinamarca"
+  },
+  {
+    "albumNumber": 845,
+    "code": "FIG-845",
+    "name": "Figurinha 845",
+    "team": "Dinamarca"
+  },
+  {
+    "albumNumber": 846,
+    "code": "FIG-846",
+    "name": "Figurinha 846",
+    "team": "Dinamarca"
+  },
+  {
+    "albumNumber": 847,
+    "code": "FIG-847",
+    "name": "Figurinha 847",
+    "team": "Dinamarca"
+  },
+  {
+    "albumNumber": 848,
+    "code": "FIG-848",
+    "name": "Figurinha 848",
+    "team": "Dinamarca"
+  },
+  {
+    "albumNumber": 849,
+    "code": "FIG-849",
+    "name": "Figurinha 849",
+    "team": "Dinamarca"
+  },
+  {
+    "albumNumber": 850,
+    "code": "FIG-850",
+    "name": "Figurinha 850",
+    "team": "Dinamarca"
+  },
+  {
+    "albumNumber": 851,
+    "code": "FIG-851",
+    "name": "Figurinha 851",
+    "team": "Suécia"
+  },
+  {
+    "albumNumber": 852,
+    "code": "FIG-852",
+    "name": "Figurinha 852",
+    "team": "Suécia"
+  },
+  {
+    "albumNumber": 853,
+    "code": "FIG-853",
+    "name": "Figurinha 853",
+    "team": "Suécia"
+  },
+  {
+    "albumNumber": 854,
+    "code": "FIG-854",
+    "name": "Figurinha 854",
+    "team": "Suécia"
+  },
+  {
+    "albumNumber": 855,
+    "code": "FIG-855",
+    "name": "Figurinha 855",
+    "team": "Suécia"
+  },
+  {
+    "albumNumber": 856,
+    "code": "FIG-856",
+    "name": "Figurinha 856",
+    "team": "Suécia"
+  },
+  {
+    "albumNumber": 857,
+    "code": "FIG-857",
+    "name": "Figurinha 857",
+    "team": "Suécia"
+  },
+  {
+    "albumNumber": 858,
+    "code": "FIG-858",
+    "name": "Figurinha 858",
+    "team": "Suécia"
+  },
+  {
+    "albumNumber": 859,
+    "code": "FIG-859",
+    "name": "Figurinha 859",
+    "team": "Suécia"
+  },
+  {
+    "albumNumber": 860,
+    "code": "FIG-860",
+    "name": "Figurinha 860",
+    "team": "Suécia"
+  },
+  {
+    "albumNumber": 861,
+    "code": "FIG-861",
+    "name": "Figurinha 861",
+    "team": "Suécia"
+  },
+  {
+    "albumNumber": 862,
+    "code": "FIG-862",
+    "name": "Figurinha 862",
+    "team": "Suécia"
+  },
+  {
+    "albumNumber": 863,
+    "code": "FIG-863",
+    "name": "Figurinha 863",
+    "team": "Suécia"
+  },
+  {
+    "albumNumber": 864,
+    "code": "FIG-864",
+    "name": "Figurinha 864",
+    "team": "Suécia"
+  },
+  {
+    "albumNumber": 865,
+    "code": "FIG-865",
+    "name": "Figurinha 865",
+    "team": "Suécia"
+  },
+  {
+    "albumNumber": 866,
+    "code": "FIG-866",
+    "name": "Figurinha 866",
+    "team": "Suécia"
+  },
+  {
+    "albumNumber": 867,
+    "code": "FIG-867",
+    "name": "Figurinha 867",
+    "team": "Suécia"
+  },
+  {
+    "albumNumber": 868,
+    "code": "FIG-868",
+    "name": "Figurinha 868",
+    "team": "Suécia"
+  },
+  {
+    "albumNumber": 869,
+    "code": "FIG-869",
+    "name": "Figurinha 869",
+    "team": "Noruega"
+  },
+  {
+    "albumNumber": 870,
+    "code": "FIG-870",
+    "name": "Figurinha 870",
+    "team": "Noruega"
+  },
+  {
+    "albumNumber": 871,
+    "code": "FIG-871",
+    "name": "Figurinha 871",
+    "team": "Noruega"
+  },
+  {
+    "albumNumber": 872,
+    "code": "FIG-872",
+    "name": "Figurinha 872",
+    "team": "Noruega"
+  },
+  {
+    "albumNumber": 873,
+    "code": "FIG-873",
+    "name": "Figurinha 873",
+    "team": "Noruega"
+  },
+  {
+    "albumNumber": 874,
+    "code": "FIG-874",
+    "name": "Figurinha 874",
+    "team": "Noruega"
+  },
+  {
+    "albumNumber": 875,
+    "code": "FIG-875",
+    "name": "Figurinha 875",
+    "team": "Noruega"
+  },
+  {
+    "albumNumber": 876,
+    "code": "FIG-876",
+    "name": "Figurinha 876",
+    "team": "Noruega"
+  },
+  {
+    "albumNumber": 877,
+    "code": "FIG-877",
+    "name": "Figurinha 877",
+    "team": "Noruega"
+  },
+  {
+    "albumNumber": 878,
+    "code": "FIG-878",
+    "name": "Figurinha 878",
+    "team": "Noruega"
+  },
+  {
+    "albumNumber": 879,
+    "code": "FIG-879",
+    "name": "Figurinha 879",
+    "team": "Noruega"
+  },
+  {
+    "albumNumber": 880,
+    "code": "FIG-880",
+    "name": "Figurinha 880",
+    "team": "Noruega"
+  },
+  {
+    "albumNumber": 881,
+    "code": "FIG-881",
+    "name": "Figurinha 881",
+    "team": "Noruega"
+  },
+  {
+    "albumNumber": 882,
+    "code": "FIG-882",
+    "name": "Figurinha 882",
+    "team": "Noruega"
+  },
+  {
+    "albumNumber": 883,
+    "code": "FIG-883",
+    "name": "Figurinha 883",
+    "team": "Noruega"
+  },
+  {
+    "albumNumber": 884,
+    "code": "FIG-884",
+    "name": "Figurinha 884",
+    "team": "Noruega"
+  },
+  {
+    "albumNumber": 885,
+    "code": "FIG-885",
+    "name": "Figurinha 885",
+    "team": "Noruega"
+  },
+  {
+    "albumNumber": 886,
+    "code": "FIG-886",
+    "name": "Figurinha 886",
+    "team": "Noruega"
+  },
+  {
+    "albumNumber": 887,
+    "code": "FIG-887",
+    "name": "Figurinha 887",
+    "team": "Escócia"
+  },
+  {
+    "albumNumber": 888,
+    "code": "FIG-888",
+    "name": "Figurinha 888",
+    "team": "Escócia"
+  },
+  {
+    "albumNumber": 889,
+    "code": "FIG-889",
+    "name": "Figurinha 889",
+    "team": "Escócia"
+  },
+  {
+    "albumNumber": 890,
+    "code": "FIG-890",
+    "name": "Figurinha 890",
+    "team": "Escócia"
+  },
+  {
+    "albumNumber": 891,
+    "code": "FIG-891",
+    "name": "Figurinha 891",
+    "team": "Escócia"
+  },
+  {
+    "albumNumber": 892,
+    "code": "FIG-892",
+    "name": "Figurinha 892",
+    "team": "Escócia"
+  },
+  {
+    "albumNumber": 893,
+    "code": "FIG-893",
+    "name": "Figurinha 893",
+    "team": "Escócia"
+  },
+  {
+    "albumNumber": 894,
+    "code": "FIG-894",
+    "name": "Figurinha 894",
+    "team": "Escócia"
+  },
+  {
+    "albumNumber": 895,
+    "code": "FIG-895",
+    "name": "Figurinha 895",
+    "team": "Escócia"
+  },
+  {
+    "albumNumber": 896,
+    "code": "FIG-896",
+    "name": "Figurinha 896",
+    "team": "Escócia"
+  },
+  {
+    "albumNumber": 897,
+    "code": "FIG-897",
+    "name": "Figurinha 897",
+    "team": "Escócia"
+  },
+  {
+    "albumNumber": 898,
+    "code": "FIG-898",
+    "name": "Figurinha 898",
+    "team": "Escócia"
+  },
+  {
+    "albumNumber": 899,
+    "code": "FIG-899",
+    "name": "Figurinha 899",
+    "team": "Escócia"
+  },
+  {
+    "albumNumber": 900,
+    "code": "FIG-900",
+    "name": "Figurinha 900",
+    "team": "Escócia"
+  },
+  {
+    "albumNumber": 901,
+    "code": "FIG-901",
+    "name": "Figurinha 901",
+    "team": "Escócia"
+  },
+  {
+    "albumNumber": 902,
+    "code": "FIG-902",
+    "name": "Figurinha 902",
+    "team": "Escócia"
+  },
+  {
+    "albumNumber": 903,
+    "code": "FIG-903",
+    "name": "Figurinha 903",
+    "team": "Escócia"
+  },
+  {
+    "albumNumber": 904,
+    "code": "FIG-904",
+    "name": "Figurinha 904",
+    "team": "Escócia"
+  },
+  {
+    "albumNumber": 905,
+    "code": "FIG-905",
+    "name": "Figurinha 905",
+    "team": "Albânia"
+  },
+  {
+    "albumNumber": 906,
+    "code": "FIG-906",
+    "name": "Figurinha 906",
+    "team": "Albânia"
+  },
+  {
+    "albumNumber": 907,
+    "code": "FIG-907",
+    "name": "Figurinha 907",
+    "team": "Albânia"
+  },
+  {
+    "albumNumber": 908,
+    "code": "FIG-908",
+    "name": "Figurinha 908",
+    "team": "Albânia"
+  },
+  {
+    "albumNumber": 909,
+    "code": "FIG-909",
+    "name": "Figurinha 909",
+    "team": "Albânia"
+  },
+  {
+    "albumNumber": 910,
+    "code": "FIG-910",
+    "name": "Figurinha 910",
+    "team": "Albânia"
+  },
+  {
+    "albumNumber": 911,
+    "code": "FIG-911",
+    "name": "Figurinha 911",
+    "team": "Albânia"
+  },
+  {
+    "albumNumber": 912,
+    "code": "FIG-912",
+    "name": "Figurinha 912",
+    "team": "Albânia"
+  },
+  {
+    "albumNumber": 913,
+    "code": "FIG-913",
+    "name": "Figurinha 913",
+    "team": "Albânia"
+  },
+  {
+    "albumNumber": 914,
+    "code": "FIG-914",
+    "name": "Figurinha 914",
+    "team": "Albânia"
+  },
+  {
+    "albumNumber": 915,
+    "code": "FIG-915",
+    "name": "Figurinha 915",
+    "team": "Albânia"
+  },
+  {
+    "albumNumber": 916,
+    "code": "FIG-916",
+    "name": "Figurinha 916",
+    "team": "Albânia"
+  },
+  {
+    "albumNumber": 917,
+    "code": "FIG-917",
+    "name": "Figurinha 917",
+    "team": "Albânia"
+  },
+  {
+    "albumNumber": 918,
+    "code": "FIG-918",
+    "name": "Figurinha 918",
+    "team": "Albânia"
+  },
+  {
+    "albumNumber": 919,
+    "code": "FIG-919",
+    "name": "Figurinha 919",
+    "team": "Albânia"
+  },
+  {
+    "albumNumber": 920,
+    "code": "FIG-920",
+    "name": "Figurinha 920",
+    "team": "Albânia"
+  },
+  {
+    "albumNumber": 921,
+    "code": "FIG-921",
+    "name": "Figurinha 921",
+    "team": "Albânia"
+  },
+  {
+    "albumNumber": 922,
+    "code": "FIG-922",
+    "name": "Figurinha 922",
+    "team": "Albânia"
+  },
+  {
+    "albumNumber": 923,
+    "code": "FIG-923",
+    "name": "Figurinha 923",
+    "team": "Sérvia"
+  },
+  {
+    "albumNumber": 924,
+    "code": "FIG-924",
+    "name": "Figurinha 924",
+    "team": "Sérvia"
+  },
+  {
+    "albumNumber": 925,
+    "code": "FIG-925",
+    "name": "Figurinha 925",
+    "team": "Sérvia"
+  },
+  {
+    "albumNumber": 926,
+    "code": "FIG-926",
+    "name": "Figurinha 926",
+    "team": "Sérvia"
+  },
+  {
+    "albumNumber": 927,
+    "code": "FIG-927",
+    "name": "Figurinha 927",
+    "team": "Sérvia"
+  },
+  {
+    "albumNumber": 928,
+    "code": "FIG-928",
+    "name": "Figurinha 928",
+    "team": "Sérvia"
+  },
+  {
+    "albumNumber": 929,
+    "code": "FIG-929",
+    "name": "Figurinha 929",
+    "team": "Sérvia"
+  },
+  {
+    "albumNumber": 930,
+    "code": "FIG-930",
+    "name": "Figurinha 930",
+    "team": "Sérvia"
+  },
+  {
+    "albumNumber": 931,
+    "code": "FIG-931",
+    "name": "Figurinha 931",
+    "team": "Sérvia"
+  },
+  {
+    "albumNumber": 932,
+    "code": "FIG-932",
+    "name": "Figurinha 932",
+    "team": "Sérvia"
+  },
+  {
+    "albumNumber": 933,
+    "code": "FIG-933",
+    "name": "Figurinha 933",
+    "team": "Sérvia"
+  },
+  {
+    "albumNumber": 934,
+    "code": "FIG-934",
+    "name": "Figurinha 934",
+    "team": "Sérvia"
+  },
+  {
+    "albumNumber": 935,
+    "code": "FIG-935",
+    "name": "Figurinha 935",
+    "team": "Sérvia"
+  },
+  {
+    "albumNumber": 936,
+    "code": "FIG-936",
+    "name": "Figurinha 936",
+    "team": "Sérvia"
+  },
+  {
+    "albumNumber": 937,
+    "code": "FIG-937",
+    "name": "Figurinha 937",
+    "team": "Sérvia"
+  },
+  {
+    "albumNumber": 938,
+    "code": "FIG-938",
+    "name": "Figurinha 938",
+    "team": "Sérvia"
+  },
+  {
+    "albumNumber": 939,
+    "code": "FIG-939",
+    "name": "Figurinha 939",
+    "team": "Sérvia"
+  },
+  {
+    "albumNumber": 940,
+    "code": "FIG-940",
+    "name": "Figurinha 940",
+    "team": "Sérvia"
+  },
+  {
+    "albumNumber": 941,
+    "code": "FIG-941",
+    "name": "Figurinha 941",
+    "team": "República Tcheca"
+  },
+  {
+    "albumNumber": 942,
+    "code": "FIG-942",
+    "name": "Figurinha 942",
+    "team": "República Tcheca"
+  },
+  {
+    "albumNumber": 943,
+    "code": "FIG-943",
+    "name": "Figurinha 943",
+    "team": "República Tcheca"
+  },
+  {
+    "albumNumber": 944,
+    "code": "FIG-944",
+    "name": "Figurinha 944",
+    "team": "República Tcheca"
+  },
+  {
+    "albumNumber": 945,
+    "code": "FIG-945",
+    "name": "Figurinha 945",
+    "team": "República Tcheca"
+  },
+  {
+    "albumNumber": 946,
+    "code": "FIG-946",
+    "name": "Figurinha 946",
+    "team": "República Tcheca"
+  },
+  {
+    "albumNumber": 947,
+    "code": "FIG-947",
+    "name": "Figurinha 947",
+    "team": "República Tcheca"
+  },
+  {
+    "albumNumber": 948,
+    "code": "FIG-948",
+    "name": "Figurinha 948",
+    "team": "República Tcheca"
+  },
+  {
+    "albumNumber": 949,
+    "code": "FIG-949",
+    "name": "Figurinha 949",
+    "team": "República Tcheca"
+  },
+  {
+    "albumNumber": 950,
+    "code": "FIG-950",
+    "name": "Figurinha 950",
+    "team": "República Tcheca"
+  },
+  {
+    "albumNumber": 951,
+    "code": "FIG-951",
+    "name": "Figurinha 951",
+    "team": "República Tcheca"
+  },
+  {
+    "albumNumber": 952,
+    "code": "FIG-952",
+    "name": "Figurinha 952",
+    "team": "República Tcheca"
+  },
+  {
+    "albumNumber": 953,
+    "code": "FIG-953",
+    "name": "Figurinha 953",
+    "team": "República Tcheca"
+  },
+  {
+    "albumNumber": 954,
+    "code": "FIG-954",
+    "name": "Figurinha 954",
+    "team": "República Tcheca"
+  },
+  {
+    "albumNumber": 955,
+    "code": "FIG-955",
+    "name": "Figurinha 955",
+    "team": "República Tcheca"
+  },
+  {
+    "albumNumber": 956,
+    "code": "FIG-956",
+    "name": "Figurinha 956",
+    "team": "República Tcheca"
+  },
+  {
+    "albumNumber": 957,
+    "code": "FIG-957",
+    "name": "Figurinha 957",
+    "team": "República Tcheca"
+  },
+  {
+    "albumNumber": 958,
+    "code": "FIG-958",
+    "name": "Figurinha 958",
+    "team": "República Tcheca"
+  },
+  {
+    "albumNumber": 959,
+    "code": "FIG-959",
+    "name": "Figurinha 959",
+    "team": "Especial"
+  },
+  {
+    "albumNumber": 960,
+    "code": "FIG-960",
+    "name": "Figurinha 960",
+    "team": "Especial"
+  },
+  {
+    "albumNumber": 961,
+    "code": "FIG-961",
+    "name": "Figurinha 961",
+    "team": "Especial"
+  },
+  {
+    "albumNumber": 962,
+    "code": "FIG-962",
+    "name": "Figurinha 962",
+    "team": "Especial"
+  },
+  {
+    "albumNumber": 963,
+    "code": "FIG-963",
+    "name": "Figurinha 963",
+    "team": "Especial"
+  },
+  {
+    "albumNumber": 964,
+    "code": "FIG-964",
+    "name": "Figurinha 964",
+    "team": "Especial"
+  },
+  {
+    "albumNumber": 965,
+    "code": "FIG-965",
+    "name": "Figurinha 965",
+    "team": "Especial"
+  },
+  {
+    "albumNumber": 966,
+    "code": "FIG-966",
+    "name": "Figurinha 966",
+    "team": "Especial"
+  },
+  {
+    "albumNumber": 967,
+    "code": "FIG-967",
+    "name": "Figurinha 967",
+    "team": "Especial"
+  },
+  {
+    "albumNumber": 968,
+    "code": "FIG-968",
+    "name": "Figurinha 968",
+    "team": "Especial"
+  },
+  {
+    "albumNumber": 969,
+    "code": "FIG-969",
+    "name": "Figurinha 969",
+    "team": "Especial"
+  },
+  {
+    "albumNumber": 970,
+    "code": "FIG-970",
+    "name": "Figurinha 970",
+    "team": "Especial"
+  },
+  {
+    "albumNumber": 971,
+    "code": "FIG-971",
+    "name": "Figurinha 971",
+    "team": "Especial"
+  },
+  {
+    "albumNumber": 972,
+    "code": "FIG-972",
+    "name": "Figurinha 972",
+    "team": "Especial"
+  },
+  {
+    "albumNumber": 973,
+    "code": "FIG-973",
+    "name": "Figurinha 973",
+    "team": "Especial"
+  },
+  {
+    "albumNumber": 974,
+    "code": "FIG-974",
+    "name": "Figurinha 974",
+    "team": "Especial"
+  },
+  {
+    "albumNumber": 975,
+    "code": "FIG-975",
+    "name": "Figurinha 975",
+    "team": "Especial"
+  },
+  {
+    "albumNumber": 976,
+    "code": "FIG-976",
+    "name": "Figurinha 976",
+    "team": "Especial"
+  },
+  {
+    "albumNumber": 977,
+    "code": "FIG-977",
+    "name": "Figurinha 977",
+    "team": "Especial"
+  },
+  {
+    "albumNumber": 978,
+    "code": "FIG-978",
+    "name": "Figurinha 978",
+    "team": "Especial"
+  },
+  {
+    "albumNumber": 979,
+    "code": "FIG-979",
+    "name": "Figurinha 979",
+    "team": "Especial"
+  },
+  {
+    "albumNumber": 980,
+    "code": "FIG-980",
+    "name": "Figurinha 980",
+    "team": "Especial"
+  }
+]
