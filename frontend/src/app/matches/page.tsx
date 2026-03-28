@@ -292,7 +292,7 @@ export default function MatchesPage() {
                         <p className="text-sm font-black text-green-700 mt-2">
                           {canReceive === 1 ? 'figurinha' : 'figurinhas'}
                         </p>
-                        <p className="text-xs text-green-600 mt-0.5 font-medium">que você pode RECEBER</p>
+                        <p className="text-xs text-green-600 mt-0.5 font-medium">que você pode receber</p>
                         <p className="text-[10px] text-gray-400 mt-1">
                           ele tem repetida e você não tem
                         </p>
@@ -305,7 +305,7 @@ export default function MatchesPage() {
                           {canOffer === 1 ? 'figurinha' : 'figurinhas'}
                         </p>
                         <p className="text-xs mt-0.5 font-medium" style={{ color: '#8a6f1e' }}>
-                          que você pode OFERECER
+                          que você pode oferecer
                         </p>
                         <p className="text-[10px] text-gray-400 mt-1">
                           você tem repetida e ele não tem

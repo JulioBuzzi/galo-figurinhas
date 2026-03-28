@@ -25,15 +25,17 @@ public interface UserStickerRepository extends JpaRepository<UserSticker, Long> 
     @Query("SELECT COALESCE(SUM(us.repeatedCount), 0) FROM UserSticker us WHERE us.user.id = :uid")
     long sumRepeatedByUserId(@Param("uid") Long uid);
 
-    /** Todos os IDs de stickers que o usuário possui (tem registro) */
+    /**
+     * IDs de stickers que o usuário POSSUI (tem registro = marcou como TENHO).
+     * repeated_count pode ser 0 ou mais — não importa, o que importa é ter o registro.
+     */
     @Query("SELECT us.sticker.id FROM UserSticker us WHERE us.user.id = :uid")
-    Set<Long> findStickerIdsByUserId(@Param("uid") Long uid);
+    Set<Long> findOwnedStickerIds(@Param("uid") Long uid);
 
-    /** IDs de stickers onde repeatedCount > 0 */
+    /**
+     * IDs de stickers onde o usuário tem REPETIDAS (repeatedCount > 0).
+     * Essas são as que ele pode OFERECER em uma troca.
+     */
     @Query("SELECT us.sticker.id FROM UserSticker us WHERE us.user.id = :uid AND us.repeatedCount > 0")
-    Set<Long> findRepeatedStickerIdsByUserId(@Param("uid") Long uid);
-
-    /** Busca UserStickers por lista de IDs de sticker */
-    @Query("SELECT us FROM UserSticker us WHERE us.user.id = :uid AND us.sticker.id IN :stickerIds")
-    List<UserSticker> findByUserIdAndStickerIdIn(@Param("uid") Long uid, @Param("stickerIds") List<Long> stickerIds);
+    Set<Long> findRepeatedStickerIds(@Param("uid") Long uid);
 }
