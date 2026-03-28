@@ -28,7 +28,7 @@ export default function Navbar() {
             <Shield className="text-galo-black" size={20} fill="currentColor" />
           </div>
           <div className="hidden sm:block">
-            <span className="text-galo-gold font-black tracking-tight">Frosócios</span>
+            <span className="text-galo-gold font-black tracking-tight">FROSÓCIOS</span>
             <span className="text-white font-light ml-1.5 text-sm">Figurinhas</span>
           </div>
         </Link>
