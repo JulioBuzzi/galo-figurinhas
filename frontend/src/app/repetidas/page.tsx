@@ -6,7 +6,7 @@ import ProtectedLayout from '@/components/ProtectedLayout';
 import { UserSticker } from '@/lib/types';
 import { groupBy } from '@/lib/utils';
 import api from '@/lib/api';
-import { RefreshCw, Loader2, Plus, Minus, Search, ChevronDown, ChevronUp, Shield } from 'lucide-react';
+import { RefreshCw, Loader2, Plus, Minus, Search, ChevronDown, ChevronUp } from 'lucide-react';
 
 export default function RepetidasPage() {
   const [stickers, setStickers] = useState<UserSticker[]>([]);

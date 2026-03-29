@@ -6,7 +6,7 @@ import ProtectedLayout from '@/components/ProtectedLayout';
 import { Match } from '@/lib/types';
 import api from '@/lib/api';
 import {
-  Users, Loader2, Phone, Shield, Search,
+  Users, Loader2, Phone, Search,
   Copy, Check, ChevronDown, ChevronUp,
   Pencil, Eye, EyeOff, CheckCircle, ArrowLeftRight, X
 } from 'lucide-react';

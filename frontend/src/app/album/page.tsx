@@ -7,7 +7,7 @@ import StickerCard from '@/components/StickerCard';
 import { UserSticker } from '@/lib/types';
 import { groupBy } from '@/lib/utils';
 import api from '@/lib/api';
-import { Search, Loader2, BookOpen, ChevronDown, ChevronUp, Shield } from 'lucide-react';
+import { Search, Loader2, BookOpen, ChevronDown, ChevronUp } from 'lucide-react';
 
 type Filter = 'TODOS' | 'TENHO' | 'NAO_TENHO';
 
