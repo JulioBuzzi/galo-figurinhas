@@ -101,8 +101,9 @@ export default function RepetidasPage() {
 
           {loading ? (
             <div className="flex flex-col items-center justify-center py-24 gap-4">
-              <div className="w-14 h-14 rounded-xl flex items-center justify-center animate-pulse" style={{ backgroundColor: '#C4A135' }}>
-                <Shield className="text-galo-black" size={28} fill="currentColor" />
+              <div className="w-14 h-14 rounded-xl overflow-hidden animate-pulse" style={{ backgroundColor: '#C4A135' }}>
+                <img src="/logo.png" alt="FroSócios" className="w-full h-full object-cover"
+                     onError={(e: any) => { e.target.style.display="none"; }} />
               </div>
               <p className="text-gray-400 text-sm">Carregando...</p>
             </div>

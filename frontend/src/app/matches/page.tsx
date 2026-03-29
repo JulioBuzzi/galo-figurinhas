@@ -126,9 +126,10 @@ export default function MatchesPage() {
           <div className="rounded-2xl p-5 shadow-lg"
                style={{ background: 'linear-gradient(135deg, #0a0a0a, #2a2a2a)' }}>
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-xl flex items-center justify-center"
+              <div className="w-10 h-10 rounded-xl overflow-hidden"
                    style={{ backgroundColor: '#C4A135' }}>
-                <Shield className="text-galo-black" size={20} fill="currentColor" />
+                <img src="/logo.png" alt="FroSócios" className="w-full h-full object-cover"
+                     onError={(e: any) => { e.target.style.display="none"; }} />
               </div>
               <div>
                 <h1 className="text-xl font-black text-white">Matches de Troca</h1>
@@ -292,20 +293,20 @@ export default function MatchesPage() {
                         <p className="text-sm font-black text-green-700 mt-2">
                           {canReceive === 1 ? 'figurinha' : 'figurinhas'}
                         </p>
-                        <p className="text-xs text-green-600 mt-0.5 font-medium">que você pode receber</p>
+                        <p className="text-xs text-green-600 mt-0.5 font-medium">que você pode RECEBER</p>
                         <p className="text-[10px] text-gray-400 mt-1">
                           ele tem repetida e você não tem
                         </p>
                       </div>
                       {/* Pode oferecer */}
                       <div className="border-2 rounded-xl p-4 text-center"
-                          style={{ backgroundColor: 'rgba(196,161,53,0.08)', borderColor: '#C4A135' }}>
+                           style={{ backgroundColor: 'rgba(196,161,53,0.08)', borderColor: '#C4A135' }}>
                         <p className="text-5xl font-black leading-none" style={{ color: '#C4A135' }}>{canOffer}</p>
                         <p className="text-sm font-black mt-2" style={{ color: '#8a6f1e' }}>
                           {canOffer === 1 ? 'figurinha' : 'figurinhas'}
                         </p>
                         <p className="text-xs mt-0.5 font-medium" style={{ color: '#8a6f1e' }}>
-                          que você pode oferecer
+                          que você pode OFERECER
                         </p>
                         <p className="text-[10px] text-gray-400 mt-1">
                           você tem repetida e ele não tem
@@ -338,7 +339,7 @@ export default function MatchesPage() {
                           <div>
                             <p className="text-xs font-black text-green-700 mb-2 flex items-center gap-1.5">
                               <span className="w-2 h-2 rounded-full bg-green-500 inline-block"/>
-                              Você pode receber ({canReceive})
+                              Você pode RECEBER ({canReceive}) — ele tem repetida, você não tem
                             </p>
                             <div className="flex flex-wrap gap-1.5">
                               {match.theyHaveWhatINeed.map((s) => (
@@ -355,7 +356,7 @@ export default function MatchesPage() {
                             <p className="text-xs font-black mb-2 flex items-center gap-1.5"
                                style={{ color: '#8a6f1e' }}>
                               <span className="w-2 h-2 rounded-full inline-block" style={{ backgroundColor: '#C4A135' }}/>
-                              Você pode oferecer ({canOffer})
+                              Você pode OFERECER ({canOffer}) — você tem repetida, ele não tem
                             </p>
                             <div className="flex flex-wrap gap-1.5">
                               {match.iHaveWhatTheyNeed.map((s) => (
@@ -463,7 +464,7 @@ export default function MatchesPage() {
                         <p className="text-sm font-black flex items-center gap-1.5"
                            style={{ color: '#8a6f1e' }}>
                           <span className="w-2.5 h-2.5 rounded-full inline-block" style={{ backgroundColor: '#C4A135' }}/>
-                          Vou oferecer
+                          Vou oferecer (dar)
                         </p>
                         <p className="text-xs text-gray-400 mt-0.5">
                           {selGiven.size} de {canOffer} selecionadas

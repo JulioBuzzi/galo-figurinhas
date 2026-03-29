@@ -4,13 +4,13 @@ COPY pom.xml .
 RUN mvn dependency:go-offline -q
 COPY src ./src
 RUN mvn clean package -DskipTests -q
- 
+
 FROM eclipse-temurin:17-jre-alpine
 WORKDIR /app
 COPY --from=build /app/target/copa2026-backend-1.0.0.jar app.jar
- 
+
 EXPOSE 10000
- 
+
 ENTRYPOINT ["java", \
   "-Xmx350m", \
   "-Xms128m", \
@@ -19,4 +19,3 @@ ENTRYPOINT ["java", \
   "-Djava.security.egd=file:/dev/./urandom", \
   "-Dserver.address=0.0.0.0", \
   "-jar", "app.jar"]
- 

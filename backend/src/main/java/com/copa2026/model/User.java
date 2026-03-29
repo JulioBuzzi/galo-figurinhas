@@ -27,7 +27,6 @@ public class User {
     @Column(nullable = false)
     private String password;
 
-    /** Código único de 6 dígitos aleatórios — independente do ID */
     @Column(name = "user_code", nullable = false, unique = true, length = 6)
     private String userCode;
 
@@ -37,6 +36,13 @@ public class User {
     @Column(name = "show_phone", nullable = false)
     @Builder.Default
     private Boolean showPhone = false;
+
+    @Column(name = "email_verified", nullable = false)
+    @Builder.Default
+    private Boolean emailVerified = false;
+
+    @Column(name = "verification_token", length = 64)
+    private String verificationToken;
 
     @Column(name = "created_at")
     private LocalDateTime createdAt;
@@ -52,6 +58,7 @@ public class User {
     @PrePersist
     protected void onCreate() {
         this.createdAt = LocalDateTime.now();
-        if (this.showPhone == null) this.showPhone = false;
+        if (this.showPhone == null)    this.showPhone    = false;
+        if (this.emailVerified == null) this.emailVerified = false;
     }
 }

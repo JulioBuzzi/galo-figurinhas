@@ -36,13 +36,14 @@ export default function DashboardPage() {
                 <h1 className="text-2xl font-black text-white">{user?.name}</h1>
                 <p className="text-white/40 text-sm mt-1">{user?.email}</p>
               </div>
-              <div className="w-14 h-14 bg-galo-gold rounded-xl flex items-center justify-center shadow-lg text-3xl">
-                🐓
+              <div className="w-14 h-14 bg-galo-gold rounded-xl overflow-hidden shadow-lg">
+                <img src="/logo.png" alt="FroSócios" className="w-full h-full object-cover"
+                     onError={(e: any) => { e.target.style.display='none'; e.target.parentElement.innerHTML='<span style="font-size:30px;display:flex;align-items:center;justify-content:center;width:100%;height:100%">🐓</span>'; }} />
               </div>
             </div>
             <div className="mt-5 pt-4 border-t border-white/10">
               <p className="text-galo-gold text-xs font-bold uppercase tracking-widest">
-                Canal do Frossard — Copa 2026
+                CANAL DO FROSSARD — COPA 2026
               </p>
             </div>
           </div>
