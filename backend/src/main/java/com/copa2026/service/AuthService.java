@@ -7,6 +7,7 @@ import com.copa2026.repository.PasswordResetTokenRepository;
 import com.copa2026.repository.UserRepository;
 import com.copa2026.security.JwtUtil;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -17,16 +18,16 @@ import java.util.Base64;
 
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class AuthService {
 
-    private final UserRepository              userRepository;
+    private final UserRepository               userRepository;
     private final PasswordResetTokenRepository resetTokenRepo;
-    private final PasswordEncoder             passwordEncoder;
-    private final JwtUtil                     jwtUtil;
-    private final EmailService                emailService;
-    private final SecureRandom                random = new SecureRandom();
+    private final PasswordEncoder              passwordEncoder;
+    private final JwtUtil                      jwtUtil;
+    private final EmailService                 emailService;
+    private final SecureRandom                 random = new SecureRandom();
 
-    /** Cadastro: cria conta e envia email de verificação */
     @Transactional
     public String register(RegisterRequest request) {
         if (userRepository.existsByEmail(request.getEmail())) {
@@ -43,23 +44,25 @@ public class AuthService {
         user.setEmailVerified(false);
         user.setVerificationToken(verificationToken);
         user.setUserCode(generateUniqueCode());
-
         userRepository.save(user);
 
-        // Envia email de verificação (assíncrono)
-        emailService.sendVerificationEmail(user.getEmail(), user.getName(), verificationToken);
+        try {
+            emailService.sendVerificationEmail(user.getEmail(), user.getName(), verificationToken);
+        } catch (Exception e) {
+            log.error("Falha ao enviar email de verificação: {}", e.getMessage());
+            // Conta criada mesmo sem email — permite reenvio futuro
+        }
 
         return "Conta criada! Verifique seu email para ativar a conta.";
     }
 
-    /** Verifica o token de email e ativa a conta */
     @Transactional
     public AuthResponse verifyEmail(String token) {
         User user = userRepository.findByVerificationToken(token)
                 .orElseThrow(() -> new RuntimeException("Token inválido ou já utilizado"));
 
         if (Boolean.TRUE.equals(user.getEmailVerified())) {
-            throw new RuntimeException("Email já foi verificado");
+            throw new RuntimeException("Email já foi verificado. Faça login.");
         }
 
         user.setEmailVerified(true);
@@ -70,7 +73,6 @@ public class AuthService {
         return new AuthResponse(jwt, user.getId(), user.getName(), user.getEmail());
     }
 
-    /** Login — só permite se email verificado */
     public AuthResponse login(LoginRequest request) {
         User user = userRepository.findByEmail(request.getEmail())
                 .orElseThrow(() -> new RuntimeException("Email ou senha inválidos"));
@@ -84,18 +86,18 @@ public class AuthService {
                 "Email não verificado. Verifique sua caixa de entrada e clique no link de confirmação.");
         }
 
-        String token = jwtUtil.generateToken(user.getEmail(), user.getId());
-        return new AuthResponse(token, user.getId(), user.getName(), user.getEmail());
+        String jwt = jwtUtil.generateToken(user.getEmail(), user.getId());
+        return new AuthResponse(jwt, user.getId(), user.getName(), user.getEmail());
     }
 
-    /** Solicita reset de senha — envia email com link */
     @Transactional
     public void forgotPassword(String email) {
         User user = userRepository.findByEmail(email).orElse(null);
-        // Não revela se o email existe ou não (segurança)
-        if (user == null) return;
+        if (user == null) {
+            log.info("forgotPassword: email não encontrado — {}", email);
+            return; // Não revela se existe
+        }
 
-        // Remove tokens anteriores
         resetTokenRepo.deleteByUserId(user.getId());
 
         String token = generateToken();
@@ -106,16 +108,20 @@ public class AuthService {
         prt.setUsed(false);
         resetTokenRepo.save(prt);
 
-        emailService.sendPasswordResetEmail(user.getEmail(), user.getName(), token);
+        try {
+            emailService.sendPasswordResetEmail(user.getEmail(), user.getName(), token);
+        } catch (Exception e) {
+            log.error("Falha ao enviar email de reset: {}", e.getMessage());
+            throw new RuntimeException("Não foi possível enviar o email. Tente novamente em instantes.");
+        }
     }
 
-    /** Redefine a senha usando o token */
     @Transactional
     public void resetPassword(String token, String newPassword) {
         PasswordResetToken prt = resetTokenRepo.findByToken(token)
                 .orElseThrow(() -> new RuntimeException("Token inválido ou expirado"));
 
-        if (prt.isExpired()) throw new RuntimeException("Token expirado. Solicite um novo.");
+        if (prt.isExpired()) throw new RuntimeException("Token expirado. Solicite um novo link.");
         if (prt.getUsed())   throw new RuntimeException("Token já foi utilizado.");
 
         User user = prt.getUser();
@@ -137,7 +143,7 @@ public class AuthService {
         int attempts = 0;
         do {
             code = String.valueOf(100000 + random.nextInt(900000));
-            if (++attempts > 100) throw new RuntimeException("Não foi possível gerar código único");
+            if (++attempts > 100) throw new RuntimeException("Erro ao gerar código");
         } while (userRepository.existsByUserCode(code));
         return code;
     }
