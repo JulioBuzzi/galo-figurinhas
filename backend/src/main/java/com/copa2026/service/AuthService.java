@@ -111,8 +111,8 @@ public class AuthService {
         try {
             emailService.sendPasswordResetEmail(user.getEmail(), user.getName(), token);
         } catch (Exception e) {
-            log.error("Falha ao enviar email de reset: {}", e.getMessage());
-            throw new RuntimeException("Não foi possível enviar o email. Tente novamente em instantes.");
+            log.error("Falha ao enviar email de reset para {}: {}", user.getEmail(), e.getMessage());
+            // Não expõe o erro ao usuário — retorna sucesso mesmo assim
         }
     }
 
