@@ -43,11 +43,7 @@ export default function DashboardPage() {
             </div>
             <div className="mt-5 pt-4 border-t border-white/10">
               <p className="text-galo-gold text-xs font-bold uppercase tracking-widest">
-<<<<<<< HEAD
-                Atlético Mineiro — Copa 2026
-=======
                 CANAL DO FROSSARD — COPA 2026
->>>>>>> 20b2388ecb0775f0530872c0c9e0a3967706be07
               </p>
             </div>
           </div>
@@ -119,8 +115,4 @@ function NavCard({ href, icon, title, desc, dark, gold }: {
       </div>
     </Link>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 20b2388ecb0775f0530872c0c9e0a3967706be07
