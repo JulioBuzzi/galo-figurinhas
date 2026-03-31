@@ -1,4 +1,4 @@
-app = "frosocios-backend"
+app = "backend-lingering-sunset-8402"
 primary_region = "gru"
 
 [build]
