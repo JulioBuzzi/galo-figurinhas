@@ -6,7 +6,11 @@ import ProtectedLayout from '@/components/ProtectedLayout';
 import { UserSticker } from '@/lib/types';
 import { groupBy } from '@/lib/utils';
 import api from '@/lib/api';
+<<<<<<< HEAD
 import { RefreshCw, Loader2, Plus, Minus, Search, ChevronDown, ChevronUp, Shield } from 'lucide-react';
+=======
+import { RefreshCw, Loader2, Plus, Minus, Search, ChevronDown, ChevronUp } from 'lucide-react';
+>>>>>>> 20b2388ecb0775f0530872c0c9e0a3967706be07
 
 export default function RepetidasPage() {
   const [stickers, setStickers] = useState<UserSticker[]>([]);
@@ -101,8 +105,14 @@ export default function RepetidasPage() {
 
           {loading ? (
             <div className="flex flex-col items-center justify-center py-24 gap-4">
+<<<<<<< HEAD
               <div className="w-14 h-14 rounded-xl flex items-center justify-center animate-pulse" style={{ backgroundColor: '#C4A135' }}>
                 <Shield className="text-galo-black" size={28} fill="currentColor" />
+=======
+              <div className="w-14 h-14 rounded-xl overflow-hidden animate-pulse" style={{ backgroundColor: '#C4A135' }}>
+                <img src="/logo.png" alt="FroSócios" className="w-full h-full object-cover"
+                     onError={(e: any) => { e.target.style.display="none"; }} />
+>>>>>>> 20b2388ecb0775f0530872c0c9e0a3967706be07
               </div>
               <p className="text-gray-400 text-sm">Carregando...</p>
             </div>
@@ -184,4 +194,8 @@ export default function RepetidasPage() {
       </div>
     </ProtectedLayout>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 20b2388ecb0775f0530872c0c9e0a3967706be07

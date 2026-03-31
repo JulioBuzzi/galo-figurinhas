@@ -3,7 +3,10 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuthStore } from '@/contexts/authStore';
+<<<<<<< HEAD
 import { Shield } from 'lucide-react';
+=======
+>>>>>>> 20b2388ecb0775f0530872c0c9e0a3967706be07
 
 export default function ProtectedLayout({ children }: { children: React.ReactNode }) {
   const router = useRouter();
@@ -21,9 +24,16 @@ export default function ProtectedLayout({ children }: { children: React.ReactNod
       <div className="min-h-screen flex items-center justify-center"
            style={{ background: 'linear-gradient(135deg, #0a0a0a, #1a1a1a)' }}>
         <div className="flex flex-col items-center gap-4">
+<<<<<<< HEAD
           <div className="w-16 h-16 bg-galo-gold rounded-2xl flex items-center justify-center
                           animate-pulse shadow-lg shadow-galo-gold/30">
             <Shield className="text-galo-black" size={32} fill="currentColor" />
+=======
+          <div className="w-16 h-16 bg-galo-gold rounded-2xl overflow-hidden animate-pulse shadow-lg">
+            <img src="/logo.png" alt="FroSócios"
+                 className="w-full h-full object-cover"
+                 onError={(e: any) => { e.target.style.display='none'; }} />
+>>>>>>> 20b2388ecb0775f0530872c0c9e0a3967706be07
           </div>
           <p className="text-white/40 text-sm">Carregando...</p>
         </div>
@@ -32,4 +42,8 @@ export default function ProtectedLayout({ children }: { children: React.ReactNod
   }
 
   return <>{children}</>;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 20b2388ecb0775f0530872c0c9e0a3967706be07

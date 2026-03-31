@@ -7,7 +7,11 @@ import StickerCard from '@/components/StickerCard';
 import { UserSticker } from '@/lib/types';
 import { groupBy } from '@/lib/utils';
 import api from '@/lib/api';
+<<<<<<< HEAD
 import { Search, Loader2, BookOpen, ChevronDown, ChevronUp, Shield } from 'lucide-react';
+=======
+import { Search, Loader2, BookOpen, ChevronDown, ChevronUp } from 'lucide-react';
+>>>>>>> 20b2388ecb0775f0530872c0c9e0a3967706be07
 
 type Filter = 'TODOS' | 'TENHO' | 'NAO_TENHO';
 
@@ -168,8 +172,14 @@ export default function AlbumPage() {
           {/* Conteúdo */}
           {loading ? (
             <div className="flex flex-col items-center justify-center py-24 gap-4">
+<<<<<<< HEAD
               <div className="w-14 h-14 bg-galo-gold rounded-xl flex items-center justify-center animate-pulse">
                 <Shield className="text-galo-black" size={28} fill="currentColor" />
+=======
+              <div className="w-14 h-14 bg-galo-gold rounded-xl overflow-hidden animate-pulse">
+                <img src="/logo.png" alt="FroSócios" className="w-full h-full object-cover"
+                     onError={(e: any) => { e.target.style.display="none"; }} />
+>>>>>>> 20b2388ecb0775f0530872c0c9e0a3967706be07
               </div>
               <p className="text-gray-400 text-sm">Carregando 980 figurinhas...</p>
             </div>
@@ -228,4 +238,8 @@ export default function AlbumPage() {
       </div>
     </ProtectedLayout>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 20b2388ecb0775f0530872c0c9e0a3967706be07

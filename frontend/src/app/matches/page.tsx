@@ -6,7 +6,11 @@ import ProtectedLayout from '@/components/ProtectedLayout';
 import { Match } from '@/lib/types';
 import api from '@/lib/api';
 import {
+<<<<<<< HEAD
   Users, Loader2, Phone, Shield, Search,
+=======
+  Users, Loader2, Phone, Search,
+>>>>>>> 20b2388ecb0775f0530872c0c9e0a3967706be07
   Copy, Check, ChevronDown, ChevronUp,
   Pencil, Eye, EyeOff, CheckCircle, ArrowLeftRight, X
 } from 'lucide-react';
@@ -126,9 +130,16 @@ export default function MatchesPage() {
           <div className="rounded-2xl p-5 shadow-lg"
                style={{ background: 'linear-gradient(135deg, #0a0a0a, #2a2a2a)' }}>
             <div className="flex items-center gap-3 mb-4">
+<<<<<<< HEAD
               <div className="w-10 h-10 rounded-xl flex items-center justify-center"
                    style={{ backgroundColor: '#C4A135' }}>
                 <Shield className="text-galo-black" size={20} fill="currentColor" />
+=======
+              <div className="w-10 h-10 rounded-xl overflow-hidden"
+                   style={{ backgroundColor: '#C4A135' }}>
+                <img src="/logo.png" alt="FroSócios" className="w-full h-full object-cover"
+                     onError={(e: any) => { e.target.style.display="none"; }} />
+>>>>>>> 20b2388ecb0775f0530872c0c9e0a3967706be07
               </div>
               <div>
                 <h1 className="text-xl font-black text-white">Matches de Troca</h1>
@@ -522,4 +533,8 @@ export default function MatchesPage() {
       </div>
     </ProtectedLayout>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 20b2388ecb0775f0530872c0c9e0a3967706be07
