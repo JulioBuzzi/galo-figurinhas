@@ -2,7 +2,6 @@ package com.copa2026.controller;
 
 import com.copa2026.dto.AuthDTOs.*;
 import com.copa2026.service.AuthService;
-import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -16,41 +15,37 @@ public class AuthController {
 
     private final AuthService authService;
 
-    /** POST /api/auth/register — cria conta e envia email de verificação */
     @PostMapping("/register")
-    public ResponseEntity<Map<String, String>> register(
-            @Valid @RequestBody RegisterRequest request) {
-        String msg = authService.register(request);
-        return ResponseEntity.ok(Map.of("message", msg));
+    public ResponseEntity<Map<String, String>> register(@RequestBody RegisterRequest req) {
+        authService.register(req);
+        return ResponseEntity.ok(Map.of("message", "Código enviado para " + req.getEmail()));
     }
 
-    /** GET /api/auth/verify-email?token=xxx — verifica email e retorna JWT */
-    @GetMapping("/verify-email")
-    public ResponseEntity<AuthResponse> verifyEmail(@RequestParam String token) {
-        return ResponseEntity.ok(authService.verifyEmail(token));
+    @PostMapping("/verify-email")
+    public ResponseEntity<AuthResponse> verifyEmail(@RequestBody VerifyEmailRequest req) {
+        return ResponseEntity.ok(authService.verifyEmail(req));
     }
 
-    /** POST /api/auth/login */
+    @PostMapping("/resend-code")
+    public ResponseEntity<Map<String, String>> resendCode(@RequestBody Map<String, String> body) {
+        authService.resendVerificationCode(body.get("email"));
+        return ResponseEntity.ok(Map.of("message", "Novo código enviado!"));
+    }
+
     @PostMapping("/login")
-    public ResponseEntity<AuthResponse> login(
-            @Valid @RequestBody LoginRequest request) {
-        return ResponseEntity.ok(authService.login(request));
+    public ResponseEntity<AuthResponse> login(@RequestBody LoginRequest req) {
+        return ResponseEntity.ok(authService.login(req));
     }
 
-    /** POST /api/auth/forgot-password */
     @PostMapping("/forgot-password")
-    public ResponseEntity<Map<String, String>> forgotPassword(
-            @Valid @RequestBody ForgotPasswordRequest request) {
-        authService.forgotPassword(request.getEmail());
-        return ResponseEntity.ok(Map.of(
-            "message", "Se este email estiver cadastrado, você receberá as instruções em breve."));
+    public ResponseEntity<Map<String, String>> forgotPassword(@RequestBody ForgotPasswordRequest req) {
+        authService.forgotPassword(req.getEmail());
+        return ResponseEntity.ok(Map.of("message", "Se o email estiver cadastrado, o código foi enviado."));
     }
 
-    /** POST /api/auth/reset-password */
     @PostMapping("/reset-password")
-    public ResponseEntity<Map<String, String>> resetPassword(
-            @Valid @RequestBody ResetPasswordRequest request) {
-        authService.resetPassword(request.getToken(), request.getNewPassword());
+    public ResponseEntity<Map<String, String>> resetPassword(@RequestBody ResetPasswordRequest req) {
+        authService.resetPassword(req);
         return ResponseEntity.ok(Map.of("message", "Senha redefinida com sucesso!"));
     }
 }

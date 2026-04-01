@@ -1,45 +1,17 @@
-package com.copa2026.model;
+package com.copa2026.repository;
 
-import jakarta.persistence.*;
-import lombok.*;
-import java.time.LocalDateTime;
+import com.copa2026.model.PasswordResetToken;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
+import java.util.Optional;
 
-@Entity
-@Table(name = "password_reset_tokens")
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
-public class PasswordResetToken {
+@Repository
+public interface PasswordResetTokenRepository extends JpaRepository<PasswordResetToken, Long> {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    void deleteByUserId(Long userId);
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id", nullable = false)
-    private User user;
-
-    @Column(nullable = false, unique = true, length = 64)
-    private String token;
-
-    @Column(name = "expires_at", nullable = false)
-    private LocalDateTime expiresAt;
-
-    @Column(nullable = false)
-    @Builder.Default
-    private Boolean used = false;
-
-    @Column(name = "created_at", nullable = false)
-    private LocalDateTime createdAt;
-
-    @PrePersist
-    protected void onCreate() {
-        this.createdAt = LocalDateTime.now();
-        if (this.used == null) this.used = false;
-    }
-
-    public boolean isExpired() {
-        return LocalDateTime.now().isAfter(expiresAt);
-    }
+    @Query("SELECT p FROM PasswordResetToken p WHERE p.user.id = :uid ORDER BY p.createdAt DESC LIMIT 1")
+    Optional<PasswordResetToken> findLatestByUserId(@Param("uid") Long uid);
 }
