@@ -3,21 +3,16 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useAuthStore } from '@/contexts/authStore';
-import { Mail, Copy, Check, ArrowLeft, Clock, Shield } from 'lucide-react';
+import { Copy, Check, ArrowLeft, Clock, Shield } from 'lucide-react';
 
 const ADMIN_EMAIL = 'galofigurinhas@gmail.com';
 
 export default function ForgotPasswordPage() {
-  const user = useAuthStore((s) => s.user);
   const [copied, setCopied] = useState(false);
-
-  const accountEmail = user?.email ?? '(faça login para ver seu email)';
 
   const emailTemplate = `ASSUNTO: ESQUECI MINHA SENHA
 
-Nome (que está no site): ${user?.name ?? 'Seu nome no site'}
-Email da conta: ${accountEmail}
+Nome (que está no site): (seu nome no site)
 Senha nova: (coloque aqui a senha que deseja)`;
 
   const handleCopy = () => {
@@ -25,8 +20,6 @@ Senha nova: (coloque aqui a senha que deseja)`;
     setCopied(true);
     setTimeout(() => setCopied(false), 2500);
   };
-
-  const mailtoLink = `mailto:${ADMIN_EMAIL}?subject=ESQUECI%20MINHA%20SENHA&body=Nome%20(que%20est%C3%A1%20no%20site)%3A%20${encodeURIComponent(user?.name ?? '')}%0AEmail%20da%20conta%3A%20${encodeURIComponent(accountEmail)}%0ASenha%20nova%3A%20`;
 
   return (
     <div className="min-h-screen flex items-center justify-center p-4"
@@ -61,8 +54,7 @@ Senha nova: (coloque aqui a senha que deseja)`;
           </div>
 
           {/* Aviso de prazo */}
-          <div className="flex items-start gap-3 bg-yellow-500/10 border border-yellow-500/30
-                          rounded-xl p-4">
+          <div className="flex items-start gap-3 bg-yellow-500/10 border border-yellow-500/30 rounded-xl p-4">
             <Clock size={18} className="text-yellow-400 shrink-0 mt-0.5" />
             <p className="text-yellow-200 text-sm leading-relaxed">
               Envie um email para o administrador com o modelo abaixo.
@@ -70,18 +62,16 @@ Senha nova: (coloque aqui a senha que deseja)`;
             </p>
           </div>
 
-          {/* Email da conta */}
+          {/* Importante */}
           <div className="bg-white/5 border border-white/10 rounded-xl p-4">
-            <p className="text-white/40 text-xs uppercase tracking-widest font-semibold mb-2">
-              ⚠️ Importante
-            </p>
-            <p className="text-white/70 text-sm leading-relaxed">
-              O email deve ser enviado <strong className="text-white">pelo mesmo email cadastrado na sua conta</strong>:
-            </p>
-            <div className="mt-2 bg-white/10 rounded-lg px-3 py-2 flex items-center gap-2">
+            <div className="flex items-center gap-2 mb-2">
               <Shield size={14} style={{ color: '#C4A135' }} />
-              <span className="text-galo-gold font-bold text-sm font-mono">{accountEmail}</span>
+              <p className="text-white/40 text-xs uppercase tracking-widest font-semibold">Importante</p>
             </div>
+            <p className="text-white/70 text-sm leading-relaxed">
+              O email deve ser enviado <strong className="text-white">pelo mesmo email cadastrado na sua conta</strong>,
+              pois é assim que identificamos você.
+            </p>
           </div>
 
           {/* Template */}
@@ -94,31 +84,21 @@ Senha nova: (coloque aqui a senha que deseja)`;
               {emailTemplate}
             </div>
 
-            <div className="flex gap-2 mt-3">
-              {/* Copiar */}
-              <button onClick={handleCopy}
-                className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl
-                           font-bold text-sm transition-all border"
-                style={copied
-                  ? { backgroundColor: 'rgba(34,197,94,0.2)', borderColor: '#22c55e', color: '#22c55e' }
-                  : { backgroundColor: 'rgba(196,161,53,0.15)', borderColor: 'rgba(196,161,53,0.5)', color: '#C4A135' }}>
-                {copied ? <><Check size={14}/> Copiado!</> : <><Copy size={14}/> Copiar modelo</>}
-              </button>
-
-              {/* Abrir email */}
-              <a href={mailtoLink}
-                 className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl
-                            font-bold text-sm transition-all"
-                 style={{ backgroundColor: '#C4A135', color: '#0a0a0a' }}>
-                <Mail size={14}/> Abrir email
-              </a>
-            </div>
+            <button onClick={handleCopy}
+              className="w-full flex items-center justify-center gap-2 py-3 rounded-xl
+                         font-bold text-sm transition-all border mt-3"
+              style={copied
+                ? { backgroundColor: 'rgba(34,197,94,0.2)', borderColor: '#22c55e', color: '#22c55e' }
+                : { backgroundColor: 'rgba(196,161,53,0.15)', borderColor: 'rgba(196,161,53,0.5)', color: '#C4A135' }}>
+              {copied ? <><Check size={15}/> Copiado!</> : <><Copy size={15}/> Copiar modelo</>}
+            </button>
           </div>
 
           {/* Destino */}
-          <div className="bg-white/5 border border-white/10 rounded-xl p-4 text-center">
-            <p className="text-white/40 text-xs mb-1 uppercase tracking-widest">Enviar para</p>
-            <p className="text-galo-gold font-black text-lg">{ADMIN_EMAIL}</p>
+          <div className="rounded-xl p-4 text-center"
+               style={{ backgroundColor: 'rgba(196,161,53,0.08)', border: '1px solid rgba(196,161,53,0.25)' }}>
+            <p className="text-white/40 text-xs mb-1 uppercase tracking-widest font-semibold">Enviar para</p>
+            <p className="font-black text-lg" style={{ color: '#C4A135' }}>{ADMIN_EMAIL}</p>
           </div>
 
           <div className="text-center">
