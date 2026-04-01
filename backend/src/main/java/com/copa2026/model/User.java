@@ -8,14 +8,10 @@ import java.util.List;
 
 @Entity
 @Table(name = "users")
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
+@Data @NoArgsConstructor @AllArgsConstructor @Builder
 public class User {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(nullable = false)
@@ -41,9 +37,6 @@ public class User {
     @Builder.Default
     private Boolean emailVerified = false;
 
-    @Column(name = "verification_token", length = 64)
-    private String verificationToken;
-
     @Column(name = "created_at")
     private LocalDateTime createdAt;
 
@@ -58,7 +51,7 @@ public class User {
     @PrePersist
     protected void onCreate() {
         this.createdAt = LocalDateTime.now();
-        if (this.showPhone == null)    this.showPhone    = false;
+        if (this.showPhone    == null) this.showPhone    = false;
         if (this.emailVerified == null) this.emailVerified = false;
     }
 }
