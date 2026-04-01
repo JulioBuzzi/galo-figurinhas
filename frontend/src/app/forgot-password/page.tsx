@@ -84,6 +84,23 @@ Senha nova: (coloque aqui a senha que deseja)`;
               {emailTemplate}
             </div>
 
+            {/* Requisitos da senha */}
+            <div className="mt-3 bg-white/5 border border-white/10 rounded-xl p-3 space-y-1.5">
+              <p className="text-white/40 text-xs uppercase tracking-widest font-semibold mb-2">
+                Requisitos da senha nova
+              </p>
+              {[
+                'Mínimo 6 caracteres',
+                'Pelo menos uma letra',
+                'Pelo menos um número',
+              ].map(r => (
+                <div key={r} className="flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-galo-gold shrink-0"/>
+                  <span className="text-white/60 text-xs">{r}</span>
+                </div>
+              ))}
+            </div>
+
             <button onClick={handleCopy}
               className="w-full flex items-center justify-center gap-2 py-3 rounded-xl
                          font-bold text-sm transition-all border mt-3"
