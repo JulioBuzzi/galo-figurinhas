@@ -1,23 +1,5 @@
 package com.copa2026.service;
 
-<<<<<<< HEAD
-import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.mail.javamail.JavaMailSender;
-import org.springframework.mail.javamail.MimeMessageHelper;
-import org.springframework.scheduling.annotation.Async;
-import org.springframework.stereotype.Service;
-
-import jakarta.mail.internet.MimeMessage;
-
-@Service
-@RequiredArgsConstructor
-@Slf4j
-public class EmailService {
-
-    private final JavaMailSender mailSender;
-=======
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.*;
@@ -27,12 +9,6 @@ import org.springframework.web.client.RestTemplate;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Envia emails via Resend API (HTTP) — funciona no Render free tier.
- * SMTP é bloqueado pelo Render; a API HTTP não.
- *
- * Docs: https://resend.com/docs/api-reference/emails/send-email
- */
 @Service
 @Slf4j
 public class EmailService {
@@ -44,74 +20,30 @@ public class EmailService {
 
     @Value("${resend.from-email}")
     private String fromEmail;
->>>>>>> 20b2388ecb0775f0530872c0c9e0a3967706be07
 
-    @Value("${app.base-url}")
-    private String baseUrl;
-
-<<<<<<< HEAD
-    @Value("${spring.mail.username}")
-    private String fromEmail;
-
-    /** Envia email de verificação de conta */
-    @Async
-    public void sendVerificationEmail(String toEmail, String userName, String token) {
-        try {
-            MimeMessage message = mailSender.createMimeMessage();
-            MimeMessageHelper helper = new MimeMessageHelper(message, true, "UTF-8");
-
-            helper.setFrom("FroSócios Figurinhas <" + fromEmail + ">");
-            helper.setTo(toEmail);
-            helper.setSubject("✅ Confirme sua conta — FroSócios Figurinhas");
-
-            String verifyUrl = baseUrl + "/verify-email?token=" + token;
-            String html = buildVerificationEmail(userName, verifyUrl);
-            helper.setText(html, true);
-
-            mailSender.send(message);
-            log.info("Email de verificação enviado para: {}", toEmail);
-        } catch (Exception e) {
-            log.error("Erro ao enviar email de verificação para {}: {}", toEmail, e.getMessage());
-        }
-    }
-
-    /** Envia email de reset de senha */
-    @Async
-    public void sendPasswordResetEmail(String toEmail, String userName, String token) {
-        try {
-            MimeMessage message = mailSender.createMimeMessage();
-            MimeMessageHelper helper = new MimeMessageHelper(message, true, "UTF-8");
-
-            helper.setFrom("FroSócios Figurinhas <" + fromEmail + ">");
-            helper.setTo(toEmail);
-            helper.setSubject("🔐 Redefinir senha — FroSócios Figurinhas");
-
-            String resetUrl = baseUrl + "/reset-password?token=" + token;
-            String html = buildResetEmail(userName, resetUrl);
-            helper.setText(html, true);
-
-            mailSender.send(message);
-            log.info("Email de reset enviado para: {}", toEmail);
-        } catch (Exception e) {
-            log.error("Erro ao enviar email de reset para {}: {}", toEmail, e.getMessage());
-=======
-    public void sendVerificationEmail(String toEmail, String userName, String token) {
-        String verifyUrl = baseUrl + "/verify-email?token=" + token;
-        String subject   = "✅ Confirme sua conta — FroSócios Figurinhas";
-        String html      = buildVerificationEmail(userName, verifyUrl);
+    /** Envia código de verificação de email no cadastro */
+    public void sendVerificationCode(String toEmail, String userName, String code) {
+        String subject = "🔑 Seu código de verificação — FroSócios Figurinhas";
+        String html    = buildCodeEmail(userName, code,
+            "confirmar sua conta",
+            "Insira o código abaixo no app para ativar sua conta.",
+            "Válido por 15 minutos.");
         send(toEmail, subject, html);
     }
 
-    public void sendPasswordResetEmail(String toEmail, String userName, String token) {
-        String resetUrl = baseUrl + "/reset-password?token=" + token;
-        String subject  = "🔐 Redefinir senha — FroSócios Figurinhas";
-        String html     = buildResetEmail(userName, resetUrl);
+    /** Envia código de reset de senha */
+    public void sendPasswordResetCode(String toEmail, String userName, String code) {
+        String subject = "🔐 Código para redefinir senha — FroSócios Figurinhas";
+        String html    = buildCodeEmail(userName, code,
+            "redefinir sua senha",
+            "Insira o código abaixo no app para criar uma nova senha.",
+            "Válido por 15 minutos. Ignore se não foi você.");
         send(toEmail, subject, html);
     }
 
     private void send(String to, String subject, String html) {
         try {
-            log.info("📧 Enviando email via Resend para: {} | Assunto: {}", to, subject);
+            log.info("📧 Enviando email via Resend para: {}", to);
 
             HttpHeaders headers = new HttpHeaders();
             headers.setContentType(MediaType.APPLICATION_JSON);
@@ -124,107 +56,49 @@ public class EmailService {
                 "html",    html
             );
 
-            HttpEntity<Map<String, Object>> request = new HttpEntity<>(body, headers);
-
             ResponseEntity<Map> response = restTemplate.postForEntity(
                 "https://api.resend.com/emails",
-                request,
+                new HttpEntity<>(body, headers),
                 Map.class
             );
 
-            log.info("✅ Email enviado! Status: {} | ID: {}",
-                response.getStatusCode(),
-                response.getBody() != null ? response.getBody().get("id") : "?"
-            );
+            log.info("✅ Email enviado! ID: {}",
+                response.getBody() != null ? response.getBody().get("id") : "?");
 
         } catch (Exception e) {
-            log.error("❌ FALHA ao enviar email para {}: {}", to, e.getMessage());
-            throw new RuntimeException("Falha ao enviar email: " + e.getMessage(), e);
->>>>>>> 20b2388ecb0775f0530872c0c9e0a3967706be07
+            log.error("❌ Falha ao enviar email para {}: {}", to, e.getMessage());
+            throw new RuntimeException("Falha ao enviar email. Tente novamente.");
         }
     }
 
-    private String buildVerificationEmail(String name, String url) {
+    private String buildCodeEmail(String name, String code, String action, String desc, String footer) {
         return """
-<<<<<<< HEAD
-            <div style="font-family:Arial,sans-serif;max-width:520px;margin:0 auto;background:#0a0a0a;border-radius:16px;overflow:hidden">
-              <div style="background:linear-gradient(135deg,#0a0a0a,#2a2a2a);padding:32px;text-align:center;border-bottom:3px solid #C4A135">
-=======
-            <div style="font-family:Arial,sans-serif;max-width:520px;margin:0 auto;
+            <div style="font-family:Arial,sans-serif;max-width:480px;margin:0 auto;
                         background:#0a0a0a;border-radius:16px;overflow:hidden">
-              <div style="background:linear-gradient(135deg,#0a0a0a,#2a2a2a);padding:32px;
+              <div style="background:linear-gradient(135deg,#0a0a0a,#2a2a2a);padding:28px 32px;
                           text-align:center;border-bottom:3px solid #C4A135">
->>>>>>> 20b2388ecb0775f0530872c0c9e0a3967706be07
-                <h1 style="color:#C4A135;margin:0;font-size:28px;letter-spacing:4px">FroSócios</h1>
-                <p style="color:rgba(255,255,255,0.5);margin:4px 0 0;font-size:13px">FIGURINHAS 2026</p>
+                <h1 style="color:#C4A135;margin:0;font-size:26px;letter-spacing:4px">FroSócios</h1>
+                <p style="color:rgba(255,255,255,0.4);margin:4px 0 0;font-size:12px">FIGURINHAS 2026</p>
               </div>
-              <div style="padding:32px">
-                <h2 style="color:#ffffff;margin:0 0 16px">Olá, %s! 👋</h2>
-                <p style="color:rgba(255,255,255,0.7);line-height:1.6">
-                  Sua conta foi criada! Clique no botão abaixo para confirmar seu email e ativar a conta.
+              <div style="padding:32px;text-align:center">
+                <h2 style="color:#ffffff;margin:0 0 8px;font-size:20px">Olá, %s!</h2>
+                <p style="color:rgba(255,255,255,0.6);font-size:14px;margin:0 0 28px;line-height:1.5">
+                  %s
                 </p>
-                <div style="text-align:center;margin:32px 0">
-<<<<<<< HEAD
-                  <a href="%s" style="background:#C4A135;color:#0a0a0a;padding:14px 32px;border-radius:12px;text-decoration:none;font-weight:900;font-size:15px;letter-spacing:1px">
-=======
-                  <a href="%s" style="background:#C4A135;color:#0a0a0a;padding:14px 32px;
-                                      border-radius:12px;text-decoration:none;font-weight:900;
-                                      font-size:15px;letter-spacing:1px;display:inline-block">
->>>>>>> 20b2388ecb0775f0530872c0c9e0a3967706be07
-                    ✅ CONFIRMAR EMAIL
-                  </a>
+                <div style="background:#1a1a1a;border:2px dashed #C4A135;border-radius:16px;
+                            padding:24px 16px;margin:0 0 24px">
+                  <p style="color:rgba(255,255,255,0.4);font-size:12px;margin:0 0 8px;
+                             letter-spacing:2px;text-transform:uppercase">
+                    Seu código
+                  </p>
+                  <p style="color:#C4A135;font-size:48px;font-weight:900;letter-spacing:12px;
+                             margin:0;font-family:monospace">
+                    %s
+                  </p>
                 </div>
-                <p style="color:rgba(255,255,255,0.3);font-size:12px;text-align:center">
-                  Link válido por 24 horas. Se não foi você, ignore este email.
-                </p>
+                <p style="color:rgba(255,255,255,0.25);font-size:12px;margin:0">%s</p>
               </div>
             </div>
-            """.formatted(name, url);
+            """.formatted(name, desc, code, footer);
     }
-
-    private String buildResetEmail(String name, String url) {
-        return """
-<<<<<<< HEAD
-            <div style="font-family:Arial,sans-serif;max-width:520px;margin:0 auto;background:#0a0a0a;border-radius:16px;overflow:hidden">
-              <div style="background:linear-gradient(135deg,#0a0a0a,#2a2a2a);padding:32px;text-align:center;border-bottom:3px solid #C4A135">
-=======
-            <div style="font-family:Arial,sans-serif;max-width:520px;margin:0 auto;
-                        background:#0a0a0a;border-radius:16px;overflow:hidden">
-              <div style="background:linear-gradient(135deg,#0a0a0a,#2a2a2a);padding:32px;
-                          text-align:center;border-bottom:3px solid #C4A135">
->>>>>>> 20b2388ecb0775f0530872c0c9e0a3967706be07
-                <h1 style="color:#C4A135;margin:0;font-size:28px;letter-spacing:4px">FroSócios</h1>
-                <p style="color:rgba(255,255,255,0.5);margin:4px 0 0;font-size:13px">FIGURINHAS 2026</p>
-              </div>
-              <div style="padding:32px">
-                <h2 style="color:#ffffff;margin:0 0 16px">Olá, %s! 🔐</h2>
-                <p style="color:rgba(255,255,255,0.7);line-height:1.6">
-<<<<<<< HEAD
-                  Recebemos uma solicitação para redefinir sua senha. Clique no botão abaixo para criar uma nova senha.
-                </p>
-                <div style="text-align:center;margin:32px 0">
-                  <a href="%s" style="background:#C4A135;color:#0a0a0a;padding:14px 32px;border-radius:12px;text-decoration:none;font-weight:900;font-size:15px;letter-spacing:1px">
-=======
-                  Recebemos uma solicitação para redefinir sua senha.
-                  Clique no botão abaixo para criar uma nova senha.
-                </p>
-                <div style="text-align:center;margin:32px 0">
-                  <a href="%s" style="background:#C4A135;color:#0a0a0a;padding:14px 32px;
-                                      border-radius:12px;text-decoration:none;font-weight:900;
-                                      font-size:15px;letter-spacing:1px;display:inline-block">
->>>>>>> 20b2388ecb0775f0530872c0c9e0a3967706be07
-                    🔐 REDEFINIR SENHA
-                  </a>
-                </div>
-                <p style="color:rgba(255,255,255,0.3);font-size:12px;text-align:center">
-                  Link válido por 1 hora. Se não foi você, ignore este email.
-                </p>
-              </div>
-            </div>
-            """.formatted(name, url);
-    }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 20b2388ecb0775f0530872c0c9e0a3967706be07
