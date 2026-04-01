@@ -339,7 +339,7 @@ export default function MatchesPage() {
                           <div>
                             <p className="text-xs font-black text-green-700 mb-2 flex items-center gap-1.5">
                               <span className="w-2 h-2 rounded-full bg-green-500 inline-block"/>
-                              Você pode RECEBER ({canReceive}) — ele tem repetida, você não tem
+                              Você pode receber ({canReceive}) — ele tem repetida, você não tem
                             </p>
                             <div className="flex flex-wrap gap-1.5">
                               {match.theyHaveWhatINeed.map((s) => (
@@ -356,7 +356,7 @@ export default function MatchesPage() {
                             <p className="text-xs font-black mb-2 flex items-center gap-1.5"
                                style={{ color: '#8a6f1e' }}>
                               <span className="w-2 h-2 rounded-full inline-block" style={{ backgroundColor: '#C4A135' }}/>
-                              Você pode OFERECER ({canOffer}) — você tem repetida, ele não tem
+                              Você pode oferecer ({canOffer}) — você tem repetida, ele não tem
                             </p>
                             <div className="flex flex-wrap gap-1.5">
                               {match.iHaveWhatTheyNeed.map((s) => (
