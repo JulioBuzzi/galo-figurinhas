@@ -37,6 +37,15 @@ public class User {
     @Builder.Default
     private Boolean emailVerified = false;
 
+    @Column(name = "verification_token", length = 64)
+    private String verificationToken;
+
+    @Column(name = "verification_code", length = 6)
+    private String verificationCode;
+
+    @Column(name = "verification_code_expires_at")
+    private LocalDateTime verificationCodeExpiresAt;
+
     @Column(name = "created_at")
     private LocalDateTime createdAt;
 
@@ -51,7 +60,7 @@ public class User {
     @PrePersist
     protected void onCreate() {
         this.createdAt = LocalDateTime.now();
-        if (this.showPhone    == null) this.showPhone    = false;
+        if (this.showPhone     == null) this.showPhone     = false;
         if (this.emailVerified == null) this.emailVerified = false;
     }
 }
