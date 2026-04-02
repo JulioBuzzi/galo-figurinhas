@@ -293,7 +293,7 @@ export default function MatchesPage() {
                         <p className="text-sm font-black text-green-700 mt-2">
                           {canReceive === 1 ? 'figurinha' : 'figurinhas'}
                         </p>
-                        <p className="text-xs text-green-600 mt-0.5 font-medium">que você pode receber</p>
+                        <p className="text-xs text-green-600 mt-0.5 font-medium">que você pode RECEBER</p>
                         <p className="text-[10px] text-gray-400 mt-1">
                           ele tem repetida e você não tem
                         </p>
@@ -306,7 +306,7 @@ export default function MatchesPage() {
                           {canOffer === 1 ? 'figurinha' : 'figurinhas'}
                         </p>
                         <p className="text-xs mt-0.5 font-medium" style={{ color: '#8a6f1e' }}>
-                          que você pode oferecer
+                          que você pode OFERECER
                         </p>
                         <p className="text-[10px] text-gray-400 mt-1">
                           você tem repetida e ele não tem
@@ -339,7 +339,7 @@ export default function MatchesPage() {
                           <div>
                             <p className="text-xs font-black text-green-700 mb-2 flex items-center gap-1.5">
                               <span className="w-2 h-2 rounded-full bg-green-500 inline-block"/>
-                              Você pode receber ({canReceive}) — ele tem repetida, você não tem
+                              Você pode RECEBER ({canReceive}) — ele tem repetida, você não tem
                             </p>
                             <div className="flex flex-wrap gap-1.5">
                               {match.theyHaveWhatINeed.map((s) => (
@@ -356,7 +356,7 @@ export default function MatchesPage() {
                             <p className="text-xs font-black mb-2 flex items-center gap-1.5"
                                style={{ color: '#8a6f1e' }}>
                               <span className="w-2 h-2 rounded-full inline-block" style={{ backgroundColor: '#C4A135' }}/>
-                              Você pode oferecer ({canOffer}) — você tem repetida, ele não tem
+                              Você pode OFERECER ({canOffer}) — você tem repetida, ele não tem
                             </p>
                             <div className="flex flex-wrap gap-1.5">
                               {match.iHaveWhatTheyNeed.map((s) => (
@@ -389,58 +389,104 @@ export default function MatchesPage() {
 
         {/* ── MODAL REGISTRAR TROCA ── */}
         {showTrade && match && (
-          <div className="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-end sm:items-center justify-center p-4"
+          <div className="fixed inset-0 bg-black/75 backdrop-blur-sm z-50 flex items-end sm:items-center justify-center"
                onClick={() => setShowTrade(false)}>
-            <div className="bg-white rounded-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto shadow-2xl"
+            <div className="bg-white w-full sm:max-w-lg sm:mx-4 sm:rounded-2xl rounded-t-2xl
+                            shadow-2xl flex flex-col max-h-[92vh]"
                  onClick={(e) => e.stopPropagation()}>
 
-              <div className="flex items-center justify-between p-5 border-b border-gray-100 sticky top-0 bg-white z-10">
-                <div>
-                  <h2 className="font-black text-gray-900 flex items-center gap-2">
-                    <ArrowLeftRight size={18} style={{ color: '#C4A135' }}/>
-                    Registrar Troca com {match.userName}
-                  </h2>
-                  <p className="text-xs text-gray-400 mt-0.5">Selecione as figurinhas que serão trocadas</p>
+              {/* Header fixo */}
+              <div className="flex items-center justify-between px-5 py-4 border-b border-gray-100 shrink-0">
+                <div className="flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-xl flex items-center justify-center"
+                       style={{ backgroundColor: '#C4A135' }}>
+                    <ArrowLeftRight size={16} className="text-black" />
+                  </div>
+                  <div>
+                    <p className="font-black text-gray-900 text-sm leading-tight">Registrar Troca</p>
+                    <p className="text-xs text-gray-400">com {match.userName}</p>
+                  </div>
                 </div>
                 <button onClick={() => setShowTrade(false)}
-                  className="p-1.5 rounded-lg hover:bg-gray-100 text-gray-400">
-                  <X size={18}/>
+                  className="w-8 h-8 flex items-center justify-center rounded-full
+                             bg-gray-100 hover:bg-gray-200 text-gray-500 transition-colors">
+                  <X size={16}/>
                 </button>
               </div>
 
-              <div className="p-5 space-y-6">
+              {/* Barra de progresso da seleção */}
+              <div className="px-5 pt-3 pb-2 shrink-0 bg-gray-50 border-b border-gray-100">
+                <div className="flex items-center justify-between text-xs text-gray-500 mb-1.5">
+                  <span>{selReceived.size + selGiven.size} figurinha{selReceived.size + selGiven.size !== 1 ? 's' : ''} selecionada{selReceived.size + selGiven.size !== 1 ? 's' : ''}</span>
+                  <span className="font-bold" style={{ color: '#C4A135' }}>
+                    {canReceive + canOffer} possíveis
+                  </span>
+                </div>
+                <div className="w-full h-1.5 bg-gray-200 rounded-full overflow-hidden">
+                  <div className="h-full rounded-full transition-all duration-300"
+                       style={{
+                         width: `${(selReceived.size + selGiven.size) / (canReceive + canOffer) * 100}%`,
+                         backgroundColor: '#C4A135'
+                       }}/>
+                </div>
+              </div>
 
-                {/* Vou RECEBER */}
+              {/* Conteúdo scrollável */}
+              <div className="overflow-y-auto flex-1 px-5 py-4 space-y-5">
+
+                {/* ── VOU RECEBER ── */}
                 {canReceive > 0 && (
                   <div>
                     <div className="flex items-center justify-between mb-3">
-                      <div>
-                        <p className="text-sm font-black text-green-700 flex items-center gap-1.5">
-                          <span className="w-2.5 h-2.5 rounded-full bg-green-500 inline-block"/>
-                          Vou receber
-                        </p>
-                        <p className="text-xs text-gray-400 mt-0.5">
-                          {selReceived.size} de {canReceive} selecionadas
-                        </p>
+                      <div className="flex items-center gap-2">
+                        <div className="w-6 h-6 rounded-full bg-green-500 flex items-center justify-center">
+                          <span className="text-white text-xs font-black">↓</span>
+                        </div>
+                        <div>
+                          <p className="text-sm font-black text-green-700">Vou receber</p>
+                          <p className="text-[10px] text-gray-400">figurinhas que ele tem repetida</p>
+                        </div>
+                        <span className="ml-1 px-2 py-0.5 rounded-full text-xs font-black"
+                              style={{ backgroundColor: selReceived.size > 0 ? '#dcfce7' : '#f1f5f9',
+                                       color: selReceived.size > 0 ? '#15803d' : '#94a3b8' }}>
+                          {selReceived.size}/{canReceive}
+                        </span>
                       </div>
                       <button onClick={() => selReceived.size === canReceive
                           ? setSelReceived(new Set())
                           : setSelReceived(new Set(match.theyHaveWhatINeed.map(s => s.id)))}
-                        className="text-xs font-bold px-2.5 py-1 rounded-lg"
-                        style={{ color: '#22c55e', backgroundColor: 'rgba(34,197,94,0.1)' }}>
-                        {selReceived.size === canReceive ? 'Desmarcar tudo' : 'Marcar tudo'}
+                        className="text-xs font-bold px-3 py-1.5 rounded-lg transition-colors"
+                        style={{ color: '#16a34a', backgroundColor: 'rgba(34,197,94,0.1)' }}>
+                        {selReceived.size === canReceive ? 'Limpar' : 'Todas'}
                       </button>
                     </div>
-                    <div className="flex flex-wrap gap-2">
+
+                    <div className="grid grid-cols-4 gap-2">
                       {match.theyHaveWhatINeed.map((s) => {
                         const sel = selReceived.has(s.id);
                         return (
-                          <button key={s.id} onClick={() => toggle(selReceived, setSelReceived, s.id)}
-                            className="text-xs px-3 py-1.5 rounded-full font-mono font-bold border-2 transition-all"
-                            style={sel
-                              ? { backgroundColor: '#22c55e', borderColor: '#22c55e', color: 'white' }
-                              : { backgroundColor: '#f0fdf4', borderColor: '#86efac', color: '#166534' }}>
-                            {sel && '✓ '}{s.code}
+                          <button key={s.id}
+                            onClick={() => toggle(selReceived, setSelReceived, s.id)}
+                            className="relative py-3 rounded-xl font-mono font-black text-xs
+                                       transition-all active:scale-95 border-2"
+                            style={sel ? {
+                              backgroundColor: '#16a34a',
+                              borderColor: '#16a34a',
+                              color: 'white',
+                              boxShadow: '0 2px 8px rgba(22,163,74,0.4)'
+                            } : {
+                              backgroundColor: '#f0fdf4',
+                              borderColor: '#bbf7d0',
+                              color: '#15803d'
+                            }}>
+                            {sel && (
+                              <span className="absolute -top-1.5 -right-1.5 w-4 h-4 bg-white
+                                               border-2 border-green-500 rounded-full flex
+                                               items-center justify-center text-green-600 text-[9px] font-black">
+                                ✓
+                              </span>
+                            )}
+                            {s.code.replace('FIG-', '')}
                           </button>
                         );
                       })}
@@ -449,74 +495,108 @@ export default function MatchesPage() {
                 )}
 
                 {canReceive > 0 && canOffer > 0 && (
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-3 py-1">
                     <div className="flex-1 h-px bg-gray-200"/>
-                    <ArrowLeftRight size={14} className="text-gray-400"/>
+                    <div className="w-7 h-7 rounded-full bg-gray-100 flex items-center justify-center">
+                      <ArrowLeftRight size={12} className="text-gray-400"/>
+                    </div>
                     <div className="flex-1 h-px bg-gray-200"/>
                   </div>
                 )}
 
-                {/* Vou OFERECER */}
+                {/* ── VOU OFERECER ── */}
                 {canOffer > 0 && (
                   <div>
                     <div className="flex items-center justify-between mb-3">
-                      <div>
-                        <p className="text-sm font-black flex items-center gap-1.5"
-                           style={{ color: '#8a6f1e' }}>
-                          <span className="w-2.5 h-2.5 rounded-full inline-block" style={{ backgroundColor: '#C4A135' }}/>
-                          Vou oferecer (dar)
-                        </p>
-                        <p className="text-xs text-gray-400 mt-0.5">
-                          {selGiven.size} de {canOffer} selecionadas
-                        </p>
+                      <div className="flex items-center gap-2">
+                        <div className="w-6 h-6 rounded-full flex items-center justify-center"
+                             style={{ backgroundColor: '#C4A135' }}>
+                          <span className="text-black text-xs font-black">↑</span>
+                        </div>
+                        <div>
+                          <p className="text-sm font-black" style={{ color: '#92400e' }}>Vou oferecer</p>
+                          <p className="text-[10px] text-gray-400">suas repetidas que ele precisa</p>
+                        </div>
+                        <span className="ml-1 px-2 py-0.5 rounded-full text-xs font-black"
+                              style={{ backgroundColor: selGiven.size > 0 ? 'rgba(196,161,53,0.2)' : '#f1f5f9',
+                                       color: selGiven.size > 0 ? '#92400e' : '#94a3b8' }}>
+                          {selGiven.size}/{canOffer}
+                        </span>
                       </div>
                       <button onClick={() => selGiven.size === canOffer
                           ? setSelGiven(new Set())
                           : setSelGiven(new Set(match.iHaveWhatTheyNeed.map(s => s.id)))}
-                        className="text-xs font-bold px-2.5 py-1 rounded-lg"
-                        style={{ color: '#C4A135', backgroundColor: 'rgba(196,161,53,0.1)' }}>
-                        {selGiven.size === canOffer ? 'Desmarcar tudo' : 'Marcar tudo'}
+                        className="text-xs font-bold px-3 py-1.5 rounded-lg transition-colors"
+                        style={{ color: '#92400e', backgroundColor: 'rgba(196,161,53,0.1)' }}>
+                        {selGiven.size === canOffer ? 'Limpar' : 'Todas'}
                       </button>
                     </div>
-                    <div className="flex flex-wrap gap-2">
+
+                    <div className="grid grid-cols-4 gap-2">
                       {match.iHaveWhatTheyNeed.map((s) => {
                         const sel = selGiven.has(s.id);
                         return (
-                          <button key={s.id} onClick={() => toggle(selGiven, setSelGiven, s.id)}
-                            className="text-xs px-3 py-1.5 rounded-full font-mono font-bold border-2 transition-all"
-                            style={sel
-                              ? { backgroundColor: '#C4A135', borderColor: '#C4A135', color: '#0a0a0a' }
-                              : { backgroundColor: 'rgba(196,161,53,0.08)', borderColor: 'rgba(196,161,53,0.4)', color: '#8a6f1e' }}>
-                            {sel && '✓ '}{s.code}
+                          <button key={s.id}
+                            onClick={() => toggle(selGiven, setSelGiven, s.id)}
+                            className="relative py-3 rounded-xl font-mono font-black text-xs
+                                       transition-all active:scale-95 border-2"
+                            style={sel ? {
+                              backgroundColor: '#C4A135',
+                              borderColor: '#C4A135',
+                              color: '#0a0a0a',
+                              boxShadow: '0 2px 8px rgba(196,161,53,0.5)'
+                            } : {
+                              backgroundColor: 'rgba(196,161,53,0.08)',
+                              borderColor: 'rgba(196,161,53,0.35)',
+                              color: '#92400e'
+                            }}>
+                            {sel && (
+                              <span className="absolute -top-1.5 -right-1.5 w-4 h-4 bg-white
+                                               border-2 rounded-full flex items-center justify-center
+                                               text-[9px] font-black"
+                                    style={{ borderColor: '#C4A135', color: '#92400e' }}>
+                                ✓
+                              </span>
+                            )}
+                            {s.code.replace('FIG-', '')}
                           </button>
                         );
                       })}
                     </div>
                   </div>
                 )}
+              </div>
 
-                {/* Resumo */}
+              {/* Footer fixo com resumo + botão */}
+              <div className="px-5 pb-5 pt-3 border-t border-gray-100 bg-white shrink-0 sm:rounded-b-2xl rounded-b-none">
                 {(selReceived.size > 0 || selGiven.size > 0) && (
-                  <div className="bg-gray-50 border border-gray-200 rounded-xl p-3 space-y-1 text-xs text-gray-600">
+                  <div className="flex gap-3 mb-3">
                     {selReceived.size > 0 && (
-                      <p>✅ <strong>{selReceived.size}</strong> figurinha(s) serão adicionadas ao seu álbum</p>
+                      <div className="flex-1 bg-green-50 border border-green-200 rounded-xl px-3 py-2 text-center">
+                        <p className="text-lg font-black text-green-600">{selReceived.size}</p>
+                        <p className="text-[10px] text-green-700 font-medium">vou receber</p>
+                      </div>
                     )}
                     {selGiven.size > 0 && (
-                      <p>📤 <strong>{selGiven.size}</strong> repetida(s) serão removidas do seu álbum</p>
+                      <div className="flex-1 border rounded-xl px-3 py-2 text-center"
+                           style={{ backgroundColor: 'rgba(196,161,53,0.08)', borderColor: 'rgba(196,161,53,0.3)' }}>
+                        <p className="text-lg font-black" style={{ color: '#C4A135' }}>{selGiven.size}</p>
+                        <p className="text-[10px] font-medium" style={{ color: '#92400e' }}>vou dar</p>
+                      </div>
                     )}
                   </div>
                 )}
-
                 <button onClick={confirmTrade}
                   disabled={confirming || (selReceived.size === 0 && selGiven.size === 0)}
-                  className="w-full flex items-center justify-center gap-2 py-3.5 rounded-xl
-                             font-black text-sm transition-all disabled:opacity-40"
+                  className="w-full flex items-center justify-center gap-2 py-4 rounded-xl
+                             font-black text-sm transition-all disabled:opacity-30"
                   style={{ backgroundColor: '#C4A135', color: '#0a0a0a' }}>
                   {confirming
                     ? <><Loader2 size={16} className="animate-spin"/> Registrando...</>
-                    : <><Check size={16}/> Confirmar Troca ({selReceived.size + selGiven.size} figurinha{selReceived.size + selGiven.size !== 1 ? 's' : ''})</>}
+                    : <><Check size={16}/> Confirmar Troca</>}
                 </button>
               </div>
+
             </div>
           </div>
         )}
