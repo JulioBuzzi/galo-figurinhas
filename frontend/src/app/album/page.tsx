@@ -29,8 +29,11 @@ export default function AlbumPage() {
     }).catch(console.error).finally(() => setLoading(false));
   }, []);
 
-  // Toggle: clique → alterna owned no backend (cria ou deleta registro)
+  // Toggle: atualiza UI imediatamente (otimista) e reverte em caso de erro
   const handleToggle = useCallback(async (stickerId: number) => {
+    setStickers((prev) => prev.map((s) =>
+      s.stickerId === stickerId ? { ...s, owned: !s.owned } : s
+    ));
     setToggling(stickerId);
     try {
       const { data } = await api.post(`/api/album/stickers/${stickerId}/toggle`);
@@ -39,7 +42,12 @@ export default function AlbumPage() {
           ? { ...s, owned: data.owned, repeatedCount: data.repeatedCount }
           : s
       ));
-    } catch (err) { console.error(err); }
+    } catch (err) {
+      setStickers((prev) => prev.map((s) =>
+        s.stickerId === stickerId ? { ...s, owned: !s.owned } : s
+      ));
+      console.error(err);
+    }
     finally { setToggling(null); }
   }, []);
 
@@ -211,7 +219,7 @@ export default function AlbumPage() {
                     {open && (
                       <div className="grid gap-1.5"
                            style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(58px, 1fr))' }}>
-                        {items.map((s) => (
+                        {[...items].sort((a, b) => (a.albumNumber ?? 0) - (b.albumNumber ?? 0)).map((s) => (
                           <StickerCard
                             key={s.stickerId}
                             sticker={s}
