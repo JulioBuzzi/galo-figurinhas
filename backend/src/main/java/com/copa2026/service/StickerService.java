@@ -26,34 +26,39 @@ public class StickerService {
     }
 
     public List<UserStickerResponse> getUserAlbum(Long userId) {
-        List<Sticker> all = stickerRepository.findAll();
-        Map<Long, UserSticker> myMap = userStickerRepository.findByUserId(userId)
+        // Fetch all stickers with user's data in one query using JOIN
+        List<Sticker> allStickers = stickerRepository.findAll();
+        Map<Long, UserSticker> userStickerMap = userStickerRepository.findByUserIdWithSticker(userId)
                 .stream()
                 .collect(Collectors.toMap(us -> us.getSticker().getId(), us -> us));
 
-        return all.stream().map(sticker -> {
-            UserStickerResponse r = new UserStickerResponse();
-            r.setStickerId(sticker.getId());
-            r.setCode(sticker.getCode());
-            r.setName(sticker.getName());
-            r.setTeam(sticker.getTeam());
-            r.setAlbumNumber(sticker.getAlbumNumber());
+        return allStickers.stream()
+                .sorted((s1, s2) -> Integer.compare(s1.getAlbumNumber(), s2.getAlbumNumber()))
+                .map(sticker -> {
+                    UserStickerResponse r = new UserStickerResponse();
+                    r.setStickerId(sticker.getId());
+                    r.setCode(sticker.getCode());
+                    r.setName(sticker.getName());
+                    r.setTeam(sticker.getTeam());
+                    r.setAlbumNumber(sticker.getAlbumNumber());
 
-            UserSticker us = myMap.get(sticker.getId());
-            if (us != null) {
-                r.setOwned(true);
-                r.setRepeatedCount(us.getRepeatedCount());
-                r.setUpdatedAt(us.getUpdatedAt());
-            } else {
-                r.setOwned(false);
-                r.setRepeatedCount(0);
-            }
-            return r;
-        }).collect(Collectors.toList());
+                    UserSticker us = userStickerMap.get(sticker.getId());
+                    if (us != null) {
+                        r.setOwned(true);
+                        r.setRepeatedCount(us.getRepeatedCount());
+                        r.setUpdatedAt(us.getUpdatedAt());
+                    } else {
+                        r.setOwned(false);
+                        r.setRepeatedCount(0);
+                    }
+                    return r;
+                }).collect(Collectors.toList());
     }
 
     public List<UserStickerResponse> getUserOwnedStickers(Long userId) {
-        return userStickerRepository.findByUserId(userId).stream()
+        // Use JOIN FETCH to avoid N+1 queries when loading stickers
+        return userStickerRepository.findByUserIdWithSticker(userId).stream()
+                .sorted((us1, us2) -> Integer.compare(us1.getSticker().getAlbumNumber(), us2.getSticker().getAlbumNumber()))
                 .map(us -> {
                     UserStickerResponse r = new UserStickerResponse();
                     r.setStickerId(us.getSticker().getId());

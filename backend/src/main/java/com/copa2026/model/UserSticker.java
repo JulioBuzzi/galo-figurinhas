@@ -23,7 +23,7 @@ public class UserSticker {
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "sticker_id", nullable = false)
     private Sticker sticker;
 

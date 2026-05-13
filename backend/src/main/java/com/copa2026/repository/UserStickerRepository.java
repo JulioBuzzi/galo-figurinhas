@@ -19,6 +19,9 @@ public interface UserStickerRepository extends JpaRepository<UserSticker, Long> 
 
     long countByUserId(Long userId);
 
+    @Query("SELECT us FROM UserSticker us JOIN FETCH us.sticker WHERE us.user.id = :uid ORDER BY us.sticker.albumNumber ASC")
+    List<UserSticker> findByUserIdWithSticker(@Param("uid") Long uid);
+
     @Query("SELECT COUNT(us) FROM UserSticker us WHERE us.user.id = :uid AND us.repeatedCount > 0")
     long countWithRepeatedByUserId(@Param("uid") Long uid);
 
