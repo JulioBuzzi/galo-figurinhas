@@ -12,8 +12,8 @@ export default function ForgotPasswordPage() {
 
   const emailTemplate = `ASSUNTO: ESQUECI MINHA SENHA
 
-Nome (que está no site): (seu nome no site)
-Senha nova: (coloque aqui a senha que deseja)`;
+Nome: seu nome igual no site
+Senha nova: senha que deseja`;
 
   const handleCopy = () => {
     navigator.clipboard.writeText(emailTemplate);
